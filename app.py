@@ -742,11 +742,18 @@ chatbot = AppalachianChatbot(data)
 @app.route('/public/<path:filename>')
 def public_file(filename):
     """Serve static files from the public directory"""
-    import mimetypes
-    mimetype, _ = mimetypes.guess_type(filename)
-    if not mimetype:
-        mimetype = 'application/octet-stream'
-    return send_file(os.path.join('public', filename), mimetype=mimetype)
+    try:
+        import mimetypes
+        file_path = os.path.join('public', filename)
+        if not os.path.exists(file_path):
+            return f"File not found: {filename}", 404
+        mimetype, _ = mimetypes.guess_type(filename)
+        if not mimetype:
+            mimetype = 'application/octet-stream'
+        return send_file(file_path, mimetype=mimetype)
+    except Exception as e:
+        print(f"Error serving file {filename}: {e}")
+        return f"Error serving file: {e}", 500
 
 @app.route('/')
 def index():
