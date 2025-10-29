@@ -23,8 +23,17 @@ except Exception as e:
 
 app = Flask(__name__)
 
-# Initialize OpenAI client
-openai_client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+# Initialize OpenAI client - handle missing API key gracefully
+try:
+    api_key = os.getenv('OPENAI_API_KEY')
+    if api_key and api_key != 'your_openai_api_key_here':
+        openai_client = OpenAI(api_key=api_key)
+    else:
+        print("WARNING: OpenAI API key not set. Advanced NLP features will be disabled.")
+        openai_client = None
+except Exception as e:
+    print(f"WARNING: Could not initialize OpenAI client: {e}")
+    openai_client = None
 
 # Load data
 def load_data():
@@ -121,6 +130,10 @@ class AppalachianChatbot:
     
     def parse_query_with_openai(self, query: str) -> Dict[str, Any]:
         """Use OpenAI to parse natural language query and extract parameters"""
+        # Fallback to regex if OpenAI client is not available
+        if not self.openai_client:
+            return self.parse_query_regex(query)
+        
         try:
             # Create a system prompt that explains the data structure
             system_prompt = """
@@ -470,6 +483,9 @@ class AppalachianChatbot:
     
     def _generate_analytics_message(self, original_query: str, analytics: Dict[str, Any], results: pd.DataFrame) -> str:
         """Generate intelligent analytical insights using OpenAI"""
+        if not self.openai_client:
+            return self._generate_simple_analytics_message(analytics, results)
+        
         try:
             # Find specific counties for min/max values
             min_gdp_county = results.loc[results['gdp_per_capita'].idxmin()]
@@ -615,6 +631,14 @@ class AppalachianChatbot:
     
     def _handle_conversation_query(self, query: str) -> Dict[str, Any]:
         """Handle general conversation queries using OpenAI"""
+        if not self.openai_client:
+            return {
+                'success': True,
+                'message': "I'm here to help you explore Appalachian county data! I can analyze unemployment rates, GDP per capita, and help you find counties with specific economic conditions. What would you like to know?",
+                'counties': [],
+                'count': 0
+            }
+        
         try:
             response = self.openai_client.chat.completions.create(
                 model="gpt-3.5-turbo",
@@ -644,6 +668,9 @@ class AppalachianChatbot:
     
     def _generate_openai_message(self, original_query: str, parsed_query: Dict[str, Any], results: pd.DataFrame) -> str:
         """Generate a human-readable response message using OpenAI"""
+        if not self.openai_client:
+            return self._generate_simple_message(parsed_query, results)
+        
         try:
             count = len(results)
             
