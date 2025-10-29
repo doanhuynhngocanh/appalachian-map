@@ -1,0 +1,2436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appalachian Map Chatbot</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.browser.print@2.0.0/dist/leaflet.browser.print.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Century+Gothic:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Century Gothic', 'CenturyGothic', 'AppleGothic', sans-serif;
+            background-color: #f8f9fa;
+            overflow: hidden;
+        }
+        
+        /* Brand Colors */
+        :root {
+            --blue: #0579b2;
+            --teal: #4dc4cf;
+            --purple: #800f69;
+            --light-purple: #c9abe7;
+            --gold: #e1e512;
+            --green: #68bd49;
+            --dark-green: #006b6d;
+        }
+        
+        /* Top Navigation Bar */
+        .navbar {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+            padding: 12px 24px;
+            box-shadow: 0 4px 12px rgba(5, 121, 178, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            z-index: 2000;
+            position: relative;
+        }
+        
+        .navbar-logo {
+            height: 45px;
+            width: auto;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+        
+        .navbar-title {
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .container {
+            display: flex;
+            height: calc(100vh - 69px);
+            overflow: hidden;
+        }
+        
+        .map-container {
+            flex: 2;
+            position: relative;
+        }
+        
+        .map-controls {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            min-width: 240px;
+        }
+        
+        .map-controls label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 700;
+            color: var(--blue);
+            font-size: 13px;
+            letter-spacing: 0.3px;
+        }
+        
+        .map-controls select {
+            padding: 10px 14px;
+            border: 2px solid var(--teal);
+            border-radius: 8px;
+            font-size: 14px;
+            cursor: pointer;
+            width: 100%;
+            background: white;
+            font-family: 'Century Gothic', sans-serif;
+            transition: all 0.3s ease;
+        }
+        
+        .map-controls select:focus {
+            outline: none;
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(5, 121, 178, 0.1);
+        }
+        
+        /* County data panel */
+        .county-data-panel {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            z-index: 1100;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(5, 121, 178, 0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            width: 550px;
+            max-width: calc(100% - 32px);
+            max-height: 75vh;
+            overflow-y: auto;
+            display: none;
+            border: 2px solid var(--teal);
+        }
+        .county-data-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--teal);
+        }
+        .county-data-title {
+            font-weight: 700;
+            color: var(--blue);
+            font-size: 20px;
+            letter-spacing: 0.3px;
+        }
+        .county-data-close {
+            background: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--purple);
+            padding: 0 8px;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .county-data-close:hover {
+            color: var(--light-purple);
+            background: rgba(201, 171, 231, 0.1);
+        }
+        .county-data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .county-data-table th,
+        .county-data-table td {
+            padding: 10px 8px;
+            text-align: left;
+            border-bottom: 1px solid var(--teal);
+        }
+        .county-data-table th {
+            color: var(--dark-green);
+            font-weight: 700;
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            width: 40%;
+        }
+        .county-data-table td {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        .county-data-table tr:last-child th,
+        .county-data-table tr:last-child td {
+            border-bottom: none;
+        }
+        .county-data-actions {
+            margin-top: 16px;
+            display: flex;
+            gap: 10px;
+            justify-content: flex-end;
+            padding-top: 16px;
+            border-top: 2px solid var(--teal);
+        }
+        .btn-secondary {
+            background: rgba(201, 171, 231, 0.1);
+            color: var(--purple);
+            border: 2px solid var(--light-purple);
+            border-radius: 8px;
+            padding: 10px 18px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background: var(--light-purple);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(201, 171, 231, 0.3);
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, var(--blue), var(--teal));
+            color: white;
+            border: none;
+            border-radius: 8px;
+            padding: 10px 18px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(5, 121, 178, 0.3);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #046099, #3db3bd);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(5, 121, 178, 0.4);
+        }
+
+         .map-export-btn {
+             position: absolute;
+            bottom: 24px;
+            left: 16px;
+             z-index: 1000;
+            background: linear-gradient(135deg, var(--green), var(--dark-green));
+             color: white;
+             border: none;
+            border-radius: 10px;
+            padding: 14px 20px;
+             cursor: pointer;
+             font-size: 15px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 16px rgba(104, 189, 73, 0.3);
+             display: flex;
+             align-items: center;
+            gap: 10px;
+            font-family: 'Century Gothic', sans-serif;
+            white-space: nowrap;
+         }
+         
+         .map-export-btn:hover:not(:disabled) {
+            background: linear-gradient(135deg, #5aa840, #005b5d);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(104, 189, 73, 0.4);
+         }
+         
+         .map-export-btn:disabled {
+            background: #b0b0b0;
+             cursor: not-allowed;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+         }
+         
+         .map-export-btn .download-icon {
+             font-size: 18px;
+             line-height: 1;
+         }
+         
+         /* Table export section (in chatbot results) */
+         .table-export-section {
+            margin-top: 12px;
+            padding: 14px;
+            background: rgba(128, 15, 105, 0.05);
+            border-radius: 10px;
+             display: flex;
+             align-items: center;
+            gap: 12px;
+         }
+         
+         .table-export-section select {
+            padding: 8px 12px;
+            border: 2px solid var(--light-purple);
+            border-radius: 8px;
+             font-size: 13px;
+             cursor: pointer;
+            font-family: 'Century Gothic', sans-serif;
+         }
+         
+         .table-export-section button {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, var(--blue), var(--teal));
+             color: white;
+             border: none;
+            border-radius: 8px;
+             cursor: pointer;
+             font-size: 13px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(5, 121, 178, 0.3);
+         }
+         
+         .table-export-section button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(5, 121, 178, 0.4);
+         }
+        
+        .map-legend {
+            position: absolute;
+            bottom: 24px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 14px 18px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            font-size: 12px;
+            max-width: 220px;
+            border: 2px solid var(--teal);
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin: 6px 0;
+            font-size: 11px;
+        }
+        
+        .legend-color {
+            width: 24px;
+            height: 14px;
+            margin-right: 10px;
+            border: 1.5px solid var(--blue);
+            border-radius: 3px;
+        }
+        
+        .legend-title {
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--blue);
+            font-size: 13px;
+        }
+        
+        .chat-container {
+            flex: 0 0 500px;
+            background: white;
+            border-left: 3px solid var(--teal);
+            display: flex;
+            flex-direction: column;
+            box-shadow: -4px 0 20px rgba(0, 0, 0, 0.08);
+        }
+        
+        .chat-header {
+            background: linear-gradient(135deg, var(--blue) 0%, var(--teal) 100%);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .chat-messages {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: linear-gradient(to bottom, #ffffff, #f8f9fa);
+        }
+        
+        .message {
+            margin-bottom: 16px;
+            padding: 14px 16px;
+            border-radius: 12px;
+            max-width: 85%;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .user-message {
+            background: linear-gradient(135deg, var(--blue), var(--teal));
+            color: white;
+            margin-left: auto;
+        }
+        
+        .bot-message {
+            background: rgba(128, 15, 105, 0.05);
+            border: 2px solid var(--light-purple);
+            margin-right: auto;
+        }
+        
+        .chat-input {
+            padding: 20px;
+            border-top: 2px solid var(--teal);
+            background: white;
+        }
+        
+        .chat-input input {
+            width: 100%;
+            padding: 14px 18px;
+            border: 2px solid var(--light-purple);
+            border-radius: 25px;
+            outline: none;
+            font-family: 'Century Gothic', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+        
+        .chat-input input:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(5, 121, 178, 0.1);
+        }
+        
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        
+        .loading {
+            text-align: center;
+            padding: 20px;
+            color: var(--dark-green);
+        }
+        
+        .error {
+            color: var(--purple);
+            background: rgba(201, 171, 231, 0.15);
+            border: 2px solid var(--light-purple);
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        
+        .success {
+            color: var(--dark-green);
+            background: rgba(104, 189, 73, 0.15);
+            border: 2px solid var(--green);
+            padding: 12px;
+            border-radius: 10px;
+            margin: 10px 0;
+        }
+        
+        .county-info {
+            background: white;
+            padding: 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            max-width: 320px;
+            border: 2px solid var(--teal);
+        }
+        
+        .county-name {
+            font-weight: 700;
+            color: var(--blue);
+            margin-bottom: 6px;
+            font-size: 16px;
+        }
+        
+                 .county-stats {
+             font-size: 0.9em;
+             color: #666;
+         }
+         
+         /* Tooltip styling */
+         .leaflet-tooltip {
+            background: linear-gradient(135deg, var(--blue), var(--teal));
+             color: white;
+             border: none;
+             border-radius: 5px;
+             padding: 6px 10px;
+             font-size: 13px;
+             font-weight: bold;
+             box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+         }
+         
+         .leaflet-tooltip-top:before {
+             border-top-color: #2c3e50;
+         }
+         
+         .leaflet-tooltip-bottom:before {
+             border-bottom-color: #2c3e50;
+         }
+         
+         .leaflet-tooltip-left:before {
+             border-left-color: #2c3e50;
+         }
+         
+         .leaflet-tooltip-right:before {
+             border-right-color: #2c3e50;
+         }
+         
+         .loading-overlay {
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             background: rgba(255, 255, 255, 0.9);
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             z-index: 2000;
+             font-size: 18px;
+             color: #2c3e50;
+         }
+         
+         .loading-spinner {
+             border: 4px solid #f3f3f3;
+             border-top: 4px solid #3498db;
+             border-radius: 50%;
+             width: 40px;
+             height: 40px;
+             animation: spin 1s linear infinite;
+             margin-right: 15px;
+         }
+         
+         @keyframes spin {
+             0% { transform: rotate(0deg); }
+             100% { transform: rotate(360deg); }
+         }
+         
+         /* Responsive Design */
+         @media (max-width: 1024px) {
+             .container {
+                 flex-direction: column;
+             }
+             
+             .map-container {
+                 flex: 1 1 auto;
+                 min-height: 60vh;
+             }
+             
+             .chat-container {
+                 flex: 0 0 40vh;
+                 border-left: none;
+                 border-top: 3px solid var(--teal);
+             }
+             
+             .county-data-panel {
+                 width: calc(100% - 32px);
+                 max-width: none;
+             }
+         }
+         
+         @media (max-width: 768px) {
+             .navbar {
+                 padding: 10px 16px;
+                 flex-wrap: wrap;
+             }
+             
+             .navbar-logo {
+                 height: 35px;
+             }
+             
+             .navbar-title {
+                 font-size: 18px;
+             }
+             
+             .map-controls {
+                 top: 12px;
+                 right: 12px;
+                 padding: 12px;
+                 min-width: 200px;
+             }
+             
+             .map-legend {
+                 bottom: 12px;
+                 right: 12px;
+                 padding: 10px 14px;
+                 max-width: 180px;
+             }
+             
+             .map-export-btn {
+                 bottom: 12px;
+                 left: 12px;
+                 padding: 12px 16px;
+                 font-size: 13px;
+             }
+             
+             .county-data-panel {
+                 width: calc(100% - 24px);
+                 padding: 16px;
+             }
+             
+             .chat-container {
+                 flex: 0 0 50vh;
+             }
+             
+             .message {
+                 max-width: 90%;
+             }
+         }
+     </style>
+ </head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <img src="/public/Fahe logo.jpg" alt="FAHE Logo" class="navbar-logo">
+        <div class="navbar-title">🗺️ Appalachian Map Chatbot</div>
+    </div>
+    
+    <div class="container">
+                 <div class="map-container">
+             <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+                 <div class="loading-spinner"></div>
+                 <span>Loading data...</span>
+             </div>
+             <div class="map-controls">
+                                 <label for="dataType">Show Data:</label>
+                 <select id="dataType">
+                     <option value="">Choose data...</option>
+                     <option value="unemployment">Unemployment Rate</option>
+                     <option value="gdp">GDP per Capita</option>
+                     <option value="income">Income Limit</option>
+                 </select>
+                
+                <label for="incomeType" id="incomeTypeLabel" style="display: none; margin-top: 10px;">Income Type:</label>
+                <select id="incomeType" style="display: none;">
+                    <option value="very_low">Very Low</option>
+                    <option value="extremely_low">Extremely Low</option>
+                    <option value="low">Low</option>
+                    <option value="median">Median Income</option>
+                </select>
+                
+                <label for="familySize" id="familySizeLabel" style="display: none; margin-top: 10px;">Family Size:</label>
+                <select id="familySize" style="display: none;">
+                    <option value="1">1 Person</option>
+                    <option value="2">2 Person</option>
+                    <option value="3">3 Person</option>
+                    <option value="4">4 Person</option>
+                    <option value="5">5 Person</option>
+                    <option value="6">6 Person</option>
+                    <option value="7">7 Person</option>
+                    <option value="8">8 Person</option>
+                </select>
+                
+            </div>
+                         <div class="map-legend" id="legend" style="display: none;">
+                 <div class="legend-title" id="legendTitle">Please select data type</div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #2ecc71;"></div>
+                    <span id="legendHigh"></span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #f39c12;"></div>
+                    <span id="legendMedium"></span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #e67e22;"></div>
+                    <span id="legendLow"></span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background-color: #e74c3c;"></div>
+                    <span id="legendVeryLow"></span>
+                </div>
+            </div>
+            <button id="exportMapBtn" class="map-export-btn" title="Download current map as image" disabled>
+                <span class="download-icon">⬇️</span>
+                <span>Download Map</span>
+            </button>
+            <div id="map"></div>
+        </div>
+        
+        <!-- County data panel -->
+        <div id="countyDataPanel" class="county-data-panel">
+            <div class="county-data-header">
+                <div class="county-data-title" id="countyDataTitle">County</div>
+                <button id="countyDataClose" class="county-data-close" aria-label="Close">✕</button>
+            </div>
+            <table class="county-data-table">
+                <tbody id="countyDataBody"></tbody>
+            </table>
+            <div class="county-data-actions">
+                <button id="countyDataDownload" class="btn-primary" title="Download this county's data">
+                    ⬇️ Download CSV
+                </button>
+            </div>
+        </div>
+        
+        <div class="chat-container">
+            <div class="chat-header">
+                🗺️ Appalachian Map Chatbot
+            </div>
+            
+            <div class="chat-messages" id="chatMessages">
+                <div class="message bot-message">
+                    <strong>Welcome!</strong><br>
+                    I can help you explore Appalachian counties. Try asking:<br>
+                    • "Show counties with unemployment > 8%"<br>
+                    • "List counties with GDP per capita > $55,000"<br>
+                    • "Find counties in Alabama"<br>
+                    • "What's the unemployment rate in Calhoun County?"
+                </div>
+            </div>
+            
+            <div class="chat-input">
+                <input type="text" id="chatInput" placeholder="Ask me about Appalachian counties..." />
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/topojson-client@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        // Initialize map with initial view on Appalachia
+        const map = L.map('map').setView([38.5, -83.0], 6);
+        window.__debug_map = map;
+        
+        // Add base layer with borders and labels - OpenStreetMap has clear border lines and city names
+        // Add tile layer with crossOrigin for leaflet-image support
+        const tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            crossOrigin: true,
+            maxZoom: 19
+        });
+        tileLayer.addTo(map);
+        window.__debug_tileLayer = tileLayer;
+        
+                 // Store map layers
+         let countiesLayer = null;
+         let currentData = null;
+         let countyDataMap = {};
+         let currentDataType = '';
+         let incomeLimitsMap = {};
+
+        // County data panel helpers
+        const countyPanelEl = document.getElementById('countyDataPanel');
+        const countyPanelTitleEl = document.getElementById('countyDataTitle');
+        const countyPanelBodyEl = document.getElementById('countyDataBody');
+        const countyPanelCloseEl = document.getElementById('countyDataClose');
+        const countyPanelDownloadEl = document.getElementById('countyDataDownload');
+
+        if (countyPanelCloseEl) {
+            countyPanelCloseEl.addEventListener('click', () => {
+                countyPanelEl.style.display = 'none';
+            });
+        }
+
+        // Helper function to format numbers with commas
+        function formatNumber(num) {
+            if (num === null || num === undefined) return null;
+            return num.toFixed(0).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        }
+
+        function showCountyDataPanel(fips) {
+            const county = countyDataMap[fips] || {};
+            const countyName = county.county || 'Unknown County';
+            const stateName = county.state || 'N/A';
+            
+            // Format values
+            const unemployment = county.unemployment_rate != null ? county.unemployment_rate.toFixed(1) : null;
+            const gdp = county.gdp_per_capita != null ? formatNumber(county.gdp_per_capita) : null;
+            
+            // Get income data
+            const incomeData = incomeLimitsMap[fips];
+            const incomeTypeSelector = document.getElementById('incomeType');
+            const currentIncomeType = incomeTypeSelector ? incomeTypeSelector.value : 'very_low';
+            let incomeLabel = 'Income Limit';
+            if (currentIncomeType === 'median') incomeLabel = 'Median Income';
+            else if (currentIncomeType === 'very_low') incomeLabel = 'Very Low Income Limit';
+            else if (currentIncomeType === 'extremely_low') incomeLabel = 'Extremely Low Income Limit';
+            else if (currentIncomeType === 'low') incomeLabel = 'Low Income Limit';
+            
+            const incomeValue = incomeData && incomeData.income_limit != null ? formatNumber(Number(incomeData.income_limit)) : null;
+
+            // Render table with only data fields (title has county and state already)
+            countyPanelTitleEl.textContent = `${countyName}, ${stateName}`;
+            countyPanelBodyEl.innerHTML = `
+                <tr><th>Unemployment Rate</th><td>${unemployment !== null ? unemployment + '%' : 'N/A'}</td></tr>
+                <tr><th>GDP per Capita</th><td>${gdp !== null ? '$' + gdp : 'N/A'}</td></tr>
+                <tr><th>${incomeLabel}</th><td>${incomeValue !== null ? '$' + incomeValue : 'N/A'}</td></tr>
+            `;
+
+            countyPanelEl.style.display = 'block';
+
+            // Prepare data for download - include all available fields
+            const downloadData = {
+                fips: fips,
+                county: countyName,
+                state: stateName
+            };
+            
+            if (unemployment !== null) {
+                downloadData.unemployment_rate = unemployment;
+            }
+            
+            if (gdp !== null) {
+                downloadData.gdp_per_capita = gdp;
+            }
+            
+            if (incomeValue !== null) {
+                downloadData.income_type = currentIncomeType;
+                downloadData.income_label = incomeLabel;
+                downloadData.income_limit = incomeValue;
+            }
+            
+            // Download handler
+            countyPanelDownloadEl.onclick = () => {
+                downloadCountyCSV(downloadData);
+            };
+        }
+
+        function downloadCountyCSV(data) {
+            // Format CSV with proper escaping and quoting
+            const headers = Object.keys(data);
+            const rows = [headers.join(',')];
+            
+            // Format values properly
+            const values = headers.map(header => {
+                let value = data[header];
+                if (value === null || value === undefined) {
+                    return '';
+                }
+                // Convert to string and escape if contains comma or quote
+                const strValue = String(value);
+                if (strValue.includes(',') || strValue.includes('"') || strValue.includes('\n')) {
+                    return '"' + strValue.replace(/"/g, '""') + '"';
+                }
+                return strValue;
+            });
+            
+            rows.push(values.join(','));
+            
+            const csv = rows.join('\n');
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            const countyName = data.county ? data.county.replace(/[^a-z0-9]+/gi,'_') : 'county';
+            a.download = `${data.fips}_${countyName}_data.csv`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+        
+                 // Show loading overlay
+         function showLoading() {
+             const loadingOverlay = document.getElementById('loadingOverlay');
+             if (loadingOverlay) {
+                 loadingOverlay.style.display = 'flex';
+             }
+         }
+         
+         // Hide loading overlay
+         function hideLoading() {
+             const loadingOverlay = document.getElementById('loadingOverlay');
+             if (loadingOverlay) {
+                 loadingOverlay.style.display = 'none';
+             }
+         }
+         
+         // Add message to chat
+         function addMessage(text, type = 'bot') {
+             const messagesContainer = document.getElementById('chatMessages');
+             const messageDiv = document.createElement('div');
+             messageDiv.className = `message ${type}-message`;
+             messageDiv.innerHTML = text;
+             messagesContainer.appendChild(messageDiv);
+             messagesContainer.scrollTop = messagesContainer.scrollHeight;
+         }
+        
+        // Create a simple Appalachian region outline as placeholder
+        function showAppalachianRegionPlaceholder() {
+            // Create a simple bounding box around Appalachian region
+            const appalachianBounds = [
+                [29.5, -90.0],  // Southwest
+                [45.0, -90.0],  // Northwest  
+                [45.0, -75.0],  // Northeast
+                [29.5, -75.0],  // Southeast
+                [29.5, -90.0]   // Close the polygon
+            ];
+            
+            // Create a simplified gray fill
+            const regionPolygon = L.polygon(appalachianBounds, {
+                fillColor: '#d3d3d3',
+                fillOpacity: 0.5,
+                color: '#999999',
+                weight: 2,
+                opacity: 0.8
+            }).addTo(map);
+            
+            // Add a label
+            const label = L.marker([38.5, -83.0], {
+                icon: L.divIcon({
+                    className: 'appalachian-label',
+                    html: '<div style="background: white; padding: 10px 20px; border-radius: 5px; font-size: 14px; font-weight: bold; color: #2c3e50; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">Appalachian Region<br><span style="font-size: 12px; font-weight: normal;">Select data type to view counties</span></div>',
+                    iconSize: [200, 50]
+                })
+            }).addTo(map);
+            
+            // Store placeholder for later removal
+            window.placeholderLayers = [regionPolygon, label];
+            
+            // Fit bounds to Appalachian region
+            map.fitBounds(regionPolygon.getBounds(), { padding: [50, 50], maxZoom: 6 });
+        }
+        
+        // Load TopoJSON (county shapes) - very fast, small file size
+        async function loadGeoJSON() {
+            try {
+                const startTime = performance.now();
+                
+                // Load TopoJSON (much smaller than GeoJSON - 630KB vs 30MB)
+                const topojsonResponse = await fetch('/api/counties/topojson');
+                const topojsonData = await topojsonResponse.json();
+                
+                // Convert TopoJSON to GeoJSON for Leaflet
+                const geojsonData = topojson.feature(topojsonData, topojsonData.objects.appalachia_snapshot);
+                
+                currentData = geojsonData;
+                
+                console.log('Loaded TopoJSON features:', geojsonData.features.length);
+                console.log('TopoJSON loaded in:', (performance.now() - startTime).toFixed(2), 'ms');
+                
+            } catch (error) {
+                console.error('Error loading TopoJSON:', error);
+                addMessage(`Error loading county shapes: ${error.message}`, 'error');
+            }
+        }
+        
+        // Load data for a specific type (unemployment, gdp, or income)
+        async function loadDataForType(dataType) {
+             try {
+                 if (dataType === 'income') {
+                     // Income data is already loaded when user selects options
+                     return;
+                 }
+                 
+                 const startTime = performance.now();
+                 
+                 // Load only the specific data type needed
+                 const summaryResponse = await fetch('/api/summary');
+                 const summaryData = await summaryResponse.json();
+                 
+                 // Create map of FIPS to data
+                 summaryData.forEach(county => {
+                     countyDataMap[county.fips] = county;
+                 });
+                 
+                 console.log(`Loaded ${dataType} data for ${summaryData.length} counties`);
+                 console.log('Data load time:', (performance.now() - startTime).toFixed(2), 'ms');
+                
+            } catch (error) {
+                console.error('Error loading data:', error);
+                addMessage(`Error loading ${dataType} data: ${error.message}`, 'error');
+            }
+        }
+        
+        // Get color based on data value
+        function getColorForValue(value, dataType) {
+            if (value === null || value === undefined) return '#cccccc';
+            
+            if (dataType === 'unemployment') {
+                // Lower unemployment is better (green), higher is worse (red)
+                if (value < 3) return '#2ecc71';      // Very low - green
+                if (value < 5) return '#f39c12';        // Low - yellow
+                if (value < 7) return '#e67e22';       // Medium - orange
+                return '#e74c3c';                      // High - red
+            } else if (dataType === 'gdp') {
+                // Higher GDP is better (green), lower is worse (red)
+                if (value > 65000) return '#2ecc71';   // High - green
+                if (value > 50000) return '#f39c12';   // Above Average - yellow
+                if (value > 40000) return '#e67e22';   // Average - orange
+                return '#e74c3c';                      // Below Average - red
+            } else if (dataType === 'income') {
+                // Different thresholds based on income type
+                const incomeTypeSelector = document.getElementById('incomeType');
+                const incomeType = incomeTypeSelector ? incomeTypeSelector.value : 'very_low';
+                
+                if (incomeType === 'median') {
+                    // Higher median income is better (green), lower is worse (red)
+                    if (value > 120000) return '#2ecc71';   // High - green
+                    if (value > 95000) return '#f39c12';    // Above Average - yellow
+                    if (value > 70000) return '#e67e22';    // Average - orange
+                    return '#e74c3c';                        // Below Average - red
+                } else {
+                    // Higher income limit is better (green), lower is worse (red)
+                    if (value > 45000) return '#2ecc71';     // High - green
+                    if (value > 35000) return '#f39c12';    // Above Average - yellow
+                    if (value > 25000) return '#e67e22';    // Average - orange
+                    return '#e74c3c';                        // Below Average - red
+                }
+            }
+            return '#3498db';
+        }
+        
+        // Get value for a county based on current data type
+        function getCountyValue(fips) {
+            if (currentDataType === 'income') {
+                const incomeData = incomeLimitsMap[fips];
+                return incomeData ? incomeData.income_limit : null;
+            }
+            
+            const county = countyDataMap[fips];
+            if (!county) return null;
+            
+            if (currentDataType === 'unemployment') {
+                return county.unemployment_rate;
+            } else if (currentDataType === 'gdp') {
+                return county.gdp_per_capita;
+            }
+            return null;
+        }
+        
+        // Display counties with neutral styling (base layer always visible)
+        function displayCountiesNeutral(data) {
+            if (countiesLayer) {
+                map.removeLayer(countiesLayer);
+            }
+            
+            countiesLayer = new L.FeatureGroup();
+            
+            data.features.forEach(feature => {
+                const props = feature.properties;
+                
+                // Create neutral gray styling
+                const layer = L.geoJSON(feature, {
+                    style: {
+                        color: '#888888',
+                        weight: 0.8,
+                        opacity: 0.7,
+                        fillColor: '#e0e0e0',
+                        fillOpacity: 0.5
+                    },
+                    onEachFeature: function(feature, layer) {
+                        const props = feature.properties;
+                        const county = countyDataMap[props.fips];
+                        
+                        // Get county name - try multiple possible property names
+                        const countyName = county ? county.county : (props.county || props.NAME || 'Unknown County');
+                        const stateName = county ? county.state : (props.state || props.STATEFP || 'N/A');
+                        
+                        const popupContent = `
+                            <div class="county-info">
+                                <div class="county-name">${countyName}</div>
+                                <div class="county-stats">
+                                    State: ${stateName}<br>
+                                    Select a data metric to view information
+                                </div>
+                            </div>
+                        `;
+                        
+                    // Tooltip with just county name and state when no metric is selected
+                    const tooltipText = `${countyName}, ${stateName}`;
+                    
+                    layer.bindTooltip(tooltipText, {
+                        permanent: false,
+                        direction: 'top',
+                        className: 'county-tooltip',
+                        interactive: true
+                    });
+                    // Show data panel on county click instead of popup
+                    layer.on('click', () => {
+                        const fips = layer.feature.properties.fips;
+                        showCountyDataPanel(fips);
+                    });
+                    }
+                });
+                
+                layer.eachLayer(l => countiesLayer.addLayer(l));
+            });
+            
+            countiesLayer.addTo(map);
+            window.__debug_countiesLayer = countiesLayer;
+            
+            // Fit bounds to show all Appalachian counties
+            if (countiesLayer) {
+                map.fitBounds(countiesLayer.getBounds(), { padding: [20, 20], maxZoom: 7 });
+            }
+        }
+        
+                 // Display counties on map (optimized for performance with chunked rendering)
+         function displayCounties(data) {
+             if (countiesLayer) {
+                 map.removeLayer(countiesLayer);
+             }
+             
+             // Pre-calculate styles for better performance
+             const defaultStyle = {
+                 color: '#888888',
+                 weight: 0.8,
+                 opacity: 0.7,
+                 fillColor: '#e0e0e0',
+                 fillOpacity: 0.5
+             };
+             
+             const styleCache = {};
+             
+             // Pre-compute all styles and popup content
+             const featuresWithData = data.features.map(feature => {
+                 const fips = feature.properties.fips;
+                 const value = getCountyValue(fips);
+                 
+                 // Pre-compute style
+                 if (value === null || value === undefined) {
+                     styleCache[fips] = defaultStyle;
+                 } else {
+                     const color = getColorForValue(value, currentDataType);
+                     styleCache[fips] = {
+                         color: '#2c3e50',
+                         weight: 1.5,
+                         opacity: 0.9,
+                         fillColor: color,
+                         fillOpacity: 0.75
+                     };
+                 }
+                 
+                 // Pre-compute popup and tooltip content
+                 const props = feature.properties;
+                 const county = countyDataMap[fips];
+                 
+                 // Get county name - try multiple possible property names
+                 const countyName = county ? county.county : (props.county || props.NAME || 'Unknown County');
+                 const stateName = county ? county.state : (props.state || props.STATEFP || 'N/A');
+                 
+                 let popupContent = `<div class="county-info"><div class="county-name">${countyName}</div><div class="county-stats">`;
+                 
+                // Create tooltip content with county name, state, and value
+                let tooltipText = `${countyName}, ${stateName}`;
+                
+                if (currentDataType === 'income') {
+                    const incomeData = incomeLimitsMap[fips];
+                    const incomeTypeSelector = document.getElementById('incomeType');
+                    const incomeType = incomeTypeSelector ? incomeTypeSelector.value : 'very_low';
+                    
+                    let label = 'Income Limit';
+                    if (incomeType === 'median') {
+                        label = 'Median Income';
+                    } else if (incomeType === 'very_low') {
+                        label = 'Very Low Income Limit';
+                    } else if (incomeType === 'extremely_low') {
+                        label = 'Extremely Low Income Limit';
+                    } else if (incomeType === 'low') {
+                        label = 'Low Income Limit';
+                    }
+                    
+                    const incomeFormatted = incomeData ? formatNumber(incomeData.income_limit) : 'N/A';
+                    popupContent += `${label}: ${incomeFormatted !== 'N/A' ? '$' + incomeFormatted : 'N/A'}<br>`;
+                    popupContent += `State: ${stateName}`;
+                    tooltipText += `<br>${label}: ${incomeFormatted !== 'N/A' ? '$' + incomeFormatted : 'N/A'}`;
+                } else if (county) {
+                    if (currentDataType === 'unemployment') {
+                        popupContent += `Unemployment Rate: ${county.unemployment_rate ? county.unemployment_rate.toFixed(1) + '%' : 'N/A'}<br>`;
+                        tooltipText += `<br>Unemployment Rate: ${county.unemployment_rate ? county.unemployment_rate.toFixed(1) + '%' : 'N/A'}`;
+                    } else if (currentDataType === 'gdp') {
+                        const gdpFormatted = county.gdp_per_capita ? formatNumber(county.gdp_per_capita) : 'N/A';
+                        popupContent += `GDP per Capita: ${gdpFormatted !== 'N/A' ? '$' + gdpFormatted : 'N/A'}<br>`;
+                        tooltipText += `<br>GDP per Capita: ${gdpFormatted !== 'N/A' ? '$' + gdpFormatted : 'N/A'}`;
+                    }
+                    popupContent += `State: ${stateName}`;
+                } else {
+                    popupContent += `State: ${stateName}`;
+                }
+                 
+                 popupContent += `</div></div>`;
+                 
+                 return { feature, popupContent, tooltipText };
+             });
+             
+             // Use chunked rendering for better performance
+             // Create a Canvas renderer for the counties (html2canvas can capture this)
+             const canvasRenderer = L.canvas({ padding: 1 });
+             countiesLayer = new L.FeatureGroup();
+             
+             // Render in chunks of 50 counties at a time to keep UI responsive
+             const chunkSize = 50;
+             let index = 0;
+             
+             function renderChunk() {
+                 const endIndex = Math.min(index + chunkSize, featuresWithData.length);
+                 
+                 for (let i = index; i < endIndex; i++) {
+                     const { feature, popupContent, tooltipText } = featuresWithData[i];
+                     const layer = L.geoJSON(feature, {
+                        style: styleCache[feature.properties.fips] || defaultStyle,
+                        renderer: canvasRenderer // Use Canvas renderer - html2canvas can capture this
+                     });
+                     layer.eachLayer(l => {
+                        l.bindTooltip(tooltipText, {
+                            permanent: false,
+                            direction: 'auto',
+                            className: 'county-tooltip',
+                            interactive: true
+                        });
+                        // Show data panel on county click
+                        l.on('click', () => {
+                            const fips = l.feature.properties.fips;
+                            showCountyDataPanel(fips);
+                        });
+                         countiesLayer.addLayer(l);
+                     });
+                 }
+                 
+                 index = endIndex;
+                 
+                 if (index < featuresWithData.length) {
+                     // Use setTimeout to yield to browser for smoother rendering
+                     setTimeout(renderChunk, 0);
+                 } else {
+                     // All chunks rendered, add to map and fit bounds
+                     countiesLayer.addTo(map);
+                     window.__debug_countiesLayer = countiesLayer;
+                     if (countiesLayer) {
+                         map.fitBounds(countiesLayer.getBounds(), { padding: [20, 20], maxZoom: 7 });
+                     }
+                     hideLoading();
+                 }
+             }
+             
+             // Start chunked rendering
+             renderChunk();
+         }
+        
+        // Update map colors based on current data type
+        function updateMapColors() {
+            if (!countiesLayer) return;
+            
+            countiesLayer.eachLayer(function(layer) {
+                const fips = layer.feature.properties.fips;
+                const value = getCountyValue(fips);
+                
+                // Style counties differently based on whether they have data
+                if (value === null || value === undefined || currentDataType === '') {
+                    layer.setStyle({
+                        fillColor: '#e0e0e0',
+                        fillOpacity: 0.5,
+                        color: '#888888',
+                        weight: 0.8,
+                        opacity: 0.7
+                    });
+                    return;
+                }
+                
+                const color = getColorForValue(value, currentDataType);
+                
+                layer.setStyle({
+                    fillColor: color,
+                    fillOpacity: 0.75,
+                    weight: 1.5,
+                    opacity: 0.9
+                });
+                
+                // Update popup content and tooltip
+                const props = layer.feature.properties;
+                const county = countyDataMap[fips];
+                
+                // Get county name and state - try multiple possible property names
+                const countyName = county ? county.county : (props.county || props.NAME || 'Unknown County');
+                const stateName = county ? county.state : (props.state || props.STATEFP || 'N/A');
+                
+                let popupContent = `
+                    <div class="county-info">
+                        <div class="county-name">${countyName}</div>
+                        <div class="county-stats">
+                `;
+                
+                let tooltipText = `${countyName}, ${stateName}`;
+                
+                if (currentDataType === 'income') {
+                    const incomeData = incomeLimitsMap[fips];
+                    const incomeTypeSelector = document.getElementById('incomeType');
+                    const incomeType = incomeTypeSelector ? incomeTypeSelector.value : 'very_low';
+                    
+                    let label = 'Income Limit';
+                    if (incomeType === 'median') {
+                        label = 'Median Income';
+                    } else if (incomeType === 'very_low') {
+                        label = 'Very Low Income Limit';
+                    } else if (incomeType === 'extremely_low') {
+                        label = 'Extremely Low Income Limit';
+                    } else if (incomeType === 'low') {
+                        label = 'Low Income Limit';
+                    }
+                    
+                    const incomeFormatted = incomeData ? formatNumber(incomeData.income_limit) : 'N/A';
+                    popupContent += `${label}: ${incomeFormatted !== 'N/A' ? '$' + incomeFormatted : 'N/A'}<br>`;
+                    popupContent += `State: ${stateName}`;
+                    tooltipText += `<br>${label}: ${incomeFormatted !== 'N/A' ? '$' + incomeFormatted : 'N/A'}`;
+                } else if (county) {
+                    if (currentDataType === 'unemployment') {
+                        popupContent += `Unemployment Rate: ${county.unemployment_rate ? county.unemployment_rate.toFixed(1) + '%' : 'N/A'}<br>`;
+                        tooltipText += `<br>Unemployment Rate: ${county.unemployment_rate ? county.unemployment_rate.toFixed(1) + '%' : 'N/A'}`;
+                    } else if (currentDataType === 'gdp') {
+                        const gdpFormatted = county.gdp_per_capita ? formatNumber(county.gdp_per_capita) : 'N/A';
+                        popupContent += `GDP per Capita: ${gdpFormatted !== 'N/A' ? '$' + gdpFormatted : 'N/A'}<br>`;
+                        tooltipText += `<br>GDP per Capita: ${gdpFormatted !== 'N/A' ? '$' + gdpFormatted : 'N/A'}`;
+                    }
+                    popupContent += `State: ${stateName}`;
+                } else {
+                    popupContent += `State: ${stateName}`;
+                }
+                
+                popupContent += `</div></div>`;
+                // Note: Popup removed - using county data panel instead on click
+                
+                // Update tooltip
+                layer.unbindTooltip();
+                layer.bindTooltip(tooltipText, {
+                    permanent: false,
+                    direction: 'top',
+                    className: 'county-tooltip',
+                    interactive: true
+                });
+                
+                // Show data panel on county click
+                layer.off('click'); // Remove previous click handlers
+                layer.on('click', () => {
+                    showCountyDataPanel(fips);
+                });
+            });
+        }
+        
+        // Highlight counties based on query results
+        function highlightCounties(countyFips) {
+            if (!countiesLayer) return;
+            
+            const highlightedBounds = L.latLngBounds([]);
+            let highlightedCount = 0;
+            
+            countiesLayer.eachLayer(function(layer) {
+                const fips = layer.feature.properties.fips;
+                if (countyFips.includes(fips)) {
+                    layer.setStyle({
+                        fillColor: '#e74c3c',
+                        fillOpacity: 0.7,
+                        weight: 2
+                    });
+                    // Add to bounds for zooming
+                    highlightedBounds.extend(layer.getBounds());
+                    highlightedCount++;
+                    
+                    // Add click event to zoom to this county
+                    layer.off('click'); // Remove previous click handlers
+                    layer.on('click', function() {
+                        zoomToCounty(layer);
+                    });
+                } else {
+                    layer.setStyle({
+                        fillColor: '#3498db',
+                        fillOpacity: 0.3,
+                        weight: 1
+                    });
+                }
+            });
+            
+            // Zoom to highlighted counties if any were found
+            if (highlightedCount > 0 && highlightedBounds.isValid()) {
+                map.fitBounds(highlightedBounds, { 
+                    padding: [50, 50],
+                    maxZoom: 10
+                });
+            }
+        }
+        
+        // Zoom to a specific county
+        function zoomToCounty(layer) {
+            const bounds = layer.getBounds();
+            if (bounds.isValid()) {
+                map.fitBounds(bounds, { 
+                    padding: [50, 50],
+                    maxZoom: 12
+                });
+            }
+        }
+        
+        // Zoom to a county by FIPS code
+        function zoomToCountyByFips(fips) {
+            if (!countiesLayer) return;
+            
+            countiesLayer.eachLayer(function(layer) {
+                if (layer.feature.properties.fips === fips) {
+                    zoomToCounty(layer);
+                    // Optionally highlight this county
+                    layer.setStyle({
+                        fillColor: '#ff6b35',
+                        fillOpacity: 0.9,
+                        weight: 3
+                    });
+                    // Reset style after 2 seconds
+                    setTimeout(() => {
+                        const value = getCountyValue(fips);
+                        if (value !== null && value !== undefined) {
+                            const color = getColorForValue(value, currentDataType);
+                            layer.setStyle({
+                                fillColor: color,
+                                fillOpacity: 0.75,
+                                weight: 1.5,
+                                opacity: 0.9
+                            });
+                        }
+                    }, 2000);
+                }
+            });
+        }
+        
+        // Process natural language query
+        async function processQuery(query) {
+            try {
+                const response = await fetch('/api/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+                
+                const result = await response.json();
+                
+                if (result.success) {
+                    addMessage(result.message, 'bot');
+                    if (result.counties && result.counties.length > 0) {
+                        // Store latest results for export
+                        latestChatbotResults = result;
+                        highlightCounties(result.counties.map(c => c.fips));
+                        
+                        // Create detailed results table with clickable rows
+                        let resultsHtml = '<strong>Results (click to zoom to county):</strong><br><table style="width:100%; font-size:0.9em; border-collapse: collapse;">';
+                        resultsHtml += '<tr style="background:#f8f9fa;"><th style="padding:5px; border:1px solid #ddd;">County</th><th style="padding:5px; border:1px solid #ddd;">State</th><th style="padding:5px; border:1px solid #ddd;">Unemployment</th><th style="padding:5px; border:1px solid #ddd;">GDP per Capita</th></tr>';
+                        
+                        result.counties.forEach(county => {
+                            const gdpFormatted = county.gdp_per_capita ? formatNumber(county.gdp_per_capita) : 'N/A';
+                            resultsHtml += `<tr class="county-row" data-fips="${county.fips}" style="cursor: pointer; background: #fff;" onmouseover="this.style.background='#e3f2fd';" onmouseout="this.style.background='#fff';">
+                                <td style="padding:5px; border:1px solid #ddd;">${county.county}</td>
+                                <td style="padding:5px; border:1px solid #ddd;">${county.state}</td>
+                                <td style="padding:5px; border:1px solid #ddd;">${county.unemployment_rate ? county.unemployment_rate.toFixed(1) + '%' : 'N/A'}</td>
+                                <td style="padding:5px; border:1px solid #ddd;">${gdpFormatted !== 'N/A' ? '$' + gdpFormatted : 'N/A'}</td>
+                            </tr>`;
+                        });
+                        resultsHtml += '</table>';
+                        
+                        // Add export controls
+                        resultsHtml += '<div class="table-export-section">';
+                        resultsHtml += '<label for="exportFormat" style="font-size: 13px; margin: 0;">Export format:</label>';
+                        resultsHtml += '<select id="exportFormat">';
+                        resultsHtml += '<option value="csv">CSV</option>';
+                        resultsHtml += '<option value="excel">Excel</option>';
+                        resultsHtml += '</select>';
+                        resultsHtml += `<button onclick="exportCurrentTable()" style="margin-left: 5px;">📊 Export Table</button>`;
+                        resultsHtml += '</div>';
+                        
+                        addMessage(resultsHtml, 'bot');
+                        
+                        // Add click handlers to table rows after they're added to DOM
+                        setTimeout(() => {
+                            document.querySelectorAll('.county-row').forEach(row => {
+                                row.addEventListener('click', function() {
+                                    const fips = this.dataset.fips;
+                                    zoomToCountyByFips(fips);
+                                });
+                            });
+                        }, 0);
+                    }
+                } else {
+                    addMessage(result.message, 'error');
+                }
+            } catch (error) {
+                console.error('Error processing query:', error);
+                addMessage('Sorry, I encountered an error processing your query.', 'error');
+            }
+        }
+        
+        // Handle chat input
+        document.getElementById('chatInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                const query = this.value.trim();
+                if (query) {
+                    addMessage(query, 'user');
+                    this.value = '';
+                    processQuery(query);
+                }
+            }
+        });
+        
+                 // Update legend based on current data type
+         function updateLegend() {
+             const legend = document.getElementById('legend');
+             const title = document.getElementById('legendTitle');
+             const high = document.getElementById('legendHigh');
+             const medium = document.getElementById('legendMedium');
+             const low = document.getElementById('legendLow');
+             const veryLow = document.getElementById('legendVeryLow');
+             
+             if (currentDataType === '') {
+                 // Hide legend when no data type is selected
+                 legend.style.display = 'none';
+                 return;
+             }
+             
+             // Show legend when data type is selected
+             legend.style.display = 'block';
+             
+             if (currentDataType === 'unemployment') {
+                title.textContent = 'Unemployment Rate';
+                high.textContent = 'Very Low (< 3%)';
+                medium.textContent = 'Low (3-5%)';
+                low.textContent = 'Medium (5-7%)';
+                veryLow.textContent = 'High (> 7%)';
+            } else if (currentDataType === 'gdp') {
+                title.textContent = 'GDP per Capita';
+                high.textContent = 'High (> $65,000)';
+                medium.textContent = 'Above Average ($50,000-65,000)';
+                low.textContent = 'Average ($40,000-50,000)';
+                veryLow.textContent = 'Below Average (< $40,000)';
+            } else if (currentDataType === 'income') {
+                const incomeTypeSelector = document.getElementById('incomeType');
+                const incomeType = incomeTypeSelector ? incomeTypeSelector.value : 'very_low';
+                
+                if (incomeType === 'median') {
+                    title.textContent = 'Median Income';
+                    high.textContent = 'High (> $120,000)';
+                    medium.textContent = 'Above Average ($95,000-120,000)';
+                    low.textContent = 'Average ($70,000-95,000)';
+                    veryLow.textContent = 'Below Average (< $70,000)';
+                } else {
+                    const typeLabel = incomeType === 'very_low' ? 'Very Low' : incomeType === 'extremely_low' ? 'Extremely Low' : 'Low';
+                    title.textContent = `${typeLabel} Income Limit`;
+                    high.textContent = 'High (> $45,000)';
+                    medium.textContent = 'Above Average ($35,000-45,000)';
+                    low.textContent = 'Average ($25,000-35,000)';
+                    veryLow.textContent = 'Below Average (< $25,000)';
+                }
+            }
+        }
+        
+        // Load income limits data
+        async function loadIncomeLimits(familySize = 1, incomeType = 'very_low') {
+            try {
+                const response = await fetch(`/api/income_limits?family_size=${familySize}&income_type=${incomeType}`);
+                const data = await response.json();
+                incomeLimitsMap = {};
+                data.forEach(item => {
+                    incomeLimitsMap[item.fips] = item;
+                });
+            } catch (error) {
+                console.error('Error loading income limits:', error);
+            }
+        }
+        
+                                   // Handle dropdown change
+          document.getElementById('dataType').addEventListener('change', async function(e) {
+              // Show loading indicator
+              if (e.target.value !== '') {
+                  showLoading();
+              }
+              
+              currentDataType = e.target.value;
+              
+              // Show/hide income type and family size selectors
+              const incomeTypeSelector = document.getElementById('incomeType');
+              const incomeTypeLabel = document.getElementById('incomeTypeLabel');
+              const familySizeSelector = document.getElementById('familySize');
+              const familySizeLabel = document.getElementById('familySizeLabel');
+              
+              if (currentDataType === 'income') {
+                  incomeTypeSelector.style.display = 'block';
+                  incomeTypeLabel.style.display = 'block';
+                  
+                  // Show/hide family size based on income type
+                  const incomeType = incomeTypeSelector.value;
+                  if (incomeType === 'median') {
+                      familySizeSelector.style.display = 'none';
+                      familySizeLabel.style.display = 'none';
+                      await loadIncomeLimits(1, 'median');
+                  } else {
+                      familySizeSelector.style.display = 'block';
+                      familySizeLabel.style.display = 'block';
+                      await loadIncomeLimits(parseInt(familySizeSelector.value), incomeType);
+                  }
+              } else {
+                  incomeTypeSelector.style.display = 'none';
+                  incomeTypeLabel.style.display = 'none';
+                  familySizeSelector.style.display = 'none';
+                  familySizeLabel.style.display = 'none';
+              }
+              
+                                                           updateLegend();
+              
+                                // Handle display based on selection
+                if (currentDataType === '') {
+                    // If "Choose data..." is selected, show counties with neutral styling
+                    if (currentData) {
+                        displayCountiesNeutral(currentData);
+                    } else {
+                        await loadGeoJSON();
+                        if (currentData) {
+                            displayCountiesNeutral(currentData);
+                        }
+                    }
+                    hideLoading();
+                } else {
+                    // Load data for the selected type if needed
+                    if (currentDataType === 'income') {
+                        // Income data is already loaded above
+                        if (currentData) {
+                            displayCounties(currentData);
+                        } else {
+                            await loadGeoJSON();
+                            if (currentData) {
+                                displayCounties(currentData);
+                            }
+                        }
+                    } else {
+                        // For unemployment/gdp, load data if needed
+                        if (!currentData) {
+                            await loadGeoJSON();
+                        }
+                        if (Object.keys(countyDataMap).length === 0) {
+                            await loadDataForType(currentDataType);
+                        }
+                        if (currentData) {
+                            displayCounties(currentData);
+                        }
+                    }
+                }
+           });
+        
+        // Handle income type change
+        document.getElementById('incomeType').addEventListener('change', async function(e) {
+            const incomeType = e.target.value;
+            const familySizeSelector = document.getElementById('familySize');
+            const familySizeLabel = document.getElementById('familySizeLabel');
+            
+            if (incomeType === 'median') {
+                familySizeSelector.style.display = 'none';
+                familySizeLabel.style.display = 'none';
+                await loadIncomeLimits(1, 'median');
+            } else {
+                familySizeSelector.style.display = 'block';
+                familySizeLabel.style.display = 'block';
+                await loadIncomeLimits(parseInt(familySizeSelector.value), incomeType);
+            }
+            
+            updateLegend();
+            if (countiesLayer) {
+                updateMapColors();
+            }
+        });
+        
+        // Handle family size change
+        document.getElementById('familySize').addEventListener('change', async function(e) {
+            const familySize = parseInt(e.target.value);
+            const incomeType = document.getElementById('incomeType').value;
+            await loadIncomeLimits(familySize, incomeType);
+            updateLegend();
+            if (countiesLayer) {
+                updateMapColors();
+            }
+        });
+        
+        // Initialize legend
+        updateLegend();
+        
+        // Store current table data for export
+        let currentTableData = [];
+        let latestChatbotResults = null; // Store latest chatbot results
+        
+        // Update table data when displaying counties
+        function updateTableData() {
+            if (!countiesLayer || !currentDataType) {
+                currentTableData = [];
+                document.getElementById('exportMapBtn').disabled = true;
+                return;
+            }
+            
+            // Enable map export button
+            document.getElementById('exportMapBtn').disabled = false;
+            
+            // Build table data from current county data
+            currentTableData = [];
+            countiesLayer.eachLayer(function(layer) {
+                const fips = layer.feature.properties.fips;
+                const props = layer.feature.properties;
+                const county = countyDataMap[fips];
+                
+                if (county) {
+                    const countyName = county.county || (props.county || props.NAME || 'Unknown County');
+                    const stateName = county.state || (props.state || props.STATEFP || 'N/A');
+                    
+                    let row = {
+                        county: countyName,
+                        state: stateName,
+                        fips: fips
+                    };
+                    
+                    if (currentDataType === 'unemployment') {
+                        row.unemployment_rate = county.unemployment_rate;
+                        row.gdp_per_capita = county.gdp_per_capita || '';
+                    } else if (currentDataType === 'gdp') {
+                        row.unemployment_rate = county.unemployment_rate || '';
+                        row.gdp_per_capita = county.gdp_per_capita;
+                    } else if (currentDataType === 'income') {
+                        const incomeData = incomeLimitsMap[fips];
+                        row.income_limit = incomeData ? incomeData.income_limit : '';
+                        const incomeType = document.getElementById('incomeType').value;
+                        row.income_type = incomeType === 'median' ? 'Median Income' : 
+                                         incomeType === 'very_low' ? 'Very Low' :
+                                         incomeType === 'extremely_low' ? 'Extremely Low' : 'Low';
+                        const familySize = document.getElementById('familySize').value;
+                        row.family_size = incomeType !== 'median' ? familySize : '';
+                    }
+                    
+                    currentTableData.push(row);
+                }
+            });
+        }
+        
+        // Helper functions for optimized map export
+        function hideUIForCapture() {
+            const hiddenElements = [];
+            
+            // Hide controls and export button, but keep legend visible
+            const elementsToHide = [
+                '.map-controls',           // Hide the dropdown controls
+                '.county-data-panel',      // Hide county data panel
+                '.map-export-btn'          // Hide the export button
+                // NOTE: Keep .map-legend visible for export
+            ];
+            
+            elementsToHide.forEach(selector => {
+                document.querySelectorAll(selector).forEach(el => {
+                    if (el.style.display !== 'none') {
+                        hiddenElements.push({ el, original: el.style.display });
+                        el.style.display = 'none';
+                    }
+                });
+            });
+            
+            return hiddenElements;
+        }
+        
+        function restoreUIAfterCapture(hiddenElements) {
+            hiddenElements.forEach(({ el, original }) => {
+                el.style.display = original;
+            });
+        }
+        
+        // Wait for all tiles to load
+        async function waitForTiles() {
+            return new Promise((resolve) => {
+                let loadCount = 0;
+                let maxWait = 5000; // Maximum wait time (5 seconds)
+                const startTime = Date.now();
+                
+                // Count tile layers
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.TileLayer) {
+                        loadCount++;
+                        // Listen for when tiles finish loading
+                        layer.once('load', () => {
+                            loadCount--;
+                            if (loadCount === 0) {
+                                resolve();
+                            }
+                        });
+                    }
+                });
+                
+                // If no tile layers or already loaded
+                if (loadCount === 0) {
+                    resolve();
+                    return;
+                }
+                
+                // Fallback timeout to prevent infinite waiting
+                const checkInterval = setInterval(() => {
+                    if (loadCount === 0 || Date.now() - startTime > maxWait) {
+                        clearInterval(checkInterval);
+                        resolve();
+                    }
+                }, 100);
+            });
+        }
+        
+        // Ensure tiles are loaded (alias for compatibility)
+        async function ensureTilesLoaded() {
+            return waitForTiles();
+        }
+        
+        // Optional: Mapbox Static Images API fallback (faster for large maps)
+        // To use: Set MAPBOX_ACCESS_TOKEN in your environment
+        async function getMapboxStaticImage() {
+            // Check if Mapbox token is available (would need to be passed from backend)
+            // This is a placeholder - would require backend support
+            const mapboxToken = ''; // Would get from server
+            
+            if (!mapboxToken) return null;
+            
+            try {
+                const bounds = map.getBounds();
+                const center = map.getCenter();
+                const zoom = map.getZoom();
+                const bbox = `${bounds.getWest()},${bounds.getSouth()},${bounds.getEast()},${bounds.getNorth()}`;
+                
+                // Mapbox Static Images API URL
+                const width = 1920;
+                const height = 1080;
+                const url = `https://api.mapbox.com/styles/v1/mapbox/streets-v12/static/${center.lat},${center.lng},${zoom}/${width}x${height}@2x?access_token=${mapboxToken}&padding=50`;
+                
+                // Fetch and convert to canvas
+                const response = await fetch(url);
+                const blob = await response.blob();
+                const img = new Image();
+                
+                return new Promise((resolve, reject) => {
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = width;
+                        canvas.height = height;
+                        const ctx = canvas.getContext('2d');
+                        ctx.drawImage(img, 0, 0);
+                        resolve(canvas);
+                    };
+                    img.onerror = reject;
+                    img.src = URL.createObjectURL(blob);
+                });
+            } catch (error) {
+                console.log('Mapbox not available, falling back to html2canvas');
+                return null;
+            }
+        }
+        
+document.getElementById('exportMapBtn').addEventListener('click', function() {
+            // Check if a data type is selected
+            const dataType = document.getElementById('dataType').value;
+            if (!dataType) {
+                alert('Please select a data type first to export the map.');
+                return;
+            }
+            
+            // Verify counties layer exists
+            if (!countiesLayer) {
+                alert('Map data is still loading. Please wait a moment and try again.');
+                return;
+            }
+            
+            // Generate filename based on data type
+            const incomeType = document.getElementById('incomeType');
+            let filename = 'appalachian_map_';
+            if (dataType === 'unemployment') filename += 'unemployment_rate';
+            else if (dataType === 'gdp') filename += 'gdp_per_capita';
+            else if (dataType === 'income' && incomeType) {
+                const it = incomeType.value;
+                if (it === 'median') filename += 'median_income';
+                else if (it === 'very_low') filename += 'very_low_income';
+                else if (it === 'extremely_low') filename += 'extremely_low_income';
+                else filename += 'low_income';
+            }
+            filename += '_' + new Date().getTime();
+            
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            loadingOverlay.style.display = 'flex';
+            loadingOverlay.querySelector('span').textContent = 'Preparing map for export...';
+            
+            async function exportMap() {
+                try {
+                    // Hide UI elements for export
+                    const controls = document.querySelector('.map-controls');
+                    const exportBtn = document.querySelector('.map-export-btn');
+                    const wasControlsVisible = controls ? controls.style.display !== 'none' : false;
+                    const wasBtnVisible = exportBtn ? exportBtn.style.display !== 'none' : false;
+                    
+                    if (controls) controls.style.display = 'none';
+                    if (exportBtn) exportBtn.style.display = 'none';
+                    
+                    console.log('Waiting for tiles and layers to load...');
+                    
+                    // Wait for tiles to finish loading with timeout
+                    await Promise.race([
+                        new Promise(resolve => tileLayer.once('load', () => {
+                            console.log('Tiles loaded');
+                            resolve();
+                        })),
+                        new Promise(resolve => setTimeout(() => {
+                            console.log('Tile load timeout, proceeding anyway');
+                            resolve();
+                        }, 3000))
+                    ]);
+                    
+                    // Wait for map to be idle with timeout
+                    await Promise.race([
+                        new Promise(resolve => map.once('idle', () => {
+                            console.log('Map idle');
+                            resolve();
+                        })),
+                        new Promise(resolve => setTimeout(() => {
+                            console.log('Idle timeout, proceeding anyway');
+                            resolve();
+                        }, 3000))
+                    ]);
+                    
+                    loadingOverlay.style.display = 'none';
+                    
+                    // Use html2canvas to capture as PNG image
+                    console.log('Starting html2canvas capture...');
+                    const mapContainer = document.querySelector('.map-container');
+                    
+                    // Debug: Check if SVG paths exist
+                    const svgCheck = document.querySelectorAll('#map svg path');
+                    console.log('SVG paths found in DOM before capture:', svgCheck.length);
+                    if (svgCheck.length > 0) {
+                        svgCheck.forEach((path, i) => {
+                            if (i < 3) {
+                                console.log('Path', i, '- fill:', path.getAttribute('fill'), 'stroke:', path.getAttribute('stroke'));
+                            }
+                        });
+                    } else {
+                        console.error('NO SVG PATHS FOUND! Counties are not rendered on the map.');
+                    }
+                    
+                    html2canvas(mapContainer, {
+                        useCORS: true,
+                        logging: true,
+                        scale: 2,
+                        allowTaint: true,
+                        backgroundColor: '#f8f9fa',
+                        imageTimeout: 15000,
+                        onclone: function(clonedDoc) {
+                            console.log('In onclone - processing SVG paths');
+                            // Get all SVG elements in the cloned document
+                            const svgElements = clonedDoc.querySelectorAll('#map svg');
+                            console.log('Found', svgElements.length, 'SVG elements');
+                            
+                            svgElements.forEach(svg => {
+                                // Make sure SVG is visible
+                                svg.style.display = 'block';
+                                svg.style.visibility = 'visible';
+                                svg.style.opacity = '1';
+                                
+                                // Process all paths in this SVG
+                                const paths = svg.querySelectorAll('path');
+                                paths.forEach(path => {
+                                    // Get fill from attribute
+                                    let fill = path.getAttribute('fill');
+                                    const stroke = path.getAttribute('stroke');
+                                    
+                                    // Set both attribute and inline style
+                                    if (fill && fill !== 'none' && fill !== 'transparent') {
+                                        path.setAttribute('fill', fill);
+                                        path.setAttribute('fill-opacity', '1');
+                                        path.style.fill = fill;
+                                        path.style.fillOpacity = '1';
+                                    }
+                                    
+                                    if (stroke) {
+                                        path.setAttribute('stroke', stroke);
+                                        path.setAttribute('stroke-opacity', '1');
+                                        path.style.stroke = stroke;
+                                        path.style.strokeOpacity = '1';
+                                    }
+                                    
+                                    path.style.visibility = 'visible';
+                                    path.style.display = 'inline';
+                                });
+                            });
+                            
+                            console.log('SVG processing complete');
+                        }
+                    }).then(canvas => {
+                        console.log('Capture complete:', canvas.width, 'x', canvas.height);
+                        
+                        canvas.toBlob(blob => {
+                            const url = URL.createObjectURL(blob);
+                            const link = document.createElement('a');
+                            link.download = filename + '.png';
+                            link.href = url;
+                            link.click();
+                            URL.revokeObjectURL(url);
+                            
+                            console.log('Image downloaded');
+                        }, 'image/png');
+                        
+                        // Restore UI
+                        setTimeout(() => {
+                            if (controls && wasControlsVisible) controls.style.display = '';
+                            if (exportBtn && wasBtnVisible) exportBtn.style.display = '';
+                        }, 500);
+                    }).catch(error => {
+                        console.error('html2canvas error:', error);
+                        alert('Failed to capture map: ' + error.message);
+                        loadingOverlay.style.display = 'none';
+                        if (controls && wasControlsVisible) controls.style.display = '';
+                        if (exportBtn && wasBtnVisible) exportBtn.style.display = '';
+                    });
+                    
+                } catch (error) {
+                    console.error('Export error:', error);
+                    alert('Failed to export map: ' + error.message);
+                    loadingOverlay.style.display = 'none';
+                }
+            }
+            
+            exportMap();
+        });
+        
+        // OLD EXPORT CODE - REMOVED
+        /*
+        document.getElementById('exportMapBtn').addEventListener('click', async function() {
+            const mapContainer = document.querySelector('.map-container');
+            
+            if (typeof html2canvas === 'undefined') {
+                alert('Export feature is loading. Please try again in a moment.');
+                return;
+            }
+            
+            // Check if a data type is selected
+            const dataType = document.getElementById('dataType').value;
+            if (!dataType) {
+                alert('Please select a data type first to export the map.');
+                return;
+            }
+            
+            // Verify counties layer exists
+            if (!countiesLayer) {
+                alert('Map data is still loading. Please wait a moment and try again.');
+                return;
+            }
+            
+            // Show initial loading message
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            let hiddenElements = [];
+            
+            loadingOverlay.style.display = 'flex';
+            loadingOverlay.querySelector('span').textContent = 'Exporting map...';
+            
+            try {
+                // Step 1: Wait for tiles to load
+                loadingOverlay.querySelector('span').textContent = 'Preparing...';
+                await waitForTiles();
+                console.log('Tiles loaded, starting capture...');
+                
+                // Step 2: Hide loading overlay before capturing
+                await new Promise(resolve => setTimeout(resolve, 100));
+                loadingOverlay.style.display = 'none';
+                
+                hiddenElements = hideUIForCapture();
+                
+                // Ensure legend is visible for export (in case it was hidden)
+                const legendEl = document.getElementById('legend');
+                if (legendEl) {
+                    legendEl.style.display = 'block';
+                    legendEl.style.visibility = 'visible';
+                }
+                
+                // TEMPORARILY switch to Canvas renderer for better html2canvas compatibility
+                if (countiesLayer) {
+                    console.log('Verifying counties are rendered...');
+                    
+                    // Check what's actually in the DOM
+                    const svgPaths = document.querySelectorAll('#map svg path');
+                    const canvases = document.querySelectorAll('#map canvas');
+                    console.log('SVG paths:', svgPaths.length);
+                    console.log('Canvas elements:', canvases.length);
+                    
+                    // Wait a bit for everything to render
+                    await new Promise(resolve => setTimeout(resolve, 1000));
+                }
+                
+                // Step 3: Add title showing the data type
+                let titleText = 'Appalachian Counties - Unemployment Rate';
+                if (dataType === 'gdp') titleText = 'Appalachian Counties - GDP per Capita';
+                else if (dataType === 'income') {
+                    const incomeType = document.getElementById('incomeType').value;
+                    if (incomeType === 'median') titleText = 'Appalachian Counties - Median Income';
+                    else if (incomeType === 'very_low') titleText = 'Appalachian Counties - Very Low Income Limits';
+                    else if (incomeType === 'extremely_low') titleText = 'Appalachian Counties - Extremely Low Income Limits';
+                    else titleText = 'Appalachian Counties - Low Income Limits';
+                }
+                
+                // Create title element if it doesn't exist
+                let titleEl = document.getElementById('map-export-title');
+                if (!titleEl) {
+                    titleEl = document.createElement('div');
+                    titleEl.id = 'map-export-title';
+                    titleEl.style.cssText = 'position: absolute; top: 16px; left: 16px; z-index: 2000; background: rgba(255, 255, 255, 0.95); padding: 12px 20px; border-radius: 8px; font-family: "Century Gothic", sans-serif; font-size: 18px; font-weight: 700; color: #0579b2; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); max-width: 50%;';
+                    mapContainer.appendChild(titleEl);
+                }
+                titleEl.textContent = titleText;
+                titleEl.style.display = 'block';
+                
+                // Small delay to ensure title and map are fully rendered (reduced from 500ms)
+                await new Promise(resolve => setTimeout(resolve, 200));
+                
+                // Force map to re-render to ensure tiles and counties are fully loaded
+                map.invalidateSize();
+                
+                // Ensure counties layer is properly rendered at ANY zoom level
+                if (countiesLayer) {
+                    // Ensure counties layer is on the map
+                    if (!map.hasLayer(countiesLayer)) {
+                        countiesLayer.addTo(map);
+                    }
+                    
+                    // Force all counties to be visible regardless of zoom
+                    countiesLayer.eachLayer(function(subLayer) {
+                        // Force redraw
+                        if (subLayer.redraw) {
+                            subLayer.redraw();
+                        }
+                        // Ensure the layer is visible at any zoom
+                        subLayer.options.interactive = true;
+                        if (subLayer.setOpacity) {
+                            subLayer.setOpacity(1);
+                        }
+                        // Force browser to render the layer
+                        if (subLayer.bringToFront) {
+                            subLayer.bringToFront();
+                        }
+                    });
+                    
+                    // Trigger a map update to ensure all layers render
+                    // Use proper Leaflet API instead of internal method
+                    map.fire('zoomend');
+                }
+                
+                // Additional delay to ensure SVG is fully rendered
+                await new Promise(resolve => setTimeout(resolve, 300));
+                
+                // Verify SVG paths exist in the DOM before capture
+                const svgPaths = document.querySelectorAll('#map path');
+                const svgElements = document.querySelectorAll('#map svg');
+                console.log('SVG paths in DOM before capture:', svgPaths.length);
+                console.log('SVG elements in DOM before capture:', svgElements.length);
+                
+                // Verify counties layer is on the map
+                if (countiesLayer) {
+                    console.log('Counties layer exists, layer count:', countiesLayer.getLayers().length);
+                } else {
+                    console.error('ERROR: Counties layer does not exist!');
+                    throw new Error('Map counties not loaded. Please wait for map to load and try again.');
+                }
+                
+                // Step 4: Capture the entire map container with all visible elements
+                console.log('Starting map capture...');
+                let url = null;
+                
+                // Try dom-to-image-more first (better SVG support) then fallback to html2canvas
+                try {
+                    // If dom-to-image library is missing, try loading it dynamically from unpkg
+                    if (typeof window.domtoimage === 'undefined') {
+                        console.warn('dom-to-image-more not found, loading from unpkg...');
+                        await new Promise((resolve, reject) => {
+                            const s = document.createElement('script');
+                            s.src = 'https://unpkg.com/dom-to-image-more@2.11.4/dist/dom-to-image-more.min.js';
+                            s.onload = resolve;
+                            s.onerror = reject;
+                            document.head.appendChild(s);
+                        });
+                    }
+
+                    console.log('Attempting capture with dom-to-image-more...');
+                    
+                    // Remove styles that might interfere with capture
+                    const currentTransform = mapContainer.style.transform;
+                    mapContainer.style.transform = 'none';
+                    
+                    url = await window.domtoimage.toPng(mapContainer, {
+                        quality: 1.0,
+                        bgcolor: '#f8f9fa',
+                        cacheBust: true,
+                        // Force SVG rendering
+                        filter: function(node) {
+                            // Don't filter anything - capture everything including SVG
+                            return true;
+                        }
+                    });
+                    
+                    // Restore transform
+                    mapContainer.style.transform = currentTransform;
+                    
+                    console.log('dom-to-image capture successful, URL length:', url.length);
+                    
+                    // Debug: Verify the captured image has content
+                    const img = new Image();
+                    img.onload = function() {
+                        console.log('Captured image dimensions:', img.width, 'x', img.height);
+                    };
+                    img.src = url;
+                    
+                } catch (domError) {
+                    console.error('dom-to-image failed, trying html2canvas:', domError);
+                    console.error('Error details:', domError.message, domError.stack);
+                    
+                    // Fallback to html2canvas
+                    try {
+                        // Simplified html2canvas options for better compatibility
+                        const html2canvasOptions = {
+                        backgroundColor: '#f8f9fa',
+                        useCORS: true,
+                        logging: true, // Enable logging to debug
+                        scale: 2,
+                        allowTaint: true, // Required for OpenStreetMap tiles with borders
+                        letterRendering: true,
+                        windowWidth: mapContainer.offsetWidth,
+                        windowHeight: mapContainer.offsetHeight,
+                        imageTimeout: 10000, // 10 second timeout for large maps
+                        foreignObjectRendering: false, // Force direct SVG rendering instead of foreignObject
+                        removeContainer: false, // Don't remove container during capture
+                        onclone: (clonedDoc) => {
+                            try {
+                                // Force visibility of all important elements
+                                const clonedTitle = clonedDoc.getElementById('map-export-title');
+                                if (clonedTitle) {
+                                    clonedTitle.style.display = 'block';
+                                    clonedTitle.style.visibility = 'visible';
+                                    clonedTitle.style.opacity = '1';
+                                }
+                                const clonedLegend = clonedDoc.getElementById('legend');
+                                if (clonedLegend) {
+                                    clonedLegend.style.display = 'block';
+                                    clonedLegend.style.visibility = 'visible';
+                                    clonedLegend.style.opacity = '1';
+                                }
+                                // Ensure map tiles with borders are visible in cloned document
+                                const clonedMap = clonedDoc.getElementById('map');
+                                if (clonedMap) {
+                                    clonedMap.style.visibility = 'visible';
+                                    clonedMap.style.opacity = '1';
+                                    
+                                    // Make sure all canvas and tile elements in Leaflet map are captured
+                                    const canvases = clonedMap.querySelectorAll('canvas');
+                                    console.log('Found ' + canvases.length + ' canvas elements to capture');
+                                    canvases.forEach(canvas => {
+                                        canvas.style.visibility = 'visible';
+                                        canvas.style.opacity = '1';
+                                        canvas.style.display = 'block';
+                                        // Ensure the canvas is painted - force a read of the image data
+                                        const ctx = canvas.getContext('2d');
+                                        if (ctx) {
+                                            const imageData = ctx.getImageData(0, 0, Math.min(100, canvas.width), Math.min(100, canvas.height));
+                                            // Just accessing this data forces the canvas to be painted
+                                        }
+                                    });
+                                    // Capture all tile images (the background map with borders)
+                                    const tileImages = clonedMap.querySelectorAll('img.leaflet-tile');
+                                    tileImages.forEach(img => {
+                                        img.style.visibility = 'visible';
+                                        img.style.opacity = '1';
+                                    });
+                                    // CRITICAL: Ensure all county polygon SVG paths are visible for capture
+                                    // Capture ALL paths including counties
+                                    const allPaths = clonedMap.querySelectorAll('path');
+                                    console.log('Found ' + (allPaths ? allPaths.length : 0) + ' paths to capture');
+                                    if (allPaths && allPaths.length > 0) {
+                                        allPaths.forEach(path => {
+                                            // Make ALL paths visible - including county fills and borders
+                                            path.style.visibility = 'visible';
+                                            path.style.opacity = '1';
+                                            path.style.display = 'inline';
+                                            
+                                            // Get fill from attribute or computed style
+                                            let fillColor = path.getAttribute('fill');
+                                            if (!fillColor || fillColor === 'none' || fillColor === 'transparent') {
+                                                const computedStyle = window.getComputedStyle(path);
+                                                fillColor = computedStyle.fill;
+                                            }
+                                            
+                                            // Force the path to have proper SVG attributes AND inline styles
+                                            if (fillColor && fillColor !== 'none' && fillColor !== 'transparent' && fillColor !== 'rgb(255, 255, 255)' && fillColor !== '#ffffff') {
+                                                path.setAttribute('fill', fillColor);
+                                                path.setAttribute('fill-opacity', '1');
+                                                // Also set as inline style for html2canvas
+                                                path.style.fill = fillColor;
+                                                path.style.fillOpacity = '1';
+                                                console.log('Set fill:', fillColor);
+                                            }
+                                            
+                                            // Get stroke from attribute
+                                            let strokeColor = path.getAttribute('stroke');
+                                            if (!strokeColor) {
+                                                const computedStyle = window.getComputedStyle(path);
+                                                strokeColor = computedStyle.stroke;
+                                            }
+                                            
+                                            if (strokeColor && strokeColor !== 'none') {
+                                                const strokeWidth = path.getAttribute('stroke-width') || '1.5';
+                                                path.setAttribute('stroke', strokeColor);
+                                                path.setAttribute('stroke-width', strokeWidth);
+                                                path.setAttribute('stroke-opacity', '1');
+                                                // Also set as inline style for html2canvas
+                                                path.style.stroke = strokeColor;
+                                                path.style.strokeWidth = strokeWidth;
+                                                path.style.strokeOpacity = '1';
+                                            }
+                                        });
+                                    }
+                                    
+                                    // Also capture any g (group) elements that might contain county paths
+                                    const groups = clonedMap.querySelectorAll('g');
+                                    if (groups && groups.length > 0) {
+                                        groups.forEach(g => {
+                                            g.style.visibility = 'visible';
+                                            g.style.opacity = '1';
+                                            g.style.display = 'block';
+                                        });
+                                    }
+                                    
+                                    // Ensure SVG elements are captured with proper styling
+                                    const svgElements = clonedMap.querySelectorAll('svg');
+                                    svgElements.forEach(svg => {
+                                        svg.style.visibility = 'visible';
+                                        svg.style.opacity = '1';
+                                        svg.style.display = 'block';
+                                        svg.style.position = 'absolute';
+                                        // Force SVG to be painted
+                                        svg.style.pointerEvents = 'none';
+                                    });
+                                    
+                                    console.log('Paths processed for capture');
+                                }
+                            } catch (cloneError) {
+                                console.error('Error in onclone:', cloneError);
+                            }
+                        }
+                    };
+                    
+                        console.log('Starting html2canvas capture with options:', Object.keys(html2canvasOptions));
+                        const canvas = await html2canvas(mapContainer, html2canvasOptions);
+                        console.log('html2canvas returned canvas:', canvas.width, 'x', canvas.height);
+                        url = canvas.toDataURL('image/png');
+                        console.log('html2canvas capture successful, URL length:', url.length);
+                        
+                        // Debug: Check if the canvas actually has content
+                        const ctx = canvas.getContext('2d');
+                        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                        const pixels = imageData.data;
+                        let coloredPixels = 0;
+                        for (let i = 3; i < pixels.length; i += 4) {
+                            if (pixels[i] > 0) coloredPixels++;
+                        }
+                        console.log('Canvas has', coloredPixels, 'non-transparent pixels');
+                    } catch (canvasError) {
+                        console.error('html2canvas failed with error:', canvasError);
+                        console.error('Error name:', canvasError.name);
+                        console.error('Error message:', canvasError.message);
+                        console.error('Error stack:', canvasError.stack);
+                        throw new Error('Failed to capture map image with html2canvas: ' + (canvasError.message || 'Unknown error'));
+                    }
+                }
+                
+                // Download the image (only if we got a valid URL)
+                if (url) {
+                    const link = document.createElement('a');
+                    const filename = 'appalachian_map_' + titleText.replace(/[^a-z0-9]/gi, '_').toLowerCase() + '_' + new Date().getTime() + '.png';
+                    link.download = filename;
+                    link.href = url;
+                    link.click();
+                }
+                
+                // Step 6: Clean up - hide title and restore UI
+                if (titleEl) titleEl.style.display = 'none';
+                restoreUIAfterCapture(hiddenElements);
+                
+            } catch (error) {
+                console.error('Map export error:', error);
+                console.error('Error details:', error.message, error.stack);
+                
+                // Clean up on error
+                loadingOverlay.style.display = 'none';
+                const titleEl = document.getElementById('map-export-title');
+                if (titleEl) titleEl.style.display = 'none';
+                // Restore UI if it exists
+                if (hiddenElements && hiddenElements.length > 0) {
+                    restoreUIAfterCapture(hiddenElements);
+                }
+                
+                // Provide more helpful error message
+                let errorMsg = 'Map export failed. ';
+                if (error.message) {
+                    errorMsg += 'Error: ' + error.message;
+            } else {
+                    errorMsg += 'Please try:\n' +
+                      '1. Refresh the page and try again\n' +
+                      '2. Try downloading with a different zoom level\n' +
+                      '3. Check browser console for details';
+                }
+                
+                alert(errorMsg);
+            }
+        });
+        */
+        
+        // Export current table data (called from chatbot results)
+        window.exportCurrentTable = async function() {
+            if (!latestChatbotResults || latestChatbotResults.counties.length === 0) {
+                alert('No data to export.');
+                return;
+            }
+            
+            const format = document.getElementById('exportFormat') ? document.getElementById('exportFormat').value : 'csv';
+            
+            try {
+                const response = await fetch('/api/export/table', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        data: latestChatbotResults.counties,
+                        format: format
+                    })
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const url = window.URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `appalachian_data_${new Date().getTime()}.${format === 'excel' ? 'xlsx' : 'csv'}`;
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                } else {
+                    alert('Error exporting data. Please try again.');
+                }
+            } catch (error) {
+                console.error('Export error:', error);
+                alert('Error exporting data. Please try again.');
+            }
+        };
+        
+        // Call updateTableData after displaying counties
+        const originalDisplayCounties = displayCounties;
+        displayCounties = function(data) {
+            originalDisplayCounties(data);
+            setTimeout(updateTableData, 1000); // Wait for rendering to complete
+        };
+        
+        // Load TopoJSON and display counties immediately on page load with neutral styling
+        (async function() {
+            await loadGeoJSON();
+            if (currentData) {
+                displayCountiesNeutral(currentData);
+            }
+        })();
+    </script>
+</body>
+</html>

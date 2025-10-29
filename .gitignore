@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+.venv/
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# IDE
+.cursor/
+.history/
+.cache/
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary files
+temp_*.txt
+
+# Large data directories - DO NOT COMMIT
+data_raw/
+data_clean/*.geojson
+data_clean/*.topojson
+data_clean/*.csv
+
