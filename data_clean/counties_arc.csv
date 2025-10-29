@@ -1,0 +1,426 @@
+fips,county,state,arc_flag
+01007,Bibb,Alabama,True
+01009,Blount,Alabama,True
+01015,Calhoun,Alabama,True
+01017,Chambers,Alabama,True
+01019,Cherokee,Alabama,True
+01021,Chilton,Alabama,True
+01027,Clay,Alabama,True
+01029,Cleburne,Alabama,True
+01033,Colbert,Alabama,True
+01037,Coosa,Alabama,True
+01043,Cullman,Alabama,True
+01049,De Kalb,Alabama,True
+01051,Elmore,Alabama,True
+01055,Etowah,Alabama,True
+01057,Fayette,Alabama,True
+01059,Franklin,Alabama,True
+01065,Hale,Alabama,True
+01071,Jackson,Alabama,True
+01073,Jefferson,Alabama,True
+01075,Lamar,Alabama,True
+01077,Lauderdale,Alabama,True
+01079,Lawrence,Alabama,True
+01083,Limestone,Alabama,True
+01087,Macon,Alabama,True
+01089,Madison,Alabama,True
+01093,Marion,Alabama,True
+01095,Marshall,Alabama,True
+01103,Morgan,Alabama,True
+01107,Pickens,Alabama,True
+01111,Randolph,Alabama,True
+01115,St. Clair,Alabama,True
+01117,Shelby,Alabama,True
+01121,Talladega,Alabama,True
+01123,Tallapoosa,Alabama,True
+01125,Tuscaloosa,Alabama,True
+01127,Walker,Alabama,True
+01133,Winston,Alabama,True
+13011,Banks,Georgia,True
+13013,Barrow,Georgia,True
+13015,Bartow,Georgia,True
+13045,Carroll,Georgia,True
+13047,Catoosa,Georgia,True
+13055,Chattooga,Georgia,True
+13057,Cherokee,Georgia,True
+13083,Dade,Georgia,True
+13085,Dawson,Georgia,True
+13097,Douglas,Georgia,True
+13105,Elbert,Georgia,True
+13111,Fannin,Georgia,True
+13115,Floyd,Georgia,True
+13117,Forsyth,Georgia,True
+13119,Franklin,Georgia,True
+13123,Gilmer,Georgia,True
+13129,Gordon,Georgia,True
+13135,Gwinnett,Georgia,True
+13137,Habersham,Georgia,True
+13139,Hall,Georgia,True
+13143,Haralson,Georgia,True
+13147,Hart,Georgia,True
+13149,Heard,Georgia,True
+13157,Jackson,Georgia,True
+13187,Lumpkin,Georgia,True
+13195,Madison,Georgia,True
+13213,Murray,Georgia,True
+13223,Paulding,Georgia,True
+13227,Pickens,Georgia,True
+13233,Polk,Georgia,True
+13241,Rabun,Georgia,True
+13257,Stephens,Georgia,True
+13281,Towns,Georgia,True
+13291,Union,Georgia,True
+13295,Walker,Georgia,True
+13311,White,Georgia,True
+13313,Whitfield,Georgia,True
+21001,Adair,Kentucky,True
+21011,Bath,Kentucky,True
+21013,Bell,Kentucky,True
+21019,Boyd,Kentucky,True
+21025,Breathitt,Kentucky,True
+21043,Carter,Kentucky,True
+21045,Casey,Kentucky,True
+21049,Clark,Kentucky,True
+21051,Clay,Kentucky,True
+21053,Clinton,Kentucky,True
+21057,Cumberland,Kentucky,True
+21061,Edmonson,Kentucky,True
+21063,Elliott,Kentucky,True
+21065,Estill,Kentucky,True
+21069,Fleming,Kentucky,True
+21071,Floyd,Kentucky,True
+21079,Garrard,Kentucky,True
+21087,Green,Kentucky,True
+21089,Greenup,Kentucky,True
+21095,Harlan,Kentucky,True
+21099,Hart,Kentucky,True
+21109,Jackson,Kentucky,True
+21115,Johnson,Kentucky,True
+21119,Knott,Kentucky,True
+21121,Knox,Kentucky,True
+21125,Laurel,Kentucky,True
+21127,Lawrence,Kentucky,True
+21129,Lee,Kentucky,True
+21131,Leslie,Kentucky,True
+21133,Letcher,Kentucky,True
+21135,Lewis,Kentucky,True
+21137,Lincoln,Kentucky,True
+21147,McCreary,Kentucky,True
+21151,Madison,Kentucky,True
+21153,Magoffin,Kentucky,True
+21159,Martin,Kentucky,True
+21165,Menifee,Kentucky,True
+21169,Metcalfe,Kentucky,True
+21171,Monroe,Kentucky,True
+21173,Montgomery,Kentucky,True
+21175,Morgan,Kentucky,True
+21181,Nicholas,Kentucky,True
+21189,Owsley,Kentucky,True
+21193,Perry,Kentucky,True
+21195,Pike,Kentucky,True
+21197,Powell,Kentucky,True
+21199,Pulaski,Kentucky,True
+21201,Robertson,Kentucky,True
+21203,Rockcastle,Kentucky,True
+21205,Rowan,Kentucky,True
+21207,Russell,Kentucky,True
+21231,Wayne,Kentucky,True
+21235,Whitley,Kentucky,True
+21237,Wolfe,Kentucky,True
+24001,Allegany,Maryland,True
+24023,Garrett,Maryland,True
+24043,Washington,Maryland,True
+28003,Alcorn,Mississippi,True
+28009,Benton,Mississippi,True
+28013,Calhoun,Mississippi,True
+28017,Chickasaw,Mississippi,True
+28019,Choctaw,Mississippi,True
+28025,Clay,Mississippi,True
+28057,Itawamba,Mississippi,True
+28069,Kemper,Mississippi,True
+28081,Lee,Mississippi,True
+28087,Lowndes,Mississippi,True
+28093,Marshall,Mississippi,True
+28095,Monroe,Mississippi,True
+28097,Montgomery,Mississippi,True
+28103,Noxubee,Mississippi,True
+28105,Oktibbeha,Mississippi,True
+28107,Panola,Mississippi,True
+28115,Pontotoc,Mississippi,True
+28117,Prentiss,Mississippi,True
+28139,Tippah,Mississippi,True
+28141,Tishomingo,Mississippi,True
+28145,Union,Mississippi,True
+28155,Webster,Mississippi,True
+28159,Winston,Mississippi,True
+28161,Yalobusha,Mississippi,True
+36003,Allegany,New York,True
+36007,Broome,New York,True
+36009,Cattaraugus,New York,True
+36013,Chautauqua,New York,True
+36015,Chemung,New York,True
+36017,Chenango,New York,True
+36023,Cortland,New York,True
+36025,Delaware,New York,True
+36077,Otsego,New York,True
+36095,Schoharie*,New York,True
+36097,Schuyler,New York,True
+36101,Steuben,New York,True
+36107,Tioga,New York,True
+36109,Tompkins,New York,True
+37003,Alexander,North Carolina,True
+37005,Alleghany,North Carolina,True
+37009,Ashe,North Carolina,True
+37011,Avery,North Carolina,True
+37021,Buncombe,North Carolina,True
+37023,Burke,North Carolina,True
+37027,Caldwell,North Carolina,True
+37035,Catawba,North Carolina,True
+37039,Cherokee,North Carolina,True
+37043,Clay,North Carolina,True
+37045,Cleveland,North Carolina,True
+37059,Davie,North Carolina,True
+37067,Forsyth,North Carolina,True
+37075,Graham,North Carolina,True
+37087,Haywood,North Carolina,True
+37089,Henderson,North Carolina,True
+37099,Jackson,North Carolina,True
+37111,McDowell,North Carolina,True
+37113,Macon,North Carolina,True
+37115,Madison,North Carolina,True
+37121,Mitchell,North Carolina,True
+37149,Polk,North Carolina,True
+37161,Rutherford,North Carolina,True
+37169,Stokes,North Carolina,True
+37171,Surry,North Carolina,True
+37173,Swain,North Carolina,True
+37175,Transylvania,North Carolina,True
+37189,Watauga,North Carolina,True
+37193,Wilkes,North Carolina,True
+37197,Yadkin,North Carolina,True
+37199,Yancey,North Carolina,True
+39001,Adams,Ohio,True
+39007,Ashtabula,Ohio,True
+39009,Athens,Ohio,True
+39013,Belmont,Ohio,True
+39015,Brown,Ohio,True
+39019,Carroll,Ohio,True
+39025,Clermont,Ohio,True
+39029,Columbiana,Ohio,True
+39031,Coshocton,Ohio,True
+39053,Gallia,Ohio,True
+39059,Guernsey,Ohio,True
+39067,Harrison,Ohio,True
+39071,Highland,Ohio,True
+39073,Hocking,Ohio,True
+39075,Holmes,Ohio,True
+39079,Jackson,Ohio,True
+39081,Jefferson,Ohio,True
+39087,Lawrence,Ohio,True
+39099,Mahoning,Ohio,True
+39105,Meigs,Ohio,True
+39111,Monroe,Ohio,True
+39115,Morgan,Ohio,True
+39119,Muskingum,Ohio,True
+39121,Noble,Ohio,True
+39127,Perry,Ohio,True
+39131,Pike,Ohio,True
+39141,Ross,Ohio,True
+39145,Scioto,Ohio,True
+39155,Trumbull,Ohio,True
+39157,Tuscarawas,Ohio,True
+39163,Vinton,Ohio,True
+39167,Washington,Ohio,True
+42003,Allegheny,Pennsylvania,True
+42005,Armstrong,Pennsylvania,True
+42007,Beaver,Pennsylvania,True
+42009,Bedford,Pennsylvania,True
+42013,Blair,Pennsylvania,True
+42015,Bradford,Pennsylvania,True
+42019,Butler,Pennsylvania,True
+42021,Cambria,Pennsylvania,True
+42023,Cameron,Pennsylvania,True
+42025,Carbon,Pennsylvania,True
+42027,Centre,Pennsylvania,True
+42031,Clarion,Pennsylvania,True
+42033,Clearfield,Pennsylvania,True
+42035,Clinton,Pennsylvania,True
+42037,Columbia,Pennsylvania,True
+42039,Crawford,Pennsylvania,True
+42047,Elk,Pennsylvania,True
+42049,Erie,Pennsylvania,True
+42051,Fayette,Pennsylvania,True
+42053,Forest,Pennsylvania,True
+42057,Fulton,Pennsylvania,True
+42059,Greene,Pennsylvania,True
+42061,Huntingdon,Pennsylvania,True
+42063,Indiana,Pennsylvania,True
+42065,Jefferson,Pennsylvania,True
+42067,Juniata,Pennsylvania,True
+42069,Lackawanna,Pennsylvania,True
+42073,Lawrence,Pennsylvania,True
+42079,Luzerne,Pennsylvania,True
+42081,Lycoming,Pennsylvania,True
+42083,McKean,Pennsylvania,True
+42085,Mercer,Pennsylvania,True
+42087,Mifflin,Pennsylvania,True
+42089,Monroe,Pennsylvania,True
+42093,Montour,Pennsylvania,True
+42097,Northumberland,Pennsylvania,True
+42099,Perry,Pennsylvania,True
+42103,Pike,Pennsylvania,True
+42105,Potter,Pennsylvania,True
+42107,Schuylkill,Pennsylvania,True
+42109,Snyder,Pennsylvania,True
+42111,Somerset,Pennsylvania,True
+42113,Sullivan,Pennsylvania,True
+42115,Susquehanna,Pennsylvania,True
+42117,Tioga,Pennsylvania,True
+42119,Union,Pennsylvania,True
+42121,Venango,Pennsylvania,True
+42123,Warren,Pennsylvania,True
+42125,Washington,Pennsylvania,True
+42127,Wayne,Pennsylvania,True
+42129,Westmoreland,Pennsylvania,True
+42131,Wyoming,Pennsylvania,True
+45007,Anderson,South Carolina,True
+45021,Cherokee,South Carolina,True
+45045,Greenville,South Carolina,True
+45073,Oconee,South Carolina,True
+45077,Pickens,South Carolina,True
+45083,Spartanburg,South Carolina,True
+45087,Union,South Carolina,True
+47001,Anderson,Tennessee,True
+47007,Bledsoe,Tennessee,True
+47009,Blount,Tennessee,True
+47011,Bradley,Tennessee,True
+47013,Campbell,Tennessee,True
+47015,Cannon,Tennessee,True
+47019,Carter,Tennessee,True
+47025,Claiborne,Tennessee,True
+47027,Clay,Tennessee,True
+47029,Cocke,Tennessee,True
+47031,Coffee,Tennessee,True
+47035,Cumberland,Tennessee,True
+47041,De Kalb,Tennessee,True
+47049,Fentress,Tennessee,True
+47051,Franklin,Tennessee,True
+47057,Grainger,Tennessee,True
+47059,Greene,Tennessee,True
+47061,Grundy,Tennessee,True
+47063,Hamblen,Tennessee,True
+47065,Hamilton,Tennessee,True
+47067,Hancock,Tennessee,True
+47073,Hawkins,Tennessee,True
+47087,Jackson,Tennessee,True
+47089,Jefferson,Tennessee,True
+47091,Johnson,Tennessee,True
+47093,Knox,Tennessee,True
+47099,Lawrence,Tennessee,True
+47101,Lewis,Tennessee,True
+47105,Loudon,Tennessee,True
+47107,McMinn,Tennessee,True
+47111,Macon,Tennessee,True
+47115,Marion,Tennessee,True
+47121,Meigs,Tennessee,True
+47123,Monroe,Tennessee,True
+47129,Morgan,Tennessee,True
+47133,Overton,Tennessee,True
+47137,Pickett,Tennessee,True
+47139,Polk,Tennessee,True
+47141,Putnam,Tennessee,True
+47143,Rhea,Tennessee,True
+47145,Roane,Tennessee,True
+47151,Scott,Tennessee,True
+47153,Sequatchie,Tennessee,True
+47155,Sevier,Tennessee,True
+47159,Smith,Tennessee,True
+47163,Sullivan,Tennessee,True
+47171,Unicoi,Tennessee,True
+47173,Union,Tennessee,True
+47175,Van Buren,Tennessee,True
+47177,Warren,Tennessee,True
+47179,Washington,Tennessee,True
+47185,White,Tennessee,True
+51005,Alleghany + Covington city,Virginia,True
+51017,Bath,Virginia,True
+51021,Bland,Virginia,True
+51023,Botetourt,Virginia,True
+51027,Buchanan,Virginia,True
+51035,Carroll + Galax city,Virginia,True
+51045,Craig,Virginia,True
+51051,Dickenson,Virginia,True
+51063,Floyd,Virginia,True
+51071,Giles,Virginia,True
+51077,Grayson,Virginia,True
+51089,Henry + Martinsville city,Virginia,True
+51091,Highland,Virginia,True
+51105,Lee,Virginia,True
+51121,Montgomery + Radford city,Virginia,True
+51141,Patrick,Virginia,True
+51155,Pulaski,Virginia,True
+51163,Rockbridge + Buena Vista city + Lexington city,Virginia,True
+51167,Russell,Virginia,True
+51169,Scott,Virginia,True
+51173,Smyth,Virginia,True
+51185,Tazewell,Virginia,True
+51191,Washington + Bristol city,Virginia,True
+51195,Wise + Norton city,Virginia,True
+51197,Wythe,Virginia,True
+54001,Barbour,West Virginia,True
+54003,Berkeley,West Virginia,True
+54005,Boone,West Virginia,True
+54007,Braxton,West Virginia,True
+54009,Brooke,West Virginia,True
+54011,Cabell,West Virginia,True
+54013,Calhoun,West Virginia,True
+54015,Clay,West Virginia,True
+54017,Doddridge,West Virginia,True
+54019,Fayette,West Virginia,True
+54021,Gilmer,West Virginia,True
+54023,Grant,West Virginia,True
+54025,Greenbrier,West Virginia,True
+54027,Hampshire,West Virginia,True
+54029,Hancock,West Virginia,True
+54031,Hardy,West Virginia,True
+54033,Harrison,West Virginia,True
+54035,Jackson,West Virginia,True
+54037,Jefferson,West Virginia,True
+54039,Kanawha,West Virginia,True
+54041,Lewis,West Virginia,True
+54043,Lincoln,West Virginia,True
+54045,Logan,West Virginia,True
+54047,McDowell,West Virginia,True
+54049,Marion,West Virginia,True
+54051,Marshall,West Virginia,True
+54053,Mason,West Virginia,True
+54055,Mercer,West Virginia,True
+54057,Mineral,West Virginia,True
+54059,Mingo,West Virginia,True
+54061,Monongalia,West Virginia,True
+54063,Monroe,West Virginia,True
+54065,Morgan,West Virginia,True
+54067,Nicholas,West Virginia,True
+54069,Ohio,West Virginia,True
+54071,Pendleton,West Virginia,True
+54073,Pleasants,West Virginia,True
+54075,Pocahontas,West Virginia,True
+54077,Preston,West Virginia,True
+54079,Putnam,West Virginia,True
+54081,Raleigh,West Virginia,True
+54083,Randolph,West Virginia,True
+54085,Ritchie,West Virginia,True
+54087,Roane,West Virginia,True
+54089,Summers,West Virginia,True
+54091,Taylor,West Virginia,True
+54093,Tucker,West Virginia,True
+54095,Tyler,West Virginia,True
+54097,Upshur,West Virginia,True
+54099,Wayne,West Virginia,True
+54101,Webster,West Virginia,True
+54103,Wetzel,West Virginia,True
+54105,Wirt,West Virginia,True
+54107,Wood,West Virginia,True
+54109,Wyoming,West Virginia,True
+00nan,,,True
+"* Schoharie County in New York is covered by two regional commissions but may only receive assistance from one commission in a given fiscal year. Schoharie County has elected not to be eligible for ARC assistance in FY 2026. If your proposed project includes Schoharie County, please coordinate with New York?s State Program Manager to discuss this matter further.",,,True

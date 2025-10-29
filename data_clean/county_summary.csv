@@ -1,0 +1,426 @@
+fips,county,state,arc_flag,unemployment_rate,gdp_per_capita,median_income
+01007,Bibb,Alabama,True,3.0,39835.0,95900.0
+01009,Blount,Alabama,True,2.7,45021.0,95900.0
+01015,Calhoun,Alabama,True,3.2,49037.0,74000.0
+01017,Chambers,Alabama,True,2.8,40735.0,68400.0
+01019,Cherokee,Alabama,True,3.1,45099.0,71700.0
+01021,Chilton,Alabama,True,2.8,46120.0,80100.0
+01027,Clay,Alabama,True,3.0,46032.0,66700.0
+01029,Cleburne,Alabama,True,2.8,51355.0,82900.0
+01033,Colbert,Alabama,True,3.3,47137.0,82400.0
+01037,Coosa,Alabama,True,3.3,40420.0,73900.0
+01043,Cullman,Alabama,True,2.7,50812.0,83500.0
+01049,De Kalb,Alabama,True,2.7,,59700.0
+01051,Elmore,Alabama,True,2.6,51950.0,83600.0
+01055,Etowah,Alabama,True,3.3,45062.0,70600.0
+01057,Fayette,Alabama,True,3.4,42346.0,77700.0
+01059,Franklin,Alabama,True,2.9,42944.0,71300.0
+01065,Hale,Alabama,True,4.3,46181.0,91100.0
+01071,Jackson,Alabama,True,3.5,49638.0,68100.0
+01073,Jefferson,Alabama,True,3.1,43046.0,95900.0
+01075,Lamar,Alabama,True,3.4,41514.0,64800.0
+01077,Lauderdale,Alabama,True,3.2,47168.0,82400.0
+01079,Lawrence,Alabama,True,2.7,43536.0,95200.0
+01083,Limestone,Alabama,True,2.5,57194.0,115500.0
+01087,Macon,Alabama,True,4.4,41172.0,58900.0
+01089,Madison,Alabama,True,2.6,42673.0,115500.0
+01093,Marion,Alabama,True,3.5,39163.0,72200.0
+01095,Marshall,Alabama,True,2.7,48602.0,85100.0
+01103,Morgan,Alabama,True,2.6,49630.0,95200.0
+01107,Pickens,Alabama,True,3.9,42292.0,66500.0
+01111,Randolph,Alabama,True,3.6,42104.0,73500.0
+01115,St. Clair,Alabama,True,2.6,50493.0,95900.0
+01117,Shelby,Alabama,True,2.4,71565.0,95900.0
+01121,Talladega,Alabama,True,3.4,43284.0,73600.0
+01123,Tallapoosa,Alabama,True,3.4,51662.0,76100.0
+01125,Tuscaloosa,Alabama,True,3.1,44456.0,91100.0
+01127,Walker,Alabama,True,3.1,51485.0,77900.0
+01133,Winston,Alabama,True,3.3,44873.0,69800.0
+13011,Banks,Georgia,True,3.0,43896.0,90700.0
+13013,Barrow,Georgia,True,3.0,50221.0,114200.0
+13015,Bartow,Georgia,True,3.3,51396.0,114200.0
+13045,Carroll,Georgia,True,3.4,53144.0,114200.0
+13047,Catoosa,Georgia,True,3.0,45791.0,95600.0
+13055,Chattooga,Georgia,True,4.6,38269.0,61200.0
+13057,Cherokee,Georgia,True,2.9,71255.0,114200.0
+13083,Dade,Georgia,True,3.3,43769.0,95600.0
+13085,Dawson,Georgia,True,2.8,63599.0,114200.0
+13097,Douglas,Georgia,True,3.8,71677.0,114200.0
+13105,Elbert,Georgia,True,3.9,44067.0,72600.0
+13111,Fannin,Georgia,True,3.4,54467.0,70600.0
+13115,Floyd,Georgia,True,3.5,66690.0,80200.0
+13117,Forsyth,Georgia,True,2.8,84447.0,114200.0
+13119,Franklin,Georgia,True,3.7,57550.0,72100.0
+13123,Gilmer,Georgia,True,3.0,47155.0,88300.0
+13129,Gordon,Georgia,True,3.4,45960.0,82000.0
+13135,Gwinnett,Georgia,True,3.2,54331.0,114200.0
+13137,Habersham,Georgia,True,3.2,40806.0,85000.0
+13139,Hall,Georgia,True,2.8,60036.0,102700.0
+13143,Haralson,Georgia,True,3.2,46887.0,88400.0
+13147,Hart,Georgia,True,3.7,46368.0,80400.0
+13149,Heard,Georgia,True,3.6,41968.0,114200.0
+13157,Jackson,Georgia,True,2.9,51461.0,103700.0
+13187,Lumpkin,Georgia,True,3.4,49173.0,94400.0
+13195,Madison,Georgia,True,3.3,48479.0,94300.0
+13213,Murray,Georgia,True,4.0,38846.0,81400.0
+13223,Paulding,Georgia,True,3.3,50181.0,114200.0
+13227,Pickens,Georgia,True,2.9,63367.0,114200.0
+13233,Polk,Georgia,True,3.7,41831.0,73900.0
+13241,Rabun,Georgia,True,3.3,54148.0,83600.0
+13257,Stephens,Georgia,True,4.1,46093.0,77300.0
+13281,Towns,Georgia,True,3.5,51955.0,80000.0
+13291,Union,Georgia,True,3.8,51681.0,90700.0
+13295,Walker,Georgia,True,3.1,44195.0,95600.0
+13311,White,Georgia,True,3.0,61640.0,92700.0
+13313,Whitfield,Georgia,True,4.1,47955.0,83100.0
+21001,Adair,Kentucky,True,5.4,43430.0,69800.0
+21011,Bath,Kentucky,True,6.9,40141.0,75100.0
+21013,Bell,Kentucky,True,6.9,42353.0,50000.0
+21019,Boyd,Kentucky,True,6.2,49074.0,78600.0
+21025,Breathitt,Kentucky,True,7.7,42633.0,59400.0
+21043,Carter,Kentucky,True,8.3,40853.0,70000.0
+21045,Casey,Kentucky,True,5.4,42262.0,56700.0
+21049,Clark,Kentucky,True,4.7,51148.0,102400.0
+21051,Clay,Kentucky,True,7.2,40899.0,49100.0
+21053,Clinton,Kentucky,True,5.8,44343.0,59200.0
+21057,Cumberland,Kentucky,True,5.1,54202.0,59000.0
+21061,Edmonson,Kentucky,True,5.8,41551.0,82900.0
+21063,Elliott,Kentucky,True,9.0,29689.0,53000.0
+21065,Estill,Kentucky,True,6.3,42324.0,64000.0
+21069,Fleming,Kentucky,True,6.1,42128.0,68100.0
+21071,Floyd,Kentucky,True,7.1,45540.0,61300.0
+21079,Garrard,Kentucky,True,4.9,46035.0,76200.0
+21087,Green,Kentucky,True,5.8,43751.0,61300.0
+21089,Greenup,Kentucky,True,7.0,50917.0,78600.0
+21095,Harlan,Kentucky,True,7.2,40111.0,55500.0
+21099,Hart,Kentucky,True,5.3,44753.0,69000.0
+21109,Jackson,Kentucky,True,7.7,39236.0,57800.0
+21115,Johnson,Kentucky,True,7.3,41188.0,62700.0
+21119,Knott,Kentucky,True,7.6,44273.0,50800.0
+21121,Knox,Kentucky,True,7.1,39065.0,46900.0
+21125,Laurel,Kentucky,True,6.2,42337.0,72500.0
+21127,Lawrence,Kentucky,True,8.1,41198.0,68900.0
+21129,Lee,Kentucky,True,5.9,36462.0,45900.0
+21131,Leslie,Kentucky,True,6.2,41877.0,60500.0
+21133,Letcher,Kentucky,True,6.2,42346.0,59000.0
+21135,Lewis,Kentucky,True,9.0,41161.0,62500.0
+21137,Lincoln,Kentucky,True,5.9,41970.0,65400.0
+21147,McCreary,Kentucky,True,6.5,35036.0,45100.0
+21151,Madison,Kentucky,True,5.0,48025.0,88400.0
+21153,Magoffin,Kentucky,True,9.1,44371.0,42500.0
+21159,Martin,Kentucky,True,8.5,33523.0,53700.0
+21165,Menifee,Kentucky,True,7.3,42933.0,58400.0
+21169,Metcalfe,Kentucky,True,5.3,38441.0,62000.0
+21171,Monroe,Kentucky,True,5.4,44980.0,67800.0
+21173,Montgomery,Kentucky,True,5.6,45753.0,79100.0
+21175,Morgan,Kentucky,True,6.7,34380.0,64100.0
+21181,Nicholas,Kentucky,True,4.8,41289.0,73600.0
+21189,Owsley,Kentucky,True,6.2,,50700.0
+21193,Perry,Kentucky,True,5.6,,57800.0
+21195,Pike,Kentucky,True,6.8,,63000.0
+21197,Powell,Kentucky,True,5.2,,76800.0
+21199,Pulaski,Kentucky,True,5.6,,72300.0
+21201,Robertson,Kentucky,True,6.5,,69500.0
+21203,Rockcastle,Kentucky,True,5.6,,67500.0
+21205,Rowan,Kentucky,True,6.2,,78400.0
+21207,Russell,Kentucky,True,5.0,,72300.0
+21231,Wayne,Kentucky,True,6.5,,62400.0
+21235,Whitley,Kentucky,True,5.3,,58000.0
+21237,Wolfe,Kentucky,True,9.4,,37900.0
+24001,Allegany,Maryland,True,4.3,49182.0,77500.0
+24023,Garrett,Maryland,True,3.5,57525.0,91200.0
+24043,Washington,Maryland,True,3.3,84018.0,93500.0
+28003,Alcorn,Mississippi,True,2.9,47651.0,70900.0
+28009,Benton,Mississippi,True,3.0,46819.0,56800.0
+28013,Calhoun,Mississippi,True,2.8,42728.0,67400.0
+28017,Chickasaw,Mississippi,True,4.1,39952.0,56300.0
+28019,Choctaw,Mississippi,True,3.6,42655.0,63900.0
+28025,Clay,Mississippi,True,4.1,69182.0,58600.0
+28057,Itawamba,Mississippi,True,2.8,42737.0,88300.0
+28069,Kemper,Mississippi,True,4.2,39625.0,52500.0
+28081,Lee,Mississippi,True,2.8,54255.0,95900.0
+28087,Lowndes,Mississippi,True,3.3,51172.0,79700.0
+28093,Marshall,Mississippi,True,3.5,46470.0,69000.0
+28095,Monroe,Mississippi,True,3.9,56061.0,72600.0
+28097,Montgomery,Mississippi,True,3.3,54811.0,56500.0
+28103,Noxubee,Mississippi,True,4.1,44881.0,48800.0
+28105,Oktibbeha,Mississippi,True,3.4,42241.0,81800.0
+28107,Panola,Mississippi,True,4.2,43391.0,67600.0
+28115,Pontotoc,Mississippi,True,3.1,43359.0,77000.0
+28117,Prentiss,Mississippi,True,3.0,39413.0,70700.0
+28139,Tippah,Mississippi,True,2.8,45880.0,63800.0
+28141,Tishomingo,Mississippi,True,3.5,45018.0,77500.0
+28145,Union,Mississippi,True,2.5,40654.0,78800.0
+28155,Webster,Mississippi,True,2.8,65987.0,79200.0
+28159,Winston,Mississippi,True,3.4,46075.0,62400.0
+28161,Yalobusha,Mississippi,True,3.3,44057.0,66900.0
+36003,Allegany,New York,True,4.3,42832.0,86400.0
+36007,Broome,New York,True,4.0,52147.0,94500.0
+36009,Cattaraugus,New York,True,4.1,48342.0,77200.0
+36013,Chautauqua,New York,True,4.1,49640.0,82700.0
+36015,Chemung,New York,True,3.8,53850.0,81900.0
+36017,Chenango,New York,True,3.4,54527.0,83100.0
+36023,Cortland,New York,True,4.2,50994.0,92200.0
+36025,Delaware,New York,True,4.0,50348.0,82600.0
+36077,Otsego,New York,True,4.1,53098.0,91200.0
+36095,Schoharie*,New York,True,4.1,,116100.0
+36097,Schuyler,New York,True,4.1,52126.0,91700.0
+36101,Steuben,New York,True,3.9,56349.0,91300.0
+36107,Tioga,New York,True,3.5,54765.0,94500.0
+36109,Tompkins,New York,True,3.3,54159.0,122100.0
+37003,Alexander,North Carolina,True,3.7,49694.0,77600.0
+37005,Alleghany,North Carolina,True,3.8,46732.0,63700.0
+37009,Ashe,North Carolina,True,3.1,48453.0,70300.0
+37011,Avery,North Carolina,True,4.3,50256.0,84000.0
+37021,Buncombe,North Carolina,True,4.3,66288.0,93100.0
+37023,Burke,North Carolina,True,3.6,89281.0,77600.0
+37027,Caldwell,North Carolina,True,3.5,47398.0,77600.0
+37035,Catawba,North Carolina,True,3.6,57624.0,77600.0
+37039,Cherokee,North Carolina,True,3.8,41999.0,71200.0
+37043,Clay,North Carolina,True,3.3,47138.0,85500.0
+37045,Cleveland,North Carolina,True,4.0,47778.0,76600.0
+37059,Davie,North Carolina,True,3.3,63324.0,86700.0
+37067,Forsyth,North Carolina,True,3.8,60481.0,86700.0
+37075,Graham,North Carolina,True,3.5,44387.0,68800.0
+37087,Haywood,North Carolina,True,3.6,53755.0,88500.0
+37089,Henderson,North Carolina,True,3.2,59258.0,93100.0
+37099,Jackson,North Carolina,True,3.6,46605.0,80800.0
+37111,McDowell,North Carolina,True,4.0,47124.0,74100.0
+37113,Macon,North Carolina,True,3.3,52844.0,77000.0
+37115,Madison,North Carolina,True,3.9,47811.0,93100.0
+37121,Mitchell,North Carolina,True,4.4,47047.0,78100.0
+37149,Polk,North Carolina,True,3.3,67589.0,86700.0
+37161,Rutherford,North Carolina,True,4.4,44091.0,66300.0
+37169,Stokes,North Carolina,True,3.4,49687.0,86700.0
+37171,Surry,North Carolina,True,3.3,51241.0,75400.0
+37173,Swain,North Carolina,True,3.5,55328.0,82200.0
+37175,Transylvania,North Carolina,True,3.5,60160.0,88300.0
+37189,Watauga,North Carolina,True,3.5,53013.0,94300.0
+37193,Wilkes,North Carolina,True,3.8,49350.0,65600.0
+37197,Yadkin,North Carolina,True,3.1,49886.0,86700.0
+37199,Yancey,North Carolina,True,4.1,45449.0,80300.0
+39001,Adams,Ohio,True,6.0,46249.0,70700.0
+39007,Ashtabula,Ohio,True,4.3,50508.0,76700.0
+39009,Athens,Ohio,True,5.2,42018.0,89400.0
+39013,Belmont,Ohio,True,5.2,51534.0,82100.0
+39015,Brown,Ohio,True,5.0,65199.0,88500.0
+39019,Carroll,Ohio,True,4.8,50809.0,86500.0
+39025,Clermont,Ohio,True,4.1,63599.0,111800.0
+39029,Columbiana,Ohio,True,4.9,47871.0,77000.0
+39031,Coshocton,Ohio,True,4.8,44741.0,75000.0
+39053,Gallia,Ohio,True,5.2,50025.0,75500.0
+39059,Guernsey,Ohio,True,5.5,51043.0,75000.0
+39067,Harrison,Ohio,True,5.0,50642.0,77900.0
+39071,Highland,Ohio,True,4.6,46608.0,78300.0
+39073,Hocking,Ohio,True,4.6,48115.0,81300.0
+39075,Holmes,Ohio,True,3.2,60632.0,96500.0
+39079,Jackson,Ohio,True,5.2,52237.0,76800.0
+39081,Jefferson,Ohio,True,5.8,58374.0,80200.0
+39087,Lawrence,Ohio,True,5.0,51367.0,78600.0
+39099,Mahoning,Ohio,True,5.0,54630.0,75500.0
+39105,Meigs,Ohio,True,6.8,44864.0,65400.0
+39111,Monroe,Ohio,True,6.2,52978.0,75000.0
+39115,Morgan,Ohio,True,5.5,45751.0,73500.0
+39119,Muskingum,Ohio,True,4.6,52225.0,80500.0
+39121,Noble,Ohio,True,6.4,53893.0,79900.0
+39127,Perry,Ohio,True,5.0,48777.0,82100.0
+39131,Pike,Ohio,True,5.4,48745.0,71700.0
+39141,Ross,Ohio,True,4.6,46934.0,81000.0
+39145,Scioto,Ohio,True,5.8,49423.0,75200.0
+39155,Trumbull,Ohio,True,5.2,49159.0,75500.0
+39157,Tuscarawas,Ohio,True,4.0,57335.0,91000.0
+39163,Vinton,Ohio,True,5.2,43796.0,79400.0
+39167,Washington,Ohio,True,5.0,73187.0,84600.0
+42003,Allegheny,Pennsylvania,True,3.5,75468.0,107300.0
+42005,Armstrong,Pennsylvania,True,4.2,58854.0,82500.0
+42007,Beaver,Pennsylvania,True,3.9,58206.0,107300.0
+42009,Bedford,Pennsylvania,True,3.8,52510.0,84700.0
+42013,Blair,Pennsylvania,True,3.5,57782.0,83800.0
+42015,Bradford,Pennsylvania,True,3.7,50930.0,86900.0
+42019,Butler,Pennsylvania,True,3.3,73039.0,107300.0
+42021,Cambria,Pennsylvania,True,4.3,50932.0,85000.0
+42023,Cameron,Pennsylvania,True,5.3,54148.0,66800.0
+42025,Carbon,Pennsylvania,True,4.0,62353.0,100200.0
+42027,Centre,Pennsylvania,True,2.9,57800.0,108100.0
+42031,Clarion,Pennsylvania,True,4.0,50175.0,85800.0
+42033,Clearfield,Pennsylvania,True,3.9,57841.0,85900.0
+42035,Clinton,Pennsylvania,True,4.2,48383.0,80200.0
+42037,Columbia,Pennsylvania,True,4.2,52692.0,84300.0
+42039,Crawford,Pennsylvania,True,3.7,51236.0,81900.0
+42047,Elk,Pennsylvania,True,3.7,53862.0,89900.0
+42049,Erie,Pennsylvania,True,3.8,54694.0,84400.0
+42051,Fayette,Pennsylvania,True,4.7,51467.0,107300.0
+42053,Forest,Pennsylvania,True,5.3,30606.0,66200.0
+42057,Fulton,Pennsylvania,True,3.3,49640.0,88500.0
+42059,Greene,Pennsylvania,True,4.4,52757.0,93100.0
+42061,Huntingdon,Pennsylvania,True,4.5,46957.0,88400.0
+42063,Indiana,Pennsylvania,True,4.4,48336.0,74500.0
+42065,Jefferson,Pennsylvania,True,4.0,50976.0,76400.0
+42067,Juniata,Pennsylvania,True,3.8,62851.0,85100.0
+42069,Lackawanna,Pennsylvania,True,3.9,56985.0,83500.0
+42073,Lawrence,Pennsylvania,True,4.3,53835.0,88900.0
+42079,Luzerne,Pennsylvania,True,4.5,53214.0,83500.0
+42081,Lycoming,Pennsylvania,True,4.0,53630.0,87800.0
+42083,McKean,Pennsylvania,True,4.1,51318.0,84700.0
+42085,Mercer,Pennsylvania,True,4.0,51133.0,82500.0
+42087,Mifflin,Pennsylvania,True,3.3,49197.0,77700.0
+42089,Monroe,Pennsylvania,True,4.2,54716.0,104400.0
+42093,Montour,Pennsylvania,True,2.8,70610.0,99700.0
+42097,Northumberland,Pennsylvania,True,4.0,50445.0,81100.0
+42099,Perry,Pennsylvania,True,3.3,56411.0,105400.0
+42103,Pike,Pennsylvania,True,4.3,59543.0,100200.0
+42105,Potter,Pennsylvania,True,4.8,48180.0,80800.0
+42107,Schuylkill,Pennsylvania,True,4.1,52049.0,85800.0
+42109,Snyder,Pennsylvania,True,3.5,54472.0,87000.0
+42111,Somerset,Pennsylvania,True,4.1,49685.0,81400.0
+42113,Sullivan,Pennsylvania,True,3.9,59379.0,88400.0
+42115,Susquehanna,Pennsylvania,True,3.7,61452.0,87800.0
+42117,Tioga,Pennsylvania,True,4.1,47580.0,81900.0
+42119,Union,Pennsylvania,True,3.4,53495.0,103600.0
+42121,Venango,Pennsylvania,True,4.0,51568.0,83000.0
+42123,Warren,Pennsylvania,True,3.9,52057.0,82100.0
+42125,Washington,Pennsylvania,True,3.6,83586.0,107300.0
+42127,Wayne,Pennsylvania,True,4.2,57575.0,83900.0
+42129,Westmoreland,Pennsylvania,True,3.7,64021.0,107300.0
+42131,Wyoming,Pennsylvania,True,4.0,57180.0,83500.0
+45007,Anderson,South Carolina,True,3.8,50288.0,87100.0
+45021,Cherokee,South Carolina,True,5.7,41896.0,72200.0
+45045,Greenville,South Carolina,True,3.7,60866.0,97300.0
+45073,Oconee,South Carolina,True,3.9,57361.0,86600.0
+45077,Pickens,South Carolina,True,4.0,49294.0,97300.0
+45083,Spartanburg,South Carolina,True,4.2,53700.0,82400.0
+45087,Union,South Carolina,True,5.5,139931.0,63200.0
+47001,Anderson,Tennessee,True,3.4,46478.0,101700.0
+47007,Bledsoe,Tennessee,True,3.2,36038.0,64700.0
+47009,Blount,Tennessee,True,3.0,58447.0,101700.0
+47011,Bradley,Tennessee,True,3.7,50014.0,84700.0
+47013,Campbell,Tennessee,True,3.7,44694.0,72700.0
+47015,Cannon,Tennessee,True,3.1,48732.0,114800.0
+47019,Carter,Tennessee,True,4.0,42833.0,84800.0
+47025,Claiborne,Tennessee,True,4.0,44367.0,68600.0
+47027,Clay,Tennessee,True,4.7,57095.0,66700.0
+47029,Cocke,Tennessee,True,4.7,42387.0,58900.0
+47031,Coffee,Tennessee,True,3.3,50163.0,76400.0
+47035,Cumberland,Tennessee,True,4.6,48091.0,75400.0
+47041,De Kalb,Tennessee,True,4.1,,68700.0
+47049,Fentress,Tennessee,True,3.6,43102.0,61700.0
+47051,Franklin,Tennessee,True,3.8,57298.0,83000.0
+47057,Grainger,Tennessee,True,3.6,45678.0,71600.0
+47059,Greene,Tennessee,True,4.6,44945.0,78300.0
+47061,Grundy,Tennessee,True,4.4,40453.0,57000.0
+47063,Hamblen,Tennessee,True,3.5,50094.0,75200.0
+47065,Hamilton,Tennessee,True,3.2,70580.0,95600.0
+47067,Hancock,Tennessee,True,4.5,33223.0,52000.0
+47073,Hawkins,Tennessee,True,4.1,44192.0,79000.0
+47087,Jackson,Tennessee,True,4.0,54702.0,64000.0
+47089,Jefferson,Tennessee,True,3.5,50131.0,75200.0
+47091,Johnson,Tennessee,True,4.7,55487.0,72100.0
+47093,Knox,Tennessee,True,3.0,52798.0,101700.0
+47099,Lawrence,Tennessee,True,3.8,43273.0,73300.0
+47101,Lewis,Tennessee,True,3.6,44554.0,76300.0
+47105,Loudon,Tennessee,True,3.4,70063.0,101700.0
+47107,McMinn,Tennessee,True,4.4,45629.0,77800.0
+47111,Macon,Tennessee,True,2.8,41530.0,77600.0
+47115,Marion,Tennessee,True,3.9,52570.0,95600.0
+47121,Meigs,Tennessee,True,5.1,41017.0,78000.0
+47123,Monroe,Tennessee,True,4.1,44350.0,79800.0
+47129,Morgan,Tennessee,True,4.0,71630.0,79900.0
+47133,Overton,Tennessee,True,3.4,42000.0,74100.0
+47137,Pickett,Tennessee,True,4.9,42545.0,67800.0
+47139,Polk,Tennessee,True,3.8,49945.0,84700.0
+47141,Putnam,Tennessee,True,3.4,51132.0,86800.0
+47143,Rhea,Tennessee,True,4.2,45745.0,68600.0
+47145,Roane,Tennessee,True,3.8,53353.0,90800.0
+47151,Scott,Tennessee,True,4.2,39326.0,57700.0
+47153,Sequatchie,Tennessee,True,3.9,48254.0,95600.0
+47155,Sevier,Tennessee,True,3.2,46183.0,80000.0
+47159,Smith,Tennessee,True,3.0,66887.0,85200.0
+47163,Sullivan,Tennessee,True,3.6,54453.0,79000.0
+47171,Unicoi,Tennessee,True,4.2,45593.0,84800.0
+47173,Union,Tennessee,True,3.5,43407.0,101700.0
+47175,Van Buren,Tennessee,True,3.6,36828.0,74800.0
+47177,Warren,Tennessee,True,3.8,44375.0,70200.0
+47179,Washington,Tennessee,True,3.3,73602.0,84800.0
+47185,White,Tennessee,True,4.1,42866.0,73600.0
+51005,Alleghany + Covington city,Virginia,True,3.9,,75000.0
+51017,Bath,Virginia,True,2.6,77195.0,87100.0
+51021,Bland,Virginia,True,3.3,46796.0,72800.0
+51023,Botetourt,Virginia,True,2.5,64012.0,90600.0
+51027,Buchanan,Virginia,True,4.2,49335.0,53100.0
+51035,Carroll + Galax city,Virginia,True,3.7,,72900.0
+51045,Craig,Virginia,True,3.3,50734.0,90600.0
+51051,Dickenson,Virginia,True,4.2,44423.0,57400.0
+51063,Floyd,Virginia,True,2.6,53008.0,88400.0
+51071,Giles,Virginia,True,3.1,53100.0,86500.0
+51077,Grayson,Virginia,True,3.1,40784.0,63400.0
+51089,Henry + Martinsville city,Virginia,True,4.0,,68200.0
+51091,Highland,Virginia,True,2.9,50924.0,83200.0
+51105,Lee,Virginia,True,3.7,41822.0,65000.0
+51121,Montgomery + Radford city,Virginia,True,3.0,,109900.0
+51141,Patrick,Virginia,True,3.2,42956.0,78700.0
+51155,Pulaski,Virginia,True,3.1,51836.0,85700.0
+51163,Rockbridge + Buena Vista city + Lexington city,Virginia,True,2.6,,85200.0
+51167,Russell,Virginia,True,3.9,43189.0,72000.0
+51169,Scott,Virginia,True,3.4,43448.0,79000.0
+51173,Smyth,Virginia,True,3.7,48244.0,69900.0
+51185,Tazewell,Virginia,True,4.2,48157.0,69000.0
+51191,Washington + Bristol city,Virginia,True,3.1,,79000.0
+51195,Wise + Norton city,Virginia,True,3.8,,66000.0
+51197,Wythe,Virginia,True,3.0,47343.0,83800.0
+54001,Barbour,West Virginia,True,5.0,42530.0,68600.0
+54003,Berkeley,West Virginia,True,3.3,54940.0,99600.0
+54005,Boone,West Virginia,True,4.6,43398.0,76900.0
+54007,Braxton,West Virginia,True,5.8,42520.0,52600.0
+54009,Brooke,West Virginia,True,5.4,53325.0,80200.0
+54011,Cabell,West Virginia,True,3.8,54209.0,78600.0
+54013,Calhoun,West Virginia,True,7.5,44580.0,51400.0
+54015,Clay,West Virginia,True,7.3,41070.0,76800.0
+54017,Doddridge,West Virginia,True,4.0,40875.0,85300.0
+54019,Fayette,West Virginia,True,4.3,47212.0,73400.0
+54021,Gilmer,West Virginia,True,5.2,38947.0,62900.0
+54023,Grant,West Virginia,True,4.2,47890.0,81000.0
+54025,Greenbrier,West Virginia,True,3.8,50142.0,71800.0
+54027,Hampshire,West Virginia,True,3.2,46417.0,113100.0
+54029,Hancock,West Virginia,True,5.7,53854.0,80200.0
+54031,Hardy,West Virginia,True,3.6,43439.0,67100.0
+54033,Harrison,West Virginia,True,3.8,63351.0,84700.0
+54035,Jackson,West Virginia,True,5.2,48978.0,83100.0
+54037,Jefferson,West Virginia,True,2.7,66514.0,127600.0
+54039,Kanawha,West Virginia,True,3.8,61400.0,76800.0
+54041,Lewis,West Virginia,True,4.8,46994.0,77000.0
+54043,Lincoln,West Virginia,True,4.9,38761.0,62600.0
+54045,Logan,West Virginia,True,4.4,46862.0,59700.0
+54047,McDowell,West Virginia,True,8.0,35813.0,42400.0
+54049,Marion,West Virginia,True,4.0,51911.0,90500.0
+54051,Marshall,West Virginia,True,4.8,51767.0,82100.0
+54053,Mason,West Virginia,True,4.2,44435.0,76100.0
+54055,Mercer,West Virginia,True,4.1,48086.0,71400.0
+54057,Mineral,West Virginia,True,4.1,49484.0,94400.0
+54059,Mingo,West Virginia,True,5.8,39157.0,55400.0
+54061,Monongalia,West Virginia,True,3.2,58418.0,98400.0
+54063,Monroe,West Virginia,True,4.0,42813.0,73500.0
+54065,Morgan,West Virginia,True,3.2,45801.0,82400.0
+54067,Nicholas,West Virginia,True,4.9,44299.0,78400.0
+54069,Ohio,West Virginia,True,4.0,,82100.0
+54071,Pendleton,West Virginia,True,3.4,,71300.0
+54073,Pleasants,West Virginia,True,4.9,,83000.0
+54075,Pocahontas,West Virginia,True,4.9,,63000.0
+54077,Preston,West Virginia,True,4.1,,98400.0
+54079,Putnam,West Virginia,True,3.4,,101500.0
+54081,Raleigh,West Virginia,True,3.8,,78500.0
+54083,Randolph,West Virginia,True,5.4,,74800.0
+54085,Ritchie,West Virginia,True,5.6,,66000.0
+54087,Roane,West Virginia,True,6.5,,56300.0
+54089,Summers,West Virginia,True,4.3,,70000.0
+54091,Taylor,West Virginia,True,4.0,,72300.0
+54093,Tucker,West Virginia,True,3.6,,76500.0
+54095,Tyler,West Virginia,True,6.2,,87800.0
+54097,Upshur,West Virginia,True,4.6,,72500.0
+54099,Wayne,West Virginia,True,4.4,,78600.0
+54101,Webster,West Virginia,True,6.0,,53900.0
+54103,Wetzel,West Virginia,True,6.9,,74600.0
+54105,Wirt,West Virginia,True,6.2,,72400.0
+54107,Wood,West Virginia,True,4.1,,72400.0
+54109,Wyoming,West Virginia,True,4.7,,59300.0
+00nan,,,True,,,
+"* Schoharie County in New York is covered by two regional commissions but may only receive assistance from one commission in a given fiscal year. Schoharie County has elected not to be eligible for ARC assistance in FY 2026. If your proposed project includes Schoharie County, please coordinate with New York?s State Program Manager to discuss this matter further.",,,True,,,

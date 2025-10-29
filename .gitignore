@@ -35,7 +35,7 @@ temp_*.txt
 
 # Large data directories - DO NOT COMMIT
 data_raw/
-data_clean/*.geojson
-data_clean/*.topojson
-data_clean/*.csv
+
+# Only ignore the very large GeoJSON file (30MB), keep TopoJSON (smaller) and CSV files
+data_clean/appalachia_snapshot.geojson
 

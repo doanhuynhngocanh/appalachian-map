@@ -1,0 +1,1426 @@
+fips,state,county,year,gdp_per_capita
+01007,Alabama,Bibb,2021,37362
+01009,Alabama,Blount,2021,42975
+01015,Alabama,Calhoun,2021,43215
+01017,Alabama,Chambers,2021,39269
+01019,Alabama,Cherokee,2021,44590
+01021,Alabama,Chilton,2021,42839
+01027,Alabama,Clay,2021,39465
+01029,Alabama,Cleburne,2021,42929
+01033,Alabama,Colbert,2021,44126
+01037,Alabama,Coosa,2021,39176
+01043,Alabama,Cullman,2021,46886
+01051,Alabama,Elmore,2021,48569
+01055,Alabama,Etowah,2021,42777
+01057,Alabama,Fayette,2021,42191
+01059,Alabama,Franklin,2021,40296
+01065,Alabama,Hale,2021,44809
+01071,Alabama,Jackson,2021,43162
+01073,Alabama,Jefferson,2021,64992
+01075,Alabama,Lamar,2021,39831
+01077,Alabama,Lauderdale,2021,44823
+01079,Alabama,Lawrence,2021,42235
+01083,Alabama,Limestone,2021,53156
+01087,Alabama,Macon,2021,38030
+01089,Alabama,Madison,2021,60517
+01093,Alabama,Marion,2021,41506
+01095,Alabama,Marshall,2021,45985
+01103,Alabama,Morgan,2021,46508
+01107,Alabama,Pickens,2021,43902
+01111,Alabama,Randolph,2021,42014
+01115,Alabama,St. Clair,2021,47303
+01117,Alabama,Shelby,2021,65158
+01121,Alabama,Talladega,2021,41267
+01123,Alabama,Tallapoosa,2021,48690
+01125,Alabama,Tuscaloosa,2021,41246
+01127,Alabama,Walker,2021,46956
+01133,Alabama,Winston,2021,42783
+01015,Alabama,Calhoun,2021,46680
+01027,Alabama,Clay,2021,44081
+01029,Alabama,Cleburne,2021,47988
+01059,Alabama,Franklin,2021,41147
+01071,Alabama,Jackson,2021,44489
+01073,Alabama,Jefferson,2021,41329
+01079,Alabama,Lawrence,2021,40541
+01089,Alabama,Madison,2021,43456
+01093,Alabama,Marion,2021,37642
+28095,Mississippi,Monroe,2021,42738
+28097,Mississippi,Montgomery,2021,38258
+28145,Mississippi,Union,2021,51839
+28013,Mississippi,Calhoun,2021,36349
+28025,Mississippi,Clay,2021,52615
+28081,Mississippi,Lee,2021,61275
+28095,Mississippi,Monroe,2021,105768
+28145,Mississippi,Union,2021,26134
+13011,Georgia,Banks,2021,43100
+13013,Georgia,Barrow,2021,45802
+13015,Georgia,Bartow,2021,47529
+13045,Georgia,Carroll,2021,49186
+13047,Georgia,Catoosa,2021,42143
+13055,Georgia,Chattooga,2021,37014
+13057,Georgia,Cherokee,2021,62910
+13083,Georgia,Dade,2021,41069
+13085,Georgia,Dawson,2021,57601
+13097,Georgia,Douglas,2021,43879
+13105,Georgia,Elbert,2021,41802
+13111,Georgia,Fannin,2021,47735
+13115,Georgia,Floyd,2021,44177
+13117,Georgia,Forsyth,2021,74584
+13119,Georgia,Franklin,2021,40801
+13123,Georgia,Gilmer,2021,42781
+13129,Georgia,Gordon,2021,43088
+13135,Georgia,Gwinnett,2021,50066
+13137,Georgia,Habersham,2021,39366
+13139,Georgia,Hall,2021,55114
+13143,Georgia,Haralson,2021,44224
+13147,Georgia,Hart,2021,43869
+13149,Georgia,Heard,2021,41117
+13157,Georgia,Jackson,2021,52143
+13187,Georgia,Lumpkin,2021,47607
+13195,Georgia,Madison,2021,43669
+13213,Georgia,Murray,2021,37345
+13223,Georgia,Paulding,2021,46912
+13227,Georgia,Pickens,2021,58192
+13233,Georgia,Polk,2021,39380
+13241,Georgia,Rabun,2021,51221
+13257,Georgia,Stephens,2021,43644
+13281,Georgia,Towns,2021,47344
+13291,Georgia,Union,2021,44841
+13295,Georgia,Walker,2021,41454
+13311,Georgia,White,2021,48170
+13313,Georgia,Whitfield,2021,46950
+13119,Georgia,Franklin,2021,44944
+13195,Georgia,Madison,2021,27693
+13045,Georgia,Carroll,2021,50760
+13097,Georgia,Douglas,2021,61083
+13119,Georgia,Franklin,2021,45826
+13157,Georgia,Jackson,2021,46923
+13195,Georgia,Madison,2021,55268
+13291,Georgia,Union,2021,48837
+13311,Georgia,White,2021,56269
+13045,Georgia,Carroll,2021,51573
+13115,Georgia,Floyd,2021,63200
+13119,Georgia,Franklin,2021,56052
+13157,Georgia,Jackson,2021,48535
+13195,Georgia,Madison,2021,46623
+39127,Ohio,Perry,2021,44466
+39131,Ohio,Pike,2021,47688
+39167,Ohio,Washington,2021,47929
+39001,Ohio,Adams,2021,65237
+39019,Ohio,Carroll,2021,60922
+39067,Ohio,Harrison,2021,55951
+39079,Ohio,Jackson,2021,53959
+39081,Ohio,Jefferson,2021,53205
+39111,Ohio,Monroe,2021,54539
+39167,Ohio,Washington,2021,72335
+39015,Ohio,Brown,2021,53575
+39079,Ohio,Jackson,2021,50474
+39081,Ohio,Jefferson,2021,53775
+39167,Ohio,Washington,2021,56307
+21001,Kentucky,Adair,2021,41156
+21011,Kentucky,Bath,2021,38121
+21013,Kentucky,Bell,2021,40573
+21019,Kentucky,Boyd,2021,46154
+21025,Kentucky,Breathitt,2021,39020
+21043,Kentucky,Carter,2021,39255
+21045,Kentucky,Casey,2021,40521
+21049,Kentucky,Clark,2021,48032
+21051,Kentucky,Clay,2021,38970
+21053,Kentucky,Clinton,2021,43976
+21057,Kentucky,Cumberland,2021,50564
+21061,Kentucky,Edmonson,2021,40459
+21063,Kentucky,Elliott,2021,28751
+21065,Kentucky,Estill,2021,40190
+21069,Kentucky,Fleming,2021,41373
+21071,Kentucky,Floyd,2021,43342
+21079,Kentucky,Garrard,2021,44195
+21087,Kentucky,Green,2021,42974
+21089,Kentucky,Greenup,2021,47502
+21095,Kentucky,Harlan,2021,38206
+21099,Kentucky,Hart,2021,41222
+21109,Kentucky,Jackson,2021,38299
+21115,Kentucky,Johnson,2021,39580
+21119,Kentucky,Knott,2021,41216
+21121,Kentucky,Knox,2021,38688
+21125,Kentucky,Laurel,2021,41320
+21127,Kentucky,Lawrence,2021,38148
+21129,Kentucky,Lee,2021,34946
+21131,Kentucky,Leslie,2021,39574
+21133,Kentucky,Letcher,2021,39667
+21135,Kentucky,Lewis,2021,40142
+21137,Kentucky,Lincoln,2021,40422
+21147,Kentucky,McCreary,2021,35655
+21151,Kentucky,Madison,2021,44175
+21153,Kentucky,Magoffin,2021,42399
+21159,Kentucky,Martin,2021,32922
+21165,Kentucky,Menifee,2021,41400
+21169,Kentucky,Metcalfe,2021,38240
+21171,Kentucky,Monroe,2021,44252
+21173,Kentucky,Montgomery,2021,42840
+21175,Kentucky,Morgan,2021,33898
+21181,Kentucky,Nicholas,2021,40735
+39127,Ohio,Perry,2021,43293
+39131,Ohio,Pike,2021,42989
+39167,Ohio,Washington,2021,46533
+39079,Ohio,Jackson,2021,42344
+39081,Ohio,Jefferson,2021,60836
+39167,Ohio,Washington,2021,41826
+39167,Ohio,Washington,2021,49899
+24001,Maryland,Allegany,2021,47462
+24023,Maryland,Garrett,2021,53377
+24043,Maryland,Washington,2021,53079
+24043,Maryland,Washington,2021,76885
+28003,Mississippi,Alcorn,2021,44564
+28009,Mississippi,Benton,2021,42696
+28013,Mississippi,Calhoun,2021,43094
+28017,Mississippi,Chickasaw,2021,42560
+28019,Mississippi,Choctaw,2021,41521
+28025,Mississippi,Clay,2021,48828
+28057,Mississippi,Itawamba,2021,41930
+28069,Mississippi,Kemper,2021,38601
+28081,Mississippi,Lee,2021,52704
+28087,Mississippi,Lowndes,2021,47971
+28093,Mississippi,Marshall,2021,44871
+28095,Mississippi,Monroe,2021,44562
+28097,Mississippi,Montgomery,2021,42537
+28103,Mississippi,Noxubee,2021,44879
+28105,Mississippi,Oktibbeha,2021,39966
+28107,Mississippi,Panola,2021,42503
+28115,Mississippi,Pontotoc,2021,42985
+28117,Mississippi,Prentiss,2021,38526
+28139,Mississippi,Tippah,2021,44606
+28141,Mississippi,Tishomingo,2021,41999
+28145,Mississippi,Union,2021,41673
+28155,Mississippi,Webster,2021,45217
+28159,Mississippi,Winston,2021,43700
+28161,Mississippi,Yalobusha,2021,42995
+28009,Mississippi,Benton,2021,43416
+28025,Mississippi,Clay,2021,55740
+28095,Mississippi,Monroe,2021,48362
+28097,Mississippi,Montgomery,2021,49816
+28155,Mississippi,Webster,2021,41464
+28025,Mississippi,Clay,2021,69130
+28155,Mississippi,Webster,2021,59798
+28145,Mississippi,Union,2021,75432
+28145,Mississippi,Union,2021,41890
+36003,New York,Allegany,2021,42299
+36007,New York,Broome,2021,50085
+36009,New York,Cattaraugus,2021,46505
+36013,New York,Chautauqua,2021,47702
+36015,New York,Chemung,2021,51914
+36017,New York,Chenango,2021,50591
+36023,New York,Cortland,2021,48524
+36025,New York,Delaware,2021,47197
+36077,New York,Otsego,2021,50957
+36097,New York,Schuyler,2021,49869
+36101,New York,Steuben,2021,54372
+36107,New York,Tioga,2021,52074
+36109,New York,Tompkins,2021,50211
+37003,North Carolina,Alexander,2021,46187
+37005,North Carolina,Alleghany,2021,45359
+37009,North Carolina,Ashe,2021,44235
+37011,North Carolina,Avery,2021,44731
+37021,North Carolina,Buncombe,2021,59007
+37023,North Carolina,Burke,2021,44608
+37027,North Carolina,Caldwell,2021,44280
+37035,North Carolina,Catawba,2021,53990
+37039,North Carolina,Cherokee,2021,39715
+37043,North Carolina,Clay,2021,43734
+37045,North Carolina,Cleveland,2021,44736
+37059,North Carolina,Davie,2021,59130
+37067,North Carolina,Forsyth,2021,56581
+37075,North Carolina,Graham,2021,42914
+37087,North Carolina,Haywood,2021,49522
+37089,North Carolina,Henderson,2021,53644
+37099,North Carolina,Jackson,2021,44064
+37111,North Carolina,McDowell,2021,43835
+37113,North Carolina,Macon,2021,48104
+37115,North Carolina,Madison,2021,43325
+37121,North Carolina,Mitchell,2021,43772
+37149,North Carolina,Polk,2021,58935
+37161,North Carolina,Rutherford,2021,42177
+37169,North Carolina,Stokes,2021,46605
+37171,North Carolina,Surry,2021,48222
+37173,North Carolina,Swain,2021,50591
+37175,North Carolina,Transylvania,2021,53367
+37189,North Carolina,Watauga,2021,46588
+37193,North Carolina,Wilkes,2021,45937
+37197,North Carolina,Yadkin,2021,46773
+37199,North Carolina,Yancey,2021,42049
+37023,North Carolina,Burke,2021,72214
+39001,Ohio,Adams,2021,44417
+39007,Ohio,Ashtabula,2021,46451
+39009,Ohio,Athens,2021,42586
+39013,Ohio,Belmont,2021,46432
+39015,Ohio,Brown,2021,46376
+39019,Ohio,Carroll,2021,47751
+39025,Ohio,Clermont,2021,62127
+39029,Ohio,Columbiana,2021,45491
+39031,Ohio,Coshocton,2021,43032
+39053,Ohio,Gallia,2021,46340
+39059,Ohio,Guernsey,2021,49038
+39067,Ohio,Harrison,2021,46119
+39071,Ohio,Highland,2021,44693
+39073,Ohio,Hocking,2021,45847
+39075,Ohio,Holmes,2021,54643
+39079,Ohio,Jackson,2021,42194
+39081,Ohio,Jefferson,2021,46277
+39087,Ohio,Lawrence,2021,47217
+39099,Ohio,Mahoning,2021,51548
+39105,Ohio,Meigs,2021,43109
+39111,Ohio,Monroe,2021,43528
+39115,Ohio,Morgan,2021,43791
+39119,Ohio,Muskingum,2021,49464
+39121,Ohio,Noble,2021,32537
+39127,Ohio,Perry,2021,46471
+39131,Ohio,Pike,2021,46171
+39141,Ohio,Ross,2021,45483
+39145,Ohio,Scioto,2021,46139
+39155,Ohio,Trumbull,2021,46077
+39157,Ohio,Tuscarawas,2021,50875
+39163,Ohio,Vinton,2021,41447
+39167,Ohio,Washington,2021,51416
+39079,Ohio,Jackson,2021,49858
+39081,Ohio,Jefferson,2021,40248
+39121,Ohio,Noble,2021,50811
+39167,Ohio,Washington,2021,82944
+39079,Ohio,Jackson,2021,57180
+39081,Ohio,Jefferson,2021,44404
+39167,Ohio,Washington,2021,74715
+42003,Pennsylvania,Allegheny,2021,69414
+42005,Pennsylvania,Armstrong,2021,53392
+42007,Pennsylvania,Beaver,2021,55016
+42009,Pennsylvania,Bedford,2021,49771
+42013,Pennsylvania,Blair,2021,54826
+42015,Pennsylvania,Bradford,2021,47753
+42019,Pennsylvania,Butler,2021,67680
+42021,Pennsylvania,Cambria,2021,48712
+42023,Pennsylvania,Cameron,2021,52268
+42025,Pennsylvania,Carbon,2021,60328
+42027,Pennsylvania,Centre,2021,54767
+42031,Pennsylvania,Clarion,2021,47303
+42033,Pennsylvania,Clearfield,2021,53641
+42035,Pennsylvania,Clinton,2021,46633
+42037,Pennsylvania,Columbia,2021,50147
+42039,Pennsylvania,Crawford,2021,48226
+42047,Pennsylvania,Elk,2021,50577
+42049,Pennsylvania,Erie,2021,52723
+42051,Pennsylvania,Fayette,2021,49374
+42053,Pennsylvania,Forest,2021,28625
+42057,Pennsylvania,Fulton,2021,49488
+42059,Pennsylvania,Greene,2021,48849
+42061,Pennsylvania,Huntingdon,2021,45635
+42063,Pennsylvania,Indiana,2021,46462
+42065,Pennsylvania,Jefferson,2021,48226
+42067,Pennsylvania,Juniata,2021,56579
+42069,Pennsylvania,Lackawanna,2021,54437
+42073,Pennsylvania,Lawrence,2021,51416
+42079,Pennsylvania,Luzerne,2021,51307
+42081,Pennsylvania,Lycoming,2021,50449
+42083,Pennsylvania,McKean,2021,49946
+42085,Pennsylvania,Mercer,2021,48513
+42087,Pennsylvania,Mifflin,2021,46271
+42089,Pennsylvania,Monroe,2021,51663
+42093,Pennsylvania,Montour,2021,64432
+42097,Pennsylvania,Northumberland,2021,48288
+42099,Pennsylvania,Perry,2021,54388
+42103,Pennsylvania,Pike,2021,55280
+42105,Pennsylvania,Potter,2021,52092
+42107,Pennsylvania,Schuylkill,2021,49219
+42109,Pennsylvania,Snyder,2021,51173
+42111,Pennsylvania,Somerset,2021,48575
+42113,Pennsylvania,Sullivan,2021,55400
+42115,Pennsylvania,Susquehanna,2021,56165
+42117,Pennsylvania,Tioga,2021,46281
+42119,Pennsylvania,Union,2021,50161
+42121,Pennsylvania,Venango,2021,49403
+42123,Pennsylvania,Warren,2021,48900
+42125,Pennsylvania,Washington,2021,65480
+42127,Pennsylvania,Wayne,2021,52956
+42129,Pennsylvania,Westmoreland,2021,59471
+42131,Pennsylvania,Wyoming,2021,53914
+42125,Pennsylvania,Washington,2021,78229
+45007,South Carolina,Anderson,2021,47395
+45021,South Carolina,Cherokee,2021,39216
+45045,South Carolina,Greenville,2021,56128
+45073,South Carolina,Oconee,2021,53686
+45077,South Carolina,Pickens,2021,45494
+45083,South Carolina,Spartanburg,2021,53005
+45087,South Carolina,Union,2021,38691
+45087,South Carolina,Union,2021,120277
+47001,Tennessee,Anderson,2021,51271
+47007,Tennessee,Bledsoe,2021,34388
+47009,Tennessee,Blount,2021,52907
+47011,Tennessee,Bradley,2021,46628
+47013,Tennessee,Campbell,2021,42634
+47015,Tennessee,Cannon,2021,44247
+47019,Tennessee,Carter,2021,40683
+47025,Tennessee,Claiborne,2021,42113
+47027,Tennessee,Clay,2021,39750
+47029,Tennessee,Cocke,2021,40996
+47031,Tennessee,Coffee,2021,46742
+47035,Tennessee,Cumberland,2021,44792
+47049,Tennessee,Fentress,2021,42447
+47051,Tennessee,Franklin,2021,46433
+47057,Tennessee,Grainger,2021,42856
+47059,Tennessee,Greene,2021,42456
+47061,Tennessee,Grundy,2021,39193
+47063,Tennessee,Hamblen,2021,47382
+47065,Tennessee,Hamilton,2021,59664
+47067,Tennessee,Hancock,2021,33327
+47073,Tennessee,Hawkins,2021,41472
+47087,Tennessee,Jackson,2021,38228
+47089,Tennessee,Jefferson,2021,45398
+47091,Tennessee,Johnson,2021,38709
+47093,Tennessee,Knox,2021,62742
+47099,Tennessee,Lawrence,2021,41852
+47101,Tennessee,Lewis,2021,41742
+47105,Tennessee,Loudon,2021,64528
+47107,Tennessee,McMinn,2021,43540
+47111,Tennessee,Macon,2021,39384
+47115,Tennessee,Marion,2021,47540
+47121,Tennessee,Meigs,2021,39913
+47123,Tennessee,Monroe,2021,42225
+47129,Tennessee,Morgan,2021,37244
+47133,Tennessee,Overton,2021,40761
+47137,Tennessee,Pickett,2021,43214
+47139,Tennessee,Polk,2021,40313
+47141,Tennessee,Putnam,2021,48229
+47143,Tennessee,Rhea,2021,43579
+47145,Tennessee,Roane,2021,49851
+47151,Tennessee,Scott,2021,37731
+47153,Tennessee,Sequatchie,2021,45532
+47155,Tennessee,Sevier,2021,51742
+47159,Tennessee,Smith,2021,48103
+47163,Tennessee,Sullivan,2021,51006
+47171,Tennessee,Unicoi,2021,42822
+47173,Tennessee,Union,2021,40980
+47175,Tennessee,Van Buren,2021,36688
+47177,Tennessee,Warren,2021,42804
+47179,Tennessee,Washington,2021,52818
+47185,Tennessee,White,2021,42325
+47001,Tennessee,Anderson,2021,43311
+47027,Tennessee,Clay,2021,52242
+47051,Tennessee,Franklin,2021,51380
+47065,Tennessee,Hamilton,2021,70499
+47087,Tennessee,Jackson,2021,50852
+47089,Tennessee,Jefferson,2021,47408
+47091,Tennessee,Johnson,2021,51464
+47093,Tennessee,Knox,2021,51783
+47115,Tennessee,Marion,2021,48483
+47139,Tennessee,Polk,2021,47501
+47159,Tennessee,Smith,2021,62358
+47179,Tennessee,Washington,2021,68834
+47129,Tennessee,Morgan,2021,68537
+47155,Tennessee,Sevier,2021,43088
+47179,Tennessee,Washington,2021,50741
+47051,Tennessee,Franklin,2021,54571
+47179,Tennessee,Washington,2021,66673
+51017,Virginia,Bath,2021,72876
+51021,Virginia,Bland,2021,42421
+51023,Virginia,Botetourt,2021,58134
+51027,Virginia,Buchanan,2021,43325
+51045,Virginia,Craig,2021,46875
+51051,Virginia,Dickenson,2021,40555
+51063,Virginia,Floyd,2021,48107
+51071,Virginia,Giles,2021,48133
+51077,Virginia,Grayson,2021,38203
+51091,Virginia,Highland,2021,50887
+51105,Virginia,Lee,2021,37995
+51141,Virginia,Patrick,2021,39124
+51155,Virginia,Pulaski,2021,46445
+51167,Virginia,Russell,2021,39796
+51169,Virginia,Scott,2021,39382
+51173,Virginia,Smyth,2021,44170
+51185,Virginia,Tazewell,2021,43136
+51197,Virginia,Wythe,2021,43349
+54001,West Virginia,Barbour,2021,41056
+54003,West Virginia,Berkeley,2021,51155
+54005,West Virginia,Boone,2021,41428
+54007,West Virginia,Braxton,2021,40682
+54009,West Virginia,Brooke,2021,49449
+54011,West Virginia,Cabell,2021,49384
+54013,West Virginia,Calhoun,2021,41800
+54015,West Virginia,Clay,2021,39158
+54017,West Virginia,Doddridge,2021,37308
+54019,West Virginia,Fayette,2021,44231
+54021,West Virginia,Gilmer,2021,36225
+54023,West Virginia,Grant,2021,46167
+54025,West Virginia,Greenbrier,2021,46603
+54027,West Virginia,Hampshire,2021,45139
+54029,West Virginia,Hancock,2021,50091
+54031,West Virginia,Hardy,2021,40407
+54033,West Virginia,Harrison,2021,57138
+54035,West Virginia,Jackson,2021,44893
+54037,West Virginia,Jefferson,2021,61072
+54039,West Virginia,Kanawha,2021,55337
+54041,West Virginia,Lewis,2021,43402
+54043,West Virginia,Lincoln,2021,36873
+54045,West Virginia,Logan,2021,42379
+54047,West Virginia,McDowell,2021,34021
+54049,West Virginia,Marion,2021,48615
+54051,West Virginia,Marshall,2021,46916
+54053,West Virginia,Mason,2021,42057
+54055,West Virginia,Mercer,2021,44804
+54057,West Virginia,Mineral,2021,50327
+54059,West Virginia,Mingo,2021,36736
+54061,West Virginia,Monongalia,2021,53257
+54063,West Virginia,Monroe,2021,40642
+54065,West Virginia,Morgan,2021,45227
+54067,West Virginia,Nicholas,2021,40533
+39001,Ohio,Adams,2021,45813
+39015,Ohio,Brown,2021,60759
+39079,Ohio,Jackson,2021,51893
+39081,Ohio,Jefferson,2021,53915
+39111,Ohio,Monroe,2021,50107
+39167,Ohio,Washington,2021,66611
+01007,Alabama,Bibb,2022,38196
+01009,Alabama,Blount,2022,44063
+01015,Alabama,Calhoun,2022,42668
+01017,Alabama,Chambers,2022,39447
+01019,Alabama,Cherokee,2022,44563
+01021,Alabama,Chilton,2022,43454
+01027,Alabama,Clay,2022,39456
+01029,Alabama,Cleburne,2022,44251
+01033,Alabama,Colbert,2022,44800
+01037,Alabama,Coosa,2022,38739
+01043,Alabama,Cullman,2022,49758
+01051,Alabama,Elmore,2022,48671
+01055,Alabama,Etowah,2022,43196
+01057,Alabama,Fayette,2022,42765
+01059,Alabama,Franklin,2022,42616
+01065,Alabama,Hale,2022,44433
+01071,Alabama,Jackson,2022,44123
+01073,Alabama,Jefferson,2022,67431
+01075,Alabama,Lamar,2022,39774
+01077,Alabama,Lauderdale,2022,44959
+01079,Alabama,Lawrence,2022,43891
+01083,Alabama,Limestone,2022,53965
+01087,Alabama,Macon,2022,38926
+01089,Alabama,Madison,2022,62533
+01093,Alabama,Marion,2022,43428
+01095,Alabama,Marshall,2022,47142
+01103,Alabama,Morgan,2022,47549
+01107,Alabama,Pickens,2022,41570
+01111,Alabama,Randolph,2022,42457
+01115,Alabama,St. Clair,2022,48215
+01117,Alabama,Shelby,2022,67354
+01121,Alabama,Talladega,2022,41455
+01123,Alabama,Tallapoosa,2022,49046
+01125,Alabama,Tuscaloosa,2022,42186
+01127,Alabama,Walker,2022,49274
+01133,Alabama,Winston,2022,43713
+01015,Alabama,Calhoun,2022,46697
+01027,Alabama,Clay,2022,44983
+01029,Alabama,Cleburne,2022,48829
+01059,Alabama,Franklin,2022,43540
+01071,Alabama,Jackson,2022,46970
+01073,Alabama,Jefferson,2022,41959
+01079,Alabama,Lawrence,2022,43390
+01089,Alabama,Madison,2022,46040
+01093,Alabama,Marion,2022,37718
+28095,Mississippi,Monroe,2022,42766
+28097,Mississippi,Montgomery,2022,39259
+28145,Mississippi,Union,2022,53759
+28013,Mississippi,Calhoun,2022,36065
+28025,Mississippi,Clay,2022,53891
+28081,Mississippi,Lee,2022,61510
+28095,Mississippi,Monroe,2022,118434
+28145,Mississippi,Union,2022,27029
+13011,Georgia,Banks,2022,44808
+13013,Georgia,Barrow,2022,48229
+13015,Georgia,Bartow,2022,49193
+13045,Georgia,Carroll,2022,49914
+13047,Georgia,Catoosa,2022,43876
+13055,Georgia,Chattooga,2022,37111
+13057,Georgia,Cherokee,2022,67315
+13083,Georgia,Dade,2022,42382
+13085,Georgia,Dawson,2022,60181
+13097,Georgia,Douglas,2022,43755
+13105,Georgia,Elbert,2022,43130
+13111,Georgia,Fannin,2022,51143
+13115,Georgia,Floyd,2022,44332
+13117,Georgia,Forsyth,2022,79986
+13119,Georgia,Franklin,2022,44534
+13123,Georgia,Gilmer,2022,45922
+13129,Georgia,Gordon,2022,45387
+13135,Georgia,Gwinnett,2022,51729
+13137,Georgia,Habersham,2022,40550
+13139,Georgia,Hall,2022,57126
+13143,Georgia,Haralson,2022,45239
+13147,Georgia,Hart,2022,46161
+13149,Georgia,Heard,2022,41139
+13157,Georgia,Jackson,2022,56230
+13187,Georgia,Lumpkin,2022,47008
+13195,Georgia,Madison,2022,47184
+13213,Georgia,Murray,2022,38242
+13223,Georgia,Paulding,2022,47668
+13227,Georgia,Pickens,2022,60575
+13233,Georgia,Polk,2022,40471
+13241,Georgia,Rabun,2022,51594
+13257,Georgia,Stephens,2022,45412
+13281,Georgia,Towns,2022,48175
+13291,Georgia,Union,2022,45528
+13295,Georgia,Walker,2022,42812
+13311,Georgia,White,2022,48617
+13313,Georgia,Whitfield,2022,46258
+13119,Georgia,Franklin,2022,45424
+13195,Georgia,Madison,2022,28113
+13045,Georgia,Carroll,2022,52107
+13097,Georgia,Douglas,2022,69116
+13119,Georgia,Franklin,2022,45930
+13157,Georgia,Jackson,2022,47152
+13195,Georgia,Madison,2022,56766
+13291,Georgia,Union,2022,48948
+13311,Georgia,White,2022,59999
+13045,Georgia,Carroll,2022,51375
+13115,Georgia,Floyd,2022,63496
+13119,Georgia,Franklin,2022,55604
+13157,Georgia,Jackson,2022,50212
+13195,Georgia,Madison,2022,46947
+39127,Ohio,Perry,2022,45081
+39131,Ohio,Pike,2022,48871
+39167,Ohio,Washington,2022,50302
+39001,Ohio,Adams,2022,66764
+39019,Ohio,Carroll,2022,68120
+39067,Ohio,Harrison,2022,60019
+39079,Ohio,Jackson,2022,56366
+39081,Ohio,Jefferson,2022,56925
+39111,Ohio,Monroe,2022,55747
+39167,Ohio,Washington,2022,82598
+39015,Ohio,Brown,2022,51909
+39079,Ohio,Jackson,2022,49905
+39081,Ohio,Jefferson,2022,54538
+39167,Ohio,Washington,2022,50260
+21001,Kentucky,Adair,2022,41624
+21011,Kentucky,Bath,2022,38581
+21013,Kentucky,Bell,2022,39680
+21019,Kentucky,Boyd,2022,45860
+21025,Kentucky,Breathitt,2022,39280
+21043,Kentucky,Carter,2022,38950
+21045,Kentucky,Casey,2022,40325
+21049,Kentucky,Clark,2022,48727
+21051,Kentucky,Clay,2022,38265
+21053,Kentucky,Clinton,2022,44344
+21057,Kentucky,Cumberland,2022,51076
+21061,Kentucky,Edmonson,2022,40491
+21063,Kentucky,Elliott,2022,27678
+21065,Kentucky,Estill,2022,40269
+21069,Kentucky,Fleming,2022,41425
+21071,Kentucky,Floyd,2022,42986
+21079,Kentucky,Garrard,2022,44079
+21087,Kentucky,Green,2022,42241
+21089,Kentucky,Greenup,2022,47838
+21095,Kentucky,Harlan,2022,37910
+21099,Kentucky,Hart,2022,42335
+21109,Kentucky,Jackson,2022,37510
+21115,Kentucky,Johnson,2022,39143
+21119,Kentucky,Knott,2022,41732
+21121,Kentucky,Knox,2022,37330
+21125,Kentucky,Laurel,2022,40659
+21127,Kentucky,Lawrence,2022,38464
+21129,Kentucky,Lee,2022,34304
+21131,Kentucky,Leslie,2022,39352
+21133,Kentucky,Letcher,2022,39824
+21135,Kentucky,Lewis,2022,39658
+21137,Kentucky,Lincoln,2022,40770
+21147,Kentucky,McCreary,2022,33934
+21151,Kentucky,Madison,2022,45296
+21153,Kentucky,Magoffin,2022,41842
+21159,Kentucky,Martin,2022,31935
+21165,Kentucky,Menifee,2022,40862
+21169,Kentucky,Metcalfe,2022,37519
+21171,Kentucky,Monroe,2022,44675
+21173,Kentucky,Montgomery,2022,43623
+21175,Kentucky,Morgan,2022,32223
+21181,Kentucky,Nicholas,2022,39213
+39127,Ohio,Perry,2022,43542
+39131,Ohio,Pike,2022,44003
+39167,Ohio,Washington,2022,45614
+39079,Ohio,Jackson,2022,42687
+39081,Ohio,Jefferson,2022,59743
+39167,Ohio,Washington,2022,42127
+39167,Ohio,Washington,2022,49799
+24001,Maryland,Allegany,2022,46913
+24023,Maryland,Garrett,2022,53861
+24043,Maryland,Washington,2022,53502
+24043,Maryland,Washington,2022,79494
+28003,Mississippi,Alcorn,2022,44838
+28009,Mississippi,Benton,2022,41656
+28013,Mississippi,Calhoun,2022,40976
+28017,Mississippi,Chickasaw,2022,39303
+28019,Mississippi,Choctaw,2022,40350
+28025,Mississippi,Clay,2022,48588
+28057,Mississippi,Itawamba,2022,41166
+28069,Mississippi,Kemper,2022,37428
+28081,Mississippi,Lee,2022,52029
+28087,Mississippi,Lowndes,2022,48298
+28093,Mississippi,Marshall,2022,44357
+28095,Mississippi,Monroe,2022,43271
+28097,Mississippi,Montgomery,2022,41480
+28103,Mississippi,Noxubee,2022,42953
+28105,Mississippi,Oktibbeha,2022,39730
+28107,Mississippi,Panola,2022,41496
+28115,Mississippi,Pontotoc,2022,42069
+28117,Mississippi,Prentiss,2022,38145
+28139,Mississippi,Tippah,2022,42729
+28141,Mississippi,Tishomingo,2022,42481
+28145,Mississippi,Union,2022,41120
+28155,Mississippi,Webster,2022,44320
+28159,Mississippi,Winston,2022,43721
+28161,Mississippi,Yalobusha,2022,42201
+28009,Mississippi,Benton,2022,44334
+28025,Mississippi,Clay,2022,57103
+28095,Mississippi,Monroe,2022,50311
+28097,Mississippi,Montgomery,2022,51075
+28155,Mississippi,Webster,2022,42105
+28025,Mississippi,Clay,2022,64258
+28155,Mississippi,Webster,2022,58850
+28145,Mississippi,Union,2022,78440
+28145,Mississippi,Union,2022,44513
+36003,New York,Allegany,2022,40738
+36007,New York,Broome,2022,49185
+36009,New York,Cattaraugus,2022,46131
+36013,New York,Chautauqua,2022,47471
+36015,New York,Chemung,2022,52228
+36017,New York,Chenango,2022,51381
+36023,New York,Cortland,2022,49104
+36025,New York,Delaware,2022,47015
+36077,New York,Otsego,2022,50404
+36097,New York,Schuyler,2022,50240
+36101,New York,Steuben,2022,54991
+36107,New York,Tioga,2022,52058
+36109,New York,Tompkins,2022,51589
+37003,North Carolina,Alexander,2022,48883
+37005,North Carolina,Alleghany,2022,44408
+37009,North Carolina,Ashe,2022,45135
+37011,North Carolina,Avery,2022,47081
+37021,North Carolina,Buncombe,2022,61970
+37023,North Carolina,Burke,2022,45654
+37027,North Carolina,Caldwell,2022,45684
+37035,North Carolina,Catawba,2022,55157
+37039,North Carolina,Cherokee,2022,40143
+37043,North Carolina,Clay,2022,44822
+37045,North Carolina,Cleveland,2022,45858
+37059,North Carolina,Davie,2022,60577
+37067,North Carolina,Forsyth,2022,57884
+37075,North Carolina,Graham,2022,41437
+37087,North Carolina,Haywood,2022,50797
+37089,North Carolina,Henderson,2022,55447
+37099,North Carolina,Jackson,2022,44768
+37111,North Carolina,McDowell,2022,45094
+37113,North Carolina,Macon,2022,49554
+37115,North Carolina,Madison,2022,44969
+37121,North Carolina,Mitchell,2022,44265
+37149,North Carolina,Polk,2022,62448
+37161,North Carolina,Rutherford,2022,42656
+37169,North Carolina,Stokes,2022,47087
+37171,North Carolina,Surry,2022,49633
+37173,North Carolina,Swain,2022,52757
+37175,North Carolina,Transylvania,2022,56487
+37189,North Carolina,Watauga,2022,49431
+37193,North Carolina,Wilkes,2022,49022
+37197,North Carolina,Yadkin,2022,48584
+37199,North Carolina,Yancey,2022,43097
+37023,North Carolina,Burke,2022,102766
+39001,Ohio,Adams,2022,43289
+39007,Ohio,Ashtabula,2022,47692
+39009,Ohio,Athens,2022,41207
+39013,Ohio,Belmont,2022,48305
+39015,Ohio,Brown,2022,46963
+39019,Ohio,Carroll,2022,48377
+39025,Ohio,Clermont,2022,60505
+39029,Ohio,Columbiana,2022,45358
+39031,Ohio,Coshocton,2022,42480
+39053,Ohio,Gallia,2022,47433
+39059,Ohio,Guernsey,2022,48997
+39067,Ohio,Harrison,2022,46777
+39071,Ohio,Highland,2022,44727
+39073,Ohio,Hocking,2022,46133
+39075,Ohio,Holmes,2022,57229
+39079,Ohio,Jackson,2022,41551
+39081,Ohio,Jefferson,2022,46523
+39087,Ohio,Lawrence,2022,48423
+39099,Ohio,Mahoning,2022,51805
+39105,Ohio,Meigs,2022,42418
+39111,Ohio,Monroe,2022,42773
+39115,Ohio,Morgan,2022,43282
+39119,Ohio,Muskingum,2022,50018
+39121,Ohio,Noble,2022,31558
+39127,Ohio,Perry,2022,46862
+39131,Ohio,Pike,2022,46256
+39141,Ohio,Ross,2022,45237
+39145,Ohio,Scioto,2022,46568
+39155,Ohio,Trumbull,2022,46766
+39157,Ohio,Tuscarawas,2022,54411
+39163,Ohio,Vinton,2022,41177
+39167,Ohio,Washington,2022,51493
+39079,Ohio,Jackson,2022,51752
+39081,Ohio,Jefferson,2022,43106
+39121,Ohio,Noble,2022,50683
+39167,Ohio,Washington,2022,110159
+39079,Ohio,Jackson,2022,58570
+39081,Ohio,Jefferson,2022,43902
+39167,Ohio,Washington,2022,75130
+42003,Pennsylvania,Allegheny,2022,71362
+42005,Pennsylvania,Armstrong,2022,56791
+42007,Pennsylvania,Beaver,2022,55174
+42009,Pennsylvania,Bedford,2022,50263
+42013,Pennsylvania,Blair,2022,55071
+42015,Pennsylvania,Bradford,2022,49053
+42019,Pennsylvania,Butler,2022,68762
+42021,Pennsylvania,Cambria,2022,48018
+42023,Pennsylvania,Cameron,2022,51491
+42025,Pennsylvania,Carbon,2022,58535
+42027,Pennsylvania,Centre,2022,54756
+42031,Pennsylvania,Clarion,2022,47685
+42033,Pennsylvania,Clearfield,2022,54951
+42035,Pennsylvania,Clinton,2022,46366
+42037,Pennsylvania,Columbia,2022,50004
+42039,Pennsylvania,Crawford,2022,48734
+42047,Pennsylvania,Elk,2022,50945
+42049,Pennsylvania,Erie,2022,51554
+42051,Pennsylvania,Fayette,2022,49302
+42053,Pennsylvania,Forest,2022,28437
+42057,Pennsylvania,Fulton,2022,47915
+42059,Pennsylvania,Greene,2022,50640
+42061,Pennsylvania,Huntingdon,2022,45444
+42063,Pennsylvania,Indiana,2022,45910
+42065,Pennsylvania,Jefferson,2022,48530
+42067,Pennsylvania,Juniata,2022,60088
+42069,Pennsylvania,Lackawanna,2022,54479
+42073,Pennsylvania,Lawrence,2022,51072
+42079,Pennsylvania,Luzerne,2022,50955
+42081,Pennsylvania,Lycoming,2022,50940
+42083,Pennsylvania,McKean,2022,48986
+42085,Pennsylvania,Mercer,2022,48630
+42087,Pennsylvania,Mifflin,2022,47383
+42089,Pennsylvania,Monroe,2022,51977
+42093,Pennsylvania,Montour,2022,67096
+42097,Pennsylvania,Northumberland,2022,48499
+42099,Pennsylvania,Perry,2022,54842
+42103,Pennsylvania,Pike,2022,56041
+42105,Pennsylvania,Potter,2022,46407
+42107,Pennsylvania,Schuylkill,2022,49853
+42109,Pennsylvania,Snyder,2022,53285
+42111,Pennsylvania,Somerset,2022,47188
+42113,Pennsylvania,Sullivan,2022,56482
+42115,Pennsylvania,Susquehanna,2022,59387
+42117,Pennsylvania,Tioga,2022,46793
+42119,Pennsylvania,Union,2022,51099
+42121,Pennsylvania,Venango,2022,49218
+42123,Pennsylvania,Warren,2022,49366
+42125,Pennsylvania,Washington,2022,71259
+42127,Pennsylvania,Wayne,2022,54371
+42129,Pennsylvania,Westmoreland,2022,60282
+42131,Pennsylvania,Wyoming,2022,54770
+42125,Pennsylvania,Washington,2022,78884
+45007,South Carolina,Anderson,2022,48196
+45021,South Carolina,Cherokee,2022,40508
+45045,South Carolina,Greenville,2022,57838
+45073,South Carolina,Oconee,2022,54951
+45077,South Carolina,Pickens,2022,47139
+45083,South Carolina,Spartanburg,2022,51359
+45087,South Carolina,Union,2022,39168
+45087,South Carolina,Union,2022,131131
+47001,Tennessee,Anderson,2022,53607
+47007,Tennessee,Bledsoe,2022,35182
+47009,Tennessee,Blount,2022,55312
+47011,Tennessee,Bradley,2022,48065
+47013,Tennessee,Campbell,2022,43205
+47015,Tennessee,Cannon,2022,46695
+47019,Tennessee,Carter,2022,40863
+47025,Tennessee,Claiborne,2022,42772
+47027,Tennessee,Clay,2022,41327
+47029,Tennessee,Cocke,2022,40651
+47031,Tennessee,Coffee,2022,47687
+47035,Tennessee,Cumberland,2022,45530
+47049,Tennessee,Fentress,2022,41810
+47051,Tennessee,Franklin,2022,47746
+47057,Tennessee,Grainger,2022,43630
+47059,Tennessee,Greene,2022,43721
+47061,Tennessee,Grundy,2022,38989
+47063,Tennessee,Hamblen,2022,47899
+47065,Tennessee,Hamilton,2022,62241
+47067,Tennessee,Hancock,2022,32401
+47073,Tennessee,Hawkins,2022,41853
+47087,Tennessee,Jackson,2022,38286
+47089,Tennessee,Jefferson,2022,45718
+47091,Tennessee,Johnson,2022,39284
+47093,Tennessee,Knox,2022,63634
+47099,Tennessee,Lawrence,2022,41698
+47101,Tennessee,Lewis,2022,41937
+47105,Tennessee,Loudon,2022,66918
+47107,Tennessee,McMinn,2022,43962
+47111,Tennessee,Macon,2022,41149
+47115,Tennessee,Marion,2022,49519
+47121,Tennessee,Meigs,2022,40681
+47123,Tennessee,Monroe,2022,42530
+47129,Tennessee,Morgan,2022,38505
+47133,Tennessee,Overton,2022,40604
+47137,Tennessee,Pickett,2022,41636
+47139,Tennessee,Polk,2022,41748
+47141,Tennessee,Putnam,2022,48938
+47143,Tennessee,Rhea,2022,43791
+47145,Tennessee,Roane,2022,50869
+47151,Tennessee,Scott,2022,37530
+47153,Tennessee,Sequatchie,2022,45529
+47155,Tennessee,Sevier,2022,54656
+47159,Tennessee,Smith,2022,47955
+47163,Tennessee,Sullivan,2022,51628
+47171,Tennessee,Unicoi,2022,43539
+47173,Tennessee,Union,2022,41344
+47175,Tennessee,Van Buren,2022,35142
+47177,Tennessee,Warren,2022,42702
+47179,Tennessee,Washington,2022,52955
+47185,Tennessee,White,2022,41610
+47001,Tennessee,Anderson,2022,44505
+47027,Tennessee,Clay,2022,53256
+47051,Tennessee,Franklin,2022,56477
+47065,Tennessee,Hamilton,2022,69445
+47087,Tennessee,Jackson,2022,51180
+47089,Tennessee,Jefferson,2022,47661
+47091,Tennessee,Johnson,2022,52389
+47093,Tennessee,Knox,2022,54750
+47115,Tennessee,Marion,2022,49627
+47139,Tennessee,Polk,2022,47138
+47159,Tennessee,Smith,2022,65495
+47179,Tennessee,Washington,2022,69605
+47129,Tennessee,Morgan,2022,67498
+47155,Tennessee,Sevier,2022,44511
+47179,Tennessee,Washington,2022,51650
+47051,Tennessee,Franklin,2022,55937
+47179,Tennessee,Washington,2022,69964
+51017,Virginia,Bath,2022,73371
+51021,Virginia,Bland,2022,43800
+51023,Virginia,Botetourt,2022,59932
+51027,Virginia,Buchanan,2022,45462
+51045,Virginia,Craig,2022,47820
+51051,Virginia,Dickenson,2022,41979
+51063,Virginia,Floyd,2022,49376
+51071,Virginia,Giles,2022,49867
+51077,Virginia,Grayson,2022,39423
+51091,Virginia,Highland,2022,52174
+51105,Virginia,Lee,2022,39709
+51141,Virginia,Patrick,2022,40749
+51155,Virginia,Pulaski,2022,48601
+51167,Virginia,Russell,2022,41628
+51169,Virginia,Scott,2022,41613
+51173,Virginia,Smyth,2022,45321
+51185,Virginia,Tazewell,2022,45456
+51197,Virginia,Wythe,2022,45129
+54001,West Virginia,Barbour,2022,41289
+54003,West Virginia,Berkeley,2022,51772
+54005,West Virginia,Boone,2022,41814
+54007,West Virginia,Braxton,2022,40416
+54009,West Virginia,Brooke,2022,51046
+54011,West Virginia,Cabell,2022,50998
+54013,West Virginia,Calhoun,2022,41532
+54015,West Virginia,Clay,2022,39151
+54017,West Virginia,Doddridge,2022,39383
+54019,West Virginia,Fayette,2022,44859
+54021,West Virginia,Gilmer,2022,36538
+54023,West Virginia,Grant,2022,47897
+54025,West Virginia,Greenbrier,2022,47453
+54027,West Virginia,Hampshire,2022,45182
+54029,West Virginia,Hancock,2022,51423
+54031,West Virginia,Hardy,2022,45583
+54033,West Virginia,Harrison,2022,59939
+54035,West Virginia,Jackson,2022,46178
+54037,West Virginia,Jefferson,2022,63053
+54039,West Virginia,Kanawha,2022,57868
+54041,West Virginia,Lewis,2022,44293
+54043,West Virginia,Lincoln,2022,36931
+54045,West Virginia,Logan,2022,44821
+54047,West Virginia,McDowell,2022,34264
+54049,West Virginia,Marion,2022,49990
+54051,West Virginia,Marshall,2022,50166
+54053,West Virginia,Mason,2022,41921
+54055,West Virginia,Mercer,2022,45286
+54057,West Virginia,Mineral,2022,47743
+54059,West Virginia,Mingo,2022,36887
+54061,West Virginia,Monongalia,2022,55502
+54063,West Virginia,Monroe,2022,40435
+54065,West Virginia,Morgan,2022,43695
+54067,West Virginia,Nicholas,2022,40643
+39001,Ohio,Adams,2022,44489
+39015,Ohio,Brown,2022,62163
+39079,Ohio,Jackson,2022,50837
+39081,Ohio,Jefferson,2022,55703
+39111,Ohio,Monroe,2022,50984
+39167,Ohio,Washington,2022,69370
+01007,Alabama,Bibb,2023,39835
+01009,Alabama,Blount,2023,45021
+01015,Alabama,Calhoun,2023,44737
+01017,Alabama,Chambers,2023,40735
+01019,Alabama,Cherokee,2023,45099
+01021,Alabama,Chilton,2023,46120
+01027,Alabama,Clay,2023,39082
+01029,Alabama,Cleburne,2023,44266
+01033,Alabama,Colbert,2023,47137
+01037,Alabama,Coosa,2023,40420
+01043,Alabama,Cullman,2023,50812
+01051,Alabama,Elmore,2023,51950
+01055,Alabama,Etowah,2023,45062
+01057,Alabama,Fayette,2023,42346
+01059,Alabama,Franklin,2023,42272
+01065,Alabama,Hale,2023,46181
+01071,Alabama,Jackson,2023,45322
+01073,Alabama,Jefferson,2023,71275
+01075,Alabama,Lamar,2023,41514
+01077,Alabama,Lauderdale,2023,47168
+01079,Alabama,Lawrence,2023,44413
+01083,Alabama,Limestone,2023,57194
+01087,Alabama,Macon,2023,41172
+01089,Alabama,Madison,2023,66005
+01093,Alabama,Marion,2023,45211
+01095,Alabama,Marshall,2023,48602
+01103,Alabama,Morgan,2023,49630
+01107,Alabama,Pickens,2023,42292
+01111,Alabama,Randolph,2023,42104
+01115,Alabama,St. Clair,2023,50493
+01117,Alabama,Shelby,2023,71565
+01121,Alabama,Talladega,2023,43284
+01123,Alabama,Tallapoosa,2023,51662
+01125,Alabama,Tuscaloosa,2023,44456
+01127,Alabama,Walker,2023,51485
+01133,Alabama,Winston,2023,44873
+01015,Alabama,Calhoun,2023,49037
+01027,Alabama,Clay,2023,46032
+01029,Alabama,Cleburne,2023,51355
+01059,Alabama,Franklin,2023,42944
+01071,Alabama,Jackson,2023,49638
+01073,Alabama,Jefferson,2023,43046
+01079,Alabama,Lawrence,2023,43536
+01089,Alabama,Madison,2023,42673
+01093,Alabama,Marion,2023,39163
+28095,Mississippi,Monroe,2023,45511
+28097,Mississippi,Montgomery,2023,40367
+28145,Mississippi,Union,2023,56838
+28013,Mississippi,Calhoun,2023,38342
+28025,Mississippi,Clay,2023,56382
+28081,Mississippi,Lee,2023,65878
+28095,Mississippi,Monroe,2023,130525
+28145,Mississippi,Union,2023,28946
+13011,Georgia,Banks,2023,43896
+13013,Georgia,Barrow,2023,50221
+13015,Georgia,Bartow,2023,51396
+13045,Georgia,Carroll,2023,51798
+13047,Georgia,Catoosa,2023,45791
+13055,Georgia,Chattooga,2023,38269
+13057,Georgia,Cherokee,2023,71255
+13083,Georgia,Dade,2023,43769
+13085,Georgia,Dawson,2023,63599
+13097,Georgia,Douglas,2023,45636
+13105,Georgia,Elbert,2023,44067
+13111,Georgia,Fannin,2023,54467
+13115,Georgia,Floyd,2023,46727
+13117,Georgia,Forsyth,2023,84447
+13119,Georgia,Franklin,2023,41656
+13123,Georgia,Gilmer,2023,47155
+13129,Georgia,Gordon,2023,45960
+13135,Georgia,Gwinnett,2023,54331
+13137,Georgia,Habersham,2023,40806
+13139,Georgia,Hall,2023,60036
+13143,Georgia,Haralson,2023,46887
+13147,Georgia,Hart,2023,46368
+13149,Georgia,Heard,2023,41968
+13157,Georgia,Jackson,2023,58834
+13187,Georgia,Lumpkin,2023,49173
+13195,Georgia,Madison,2023,46890
+13213,Georgia,Murray,2023,38846
+13223,Georgia,Paulding,2023,50181
+13227,Georgia,Pickens,2023,63367
+13233,Georgia,Polk,2023,41831
+13241,Georgia,Rabun,2023,54148
+13257,Georgia,Stephens,2023,46093
+13281,Georgia,Towns,2023,51955
+13291,Georgia,Union,2023,47853
+13295,Georgia,Walker,2023,44195
+13311,Georgia,White,2023,50043
+13313,Georgia,Whitfield,2023,47955
+13119,Georgia,Franklin,2023,45872
+13195,Georgia,Madison,2023,29168
+13045,Georgia,Carroll,2023,52391
+13097,Georgia,Douglas,2023,71677
+13119,Georgia,Franklin,2023,48167
+13157,Georgia,Jackson,2023,49775
+13195,Georgia,Madison,2023,60115
+13291,Georgia,Union,2023,51681
+13311,Georgia,White,2023,61640
+13045,Georgia,Carroll,2023,53144
+13115,Georgia,Floyd,2023,66690
+13119,Georgia,Franklin,2023,57550
+13157,Georgia,Jackson,2023,51461
+13195,Georgia,Madison,2023,48479
+39127,Ohio,Perry,2023,46830
+39131,Ohio,Pike,2023,50515
+39167,Ohio,Washington,2023,51198
+39001,Ohio,Adams,2023,64379
+39019,Ohio,Carroll,2023,65159
+39067,Ohio,Harrison,2023,59741
+39079,Ohio,Jackson,2023,56935
+39081,Ohio,Jefferson,2023,57961
+39111,Ohio,Monroe,2023,58282
+39167,Ohio,Washington,2023,80062
+39015,Ohio,Brown,2023,54718
+39079,Ohio,Jackson,2023,53147
+39081,Ohio,Jefferson,2023,58042
+39167,Ohio,Washington,2023,55727
+21001,Kentucky,Adair,2023,43430
+21011,Kentucky,Bath,2023,40141
+21013,Kentucky,Bell,2023,42353
+21019,Kentucky,Boyd,2023,49074
+21025,Kentucky,Breathitt,2023,42633
+21043,Kentucky,Carter,2023,40853
+21045,Kentucky,Casey,2023,42262
+21049,Kentucky,Clark,2023,51148
+21051,Kentucky,Clay,2023,40899
+21053,Kentucky,Clinton,2023,44343
+21057,Kentucky,Cumberland,2023,54202
+21061,Kentucky,Edmonson,2023,41551
+21063,Kentucky,Elliott,2023,29689
+21065,Kentucky,Estill,2023,42324
+21069,Kentucky,Fleming,2023,42128
+21071,Kentucky,Floyd,2023,45540
+21079,Kentucky,Garrard,2023,46035
+21087,Kentucky,Green,2023,43751
+21089,Kentucky,Greenup,2023,50917
+21095,Kentucky,Harlan,2023,40111
+21099,Kentucky,Hart,2023,44753
+21109,Kentucky,Jackson,2023,39236
+21115,Kentucky,Johnson,2023,41188
+21119,Kentucky,Knott,2023,44273
+21121,Kentucky,Knox,2023,39065
+21125,Kentucky,Laurel,2023,42337
+21127,Kentucky,Lawrence,2023,41198
+21129,Kentucky,Lee,2023,36462
+21131,Kentucky,Leslie,2023,41877
+21133,Kentucky,Letcher,2023,42346
+21135,Kentucky,Lewis,2023,41161
+21137,Kentucky,Lincoln,2023,41970
+21147,Kentucky,McCreary,2023,35036
+21151,Kentucky,Madison,2023,48025
+21153,Kentucky,Magoffin,2023,44371
+21159,Kentucky,Martin,2023,33523
+21165,Kentucky,Menifee,2023,42933
+21169,Kentucky,Metcalfe,2023,38441
+21171,Kentucky,Monroe,2023,44980
+21173,Kentucky,Montgomery,2023,45753
+21175,Kentucky,Morgan,2023,34380
+21181,Kentucky,Nicholas,2023,41289
+39127,Ohio,Perry,2023,46219
+39131,Ohio,Pike,2023,46272
+39167,Ohio,Washington,2023,47570
+39079,Ohio,Jackson,2023,44759
+39081,Ohio,Jefferson,2023,63448
+39167,Ohio,Washington,2023,44615
+39167,Ohio,Washington,2023,52366
+24001,Maryland,Allegany,2023,49182
+24023,Maryland,Garrett,2023,57525
+24043,Maryland,Washington,2023,56174
+24043,Maryland,Washington,2023,84018
+28003,Mississippi,Alcorn,2023,47651
+28009,Mississippi,Benton,2023,45081
+28013,Mississippi,Calhoun,2023,42728
+28017,Mississippi,Chickasaw,2023,39952
+28019,Mississippi,Choctaw,2023,42655
+28025,Mississippi,Clay,2023,51599
+28057,Mississippi,Itawamba,2023,42737
+28069,Mississippi,Kemper,2023,39625
+28081,Mississippi,Lee,2023,54255
+28087,Mississippi,Lowndes,2023,51172
+28093,Mississippi,Marshall,2023,46470
+28095,Mississippi,Monroe,2023,44517
+28097,Mississippi,Montgomery,2023,42976
+28103,Mississippi,Noxubee,2023,44881
+28105,Mississippi,Oktibbeha,2023,42241
+28107,Mississippi,Panola,2023,43391
+28115,Mississippi,Pontotoc,2023,43359
+28117,Mississippi,Prentiss,2023,39413
+28139,Mississippi,Tippah,2023,45880
+28141,Mississippi,Tishomingo,2023,45018
+28145,Mississippi,Union,2023,42339
+28155,Mississippi,Webster,2023,47027
+28159,Mississippi,Winston,2023,46075
+28161,Mississippi,Yalobusha,2023,44057
+28009,Mississippi,Benton,2023,46819
+28025,Mississippi,Clay,2023,60043
+28095,Mississippi,Monroe,2023,56061
+28097,Mississippi,Montgomery,2023,54811
+28155,Mississippi,Webster,2023,43890
+28025,Mississippi,Clay,2023,69182
+28155,Mississippi,Webster,2023,65987
+28145,Mississippi,Union,2023,82502
+28145,Mississippi,Union,2023,40654
+36003,New York,Allegany,2023,42832
+36007,New York,Broome,2023,52147
+36009,New York,Cattaraugus,2023,48342
+36013,New York,Chautauqua,2023,49640
+36015,New York,Chemung,2023,53850
+36017,New York,Chenango,2023,54527
+36023,New York,Cortland,2023,50994
+36025,New York,Delaware,2023,50348
+36077,New York,Otsego,2023,53098
+36097,New York,Schuyler,2023,52126
+36101,New York,Steuben,2023,56349
+36107,New York,Tioga,2023,54765
+36109,New York,Tompkins,2023,54159
+37003,North Carolina,Alexander,2023,49694
+37005,North Carolina,Alleghany,2023,46732
+37009,North Carolina,Ashe,2023,48453
+37011,North Carolina,Avery,2023,50256
+37021,North Carolina,Buncombe,2023,66288
+37023,North Carolina,Burke,2023,47560
+37027,North Carolina,Caldwell,2023,47398
+37035,North Carolina,Catawba,2023,57624
+37039,North Carolina,Cherokee,2023,41999
+37043,North Carolina,Clay,2023,47138
+37045,North Carolina,Cleveland,2023,47778
+37059,North Carolina,Davie,2023,63324
+37067,North Carolina,Forsyth,2023,60481
+37075,North Carolina,Graham,2023,44387
+37087,North Carolina,Haywood,2023,53755
+37089,North Carolina,Henderson,2023,59258
+37099,North Carolina,Jackson,2023,46605
+37111,North Carolina,McDowell,2023,47124
+37113,North Carolina,Macon,2023,52844
+37115,North Carolina,Madison,2023,47811
+37121,North Carolina,Mitchell,2023,47047
+37149,North Carolina,Polk,2023,67589
+37161,North Carolina,Rutherford,2023,44091
+37169,North Carolina,Stokes,2023,49687
+37171,North Carolina,Surry,2023,51241
+37173,North Carolina,Swain,2023,55328
+37175,North Carolina,Transylvania,2023,60160
+37189,North Carolina,Watauga,2023,53013
+37193,North Carolina,Wilkes,2023,49350
+37197,North Carolina,Yadkin,2023,49886
+37199,North Carolina,Yancey,2023,45449
+37023,North Carolina,Burke,2023,89281
+39001,Ohio,Adams,2023,46026
+39007,Ohio,Ashtabula,2023,50508
+39009,Ohio,Athens,2023,42018
+39013,Ohio,Belmont,2023,51534
+39015,Ohio,Brown,2023,49102
+39019,Ohio,Carroll,2023,50809
+39025,Ohio,Clermont,2023,63599
+39029,Ohio,Columbiana,2023,47871
+39031,Ohio,Coshocton,2023,44741
+39053,Ohio,Gallia,2023,50025
+39059,Ohio,Guernsey,2023,51043
+39067,Ohio,Harrison,2023,50642
+39071,Ohio,Highland,2023,46608
+39073,Ohio,Hocking,2023,48115
+39075,Ohio,Holmes,2023,60632
+39079,Ohio,Jackson,2023,43799
+39081,Ohio,Jefferson,2023,48346
+39087,Ohio,Lawrence,2023,51367
+39099,Ohio,Mahoning,2023,54630
+39105,Ohio,Meigs,2023,44864
+39111,Ohio,Monroe,2023,44894
+39115,Ohio,Morgan,2023,45751
+39119,Ohio,Muskingum,2023,52225
+39121,Ohio,Noble,2023,33492
+39127,Ohio,Perry,2023,48777
+39131,Ohio,Pike,2023,48745
+39141,Ohio,Ross,2023,46934
+39145,Ohio,Scioto,2023,49423
+39155,Ohio,Trumbull,2023,49159
+39157,Ohio,Tuscarawas,2023,57335
+39163,Ohio,Vinton,2023,43796
+39167,Ohio,Washington,2023,55168
+39079,Ohio,Jackson,2023,54031
+39081,Ohio,Jefferson,2023,44947
+39121,Ohio,Noble,2023,53893
+39167,Ohio,Washington,2023,111286
+39079,Ohio,Jackson,2023,62541
+39081,Ohio,Jefferson,2023,46111
+39167,Ohio,Washington,2023,79139
+42003,Pennsylvania,Allegheny,2023,75468
+42005,Pennsylvania,Armstrong,2023,58854
+42007,Pennsylvania,Beaver,2023,58206
+42009,Pennsylvania,Bedford,2023,52510
+42013,Pennsylvania,Blair,2023,57782
+42015,Pennsylvania,Bradford,2023,50930
+42019,Pennsylvania,Butler,2023,73039
+42021,Pennsylvania,Cambria,2023,50932
+42023,Pennsylvania,Cameron,2023,54148
+42025,Pennsylvania,Carbon,2023,62353
+42027,Pennsylvania,Centre,2023,57800
+42031,Pennsylvania,Clarion,2023,50175
+42033,Pennsylvania,Clearfield,2023,57841
+42035,Pennsylvania,Clinton,2023,48383
+42037,Pennsylvania,Columbia,2023,52692
+42039,Pennsylvania,Crawford,2023,51236
+42047,Pennsylvania,Elk,2023,53862
+42049,Pennsylvania,Erie,2023,54694
+42051,Pennsylvania,Fayette,2023,51467
+42053,Pennsylvania,Forest,2023,30606
+42057,Pennsylvania,Fulton,2023,49640
+42059,Pennsylvania,Greene,2023,52757
+42061,Pennsylvania,Huntingdon,2023,46957
+42063,Pennsylvania,Indiana,2023,48336
+42065,Pennsylvania,Jefferson,2023,50976
+42067,Pennsylvania,Juniata,2023,62851
+42069,Pennsylvania,Lackawanna,2023,56985
+42073,Pennsylvania,Lawrence,2023,53835
+42079,Pennsylvania,Luzerne,2023,53214
+42081,Pennsylvania,Lycoming,2023,53630
+42083,Pennsylvania,McKean,2023,51318
+42085,Pennsylvania,Mercer,2023,51133
+42087,Pennsylvania,Mifflin,2023,49197
+42089,Pennsylvania,Monroe,2023,54716
+42093,Pennsylvania,Montour,2023,70610
+42097,Pennsylvania,Northumberland,2023,50445
+42099,Pennsylvania,Perry,2023,56411
+42103,Pennsylvania,Pike,2023,59543
+42105,Pennsylvania,Potter,2023,48180
+42107,Pennsylvania,Schuylkill,2023,52049
+42109,Pennsylvania,Snyder,2023,54472
+42111,Pennsylvania,Somerset,2023,49685
+42113,Pennsylvania,Sullivan,2023,59379
+42115,Pennsylvania,Susquehanna,2023,61452
+42117,Pennsylvania,Tioga,2023,47580
+42119,Pennsylvania,Union,2023,53495
+42121,Pennsylvania,Venango,2023,51568
+42123,Pennsylvania,Warren,2023,52057
+42125,Pennsylvania,Washington,2023,75091
+42127,Pennsylvania,Wayne,2023,57575
+42129,Pennsylvania,Westmoreland,2023,64021
+42131,Pennsylvania,Wyoming,2023,57180
+42125,Pennsylvania,Washington,2023,83586
+45007,South Carolina,Anderson,2023,50288
+45021,South Carolina,Cherokee,2023,41896
+45045,South Carolina,Greenville,2023,60866
+45073,South Carolina,Oconee,2023,57361
+45077,South Carolina,Pickens,2023,49294
+45083,South Carolina,Spartanburg,2023,53700
+45087,South Carolina,Union,2023,40314
+45087,South Carolina,Union,2023,139931
+47001,Tennessee,Anderson,2023,56260
+47007,Tennessee,Bledsoe,2023,36038
+47009,Tennessee,Blount,2023,58447
+47011,Tennessee,Bradley,2023,50014
+47013,Tennessee,Campbell,2023,44694
+47015,Tennessee,Cannon,2023,48732
+47019,Tennessee,Carter,2023,42833
+47025,Tennessee,Claiborne,2023,44367
+47027,Tennessee,Clay,2023,39424
+47029,Tennessee,Cocke,2023,42387
+47031,Tennessee,Coffee,2023,50163
+47035,Tennessee,Cumberland,2023,48091
+47049,Tennessee,Fentress,2023,43102
+47051,Tennessee,Franklin,2023,49891
+47057,Tennessee,Grainger,2023,45678
+47059,Tennessee,Greene,2023,44945
+47061,Tennessee,Grundy,2023,40453
+47063,Tennessee,Hamblen,2023,50094
+47065,Tennessee,Hamilton,2023,65525
+47067,Tennessee,Hancock,2023,33223
+47073,Tennessee,Hawkins,2023,44192
+47087,Tennessee,Jackson,2023,40132
+47089,Tennessee,Jefferson,2023,48184
+47091,Tennessee,Johnson,2023,40345
+47093,Tennessee,Knox,2023,67323
+47099,Tennessee,Lawrence,2023,43273
+47101,Tennessee,Lewis,2023,44554
+47105,Tennessee,Loudon,2023,70063
+47107,Tennessee,McMinn,2023,45629
+47111,Tennessee,Macon,2023,41530
+47115,Tennessee,Marion,2023,51590
+47121,Tennessee,Meigs,2023,41017
+47123,Tennessee,Monroe,2023,44350
+47129,Tennessee,Morgan,2023,40237
+47133,Tennessee,Overton,2023,42000
+47137,Tennessee,Pickett,2023,42545
+47139,Tennessee,Polk,2023,42519
+47141,Tennessee,Putnam,2023,51132
+47143,Tennessee,Rhea,2023,45745
+47145,Tennessee,Roane,2023,53353
+47151,Tennessee,Scott,2023,39326
+47153,Tennessee,Sequatchie,2023,48254
+47155,Tennessee,Sevier,2023,57533
+47159,Tennessee,Smith,2023,50388
+47163,Tennessee,Sullivan,2023,54453
+47171,Tennessee,Unicoi,2023,45593
+47173,Tennessee,Union,2023,43407
+47175,Tennessee,Van Buren,2023,36828
+47177,Tennessee,Warren,2023,44375
+47179,Tennessee,Washington,2023,55967
+47185,Tennessee,White,2023,42866
+47001,Tennessee,Anderson,2023,46478
+47027,Tennessee,Clay,2023,57095
+47051,Tennessee,Franklin,2023,56987
+47065,Tennessee,Hamilton,2023,70580
+47087,Tennessee,Jackson,2023,54702
+47089,Tennessee,Jefferson,2023,50131
+47091,Tennessee,Johnson,2023,55487
+47093,Tennessee,Knox,2023,52798
+47115,Tennessee,Marion,2023,52570
+47139,Tennessee,Polk,2023,49945
+47159,Tennessee,Smith,2023,66887
+47179,Tennessee,Washington,2023,73880
+47129,Tennessee,Morgan,2023,71630
+47155,Tennessee,Sevier,2023,46183
+47179,Tennessee,Washington,2023,54405
+47051,Tennessee,Franklin,2023,57298
+47179,Tennessee,Washington,2023,73602
+51017,Virginia,Bath,2023,77195
+51021,Virginia,Bland,2023,46796
+51023,Virginia,Botetourt,2023,64012
+51027,Virginia,Buchanan,2023,49335
+51045,Virginia,Craig,2023,50734
+51051,Virginia,Dickenson,2023,44423
+51063,Virginia,Floyd,2023,53008
+51071,Virginia,Giles,2023,53100
+51077,Virginia,Grayson,2023,40784
+51091,Virginia,Highland,2023,50924
+51105,Virginia,Lee,2023,41822
+51141,Virginia,Patrick,2023,42956
+51155,Virginia,Pulaski,2023,51836
+51167,Virginia,Russell,2023,43189
+51169,Virginia,Scott,2023,43448
+51173,Virginia,Smyth,2023,48244
+51185,Virginia,Tazewell,2023,48157
+51197,Virginia,Wythe,2023,47343
+54001,West Virginia,Barbour,2023,42530
+54003,West Virginia,Berkeley,2023,54940
+54005,West Virginia,Boone,2023,43398
+54007,West Virginia,Braxton,2023,42520
+54009,West Virginia,Brooke,2023,53325
+54011,West Virginia,Cabell,2023,54209
+54013,West Virginia,Calhoun,2023,44580
+54015,West Virginia,Clay,2023,41070
+54017,West Virginia,Doddridge,2023,40875
+54019,West Virginia,Fayette,2023,47212
+54021,West Virginia,Gilmer,2023,38947
+54023,West Virginia,Grant,2023,47890
+54025,West Virginia,Greenbrier,2023,50142
+54027,West Virginia,Hampshire,2023,46417
+54029,West Virginia,Hancock,2023,53854
+54031,West Virginia,Hardy,2023,43439
+54033,West Virginia,Harrison,2023,63351
+54035,West Virginia,Jackson,2023,48978
+54037,West Virginia,Jefferson,2023,66514
+54039,West Virginia,Kanawha,2023,61400
+54041,West Virginia,Lewis,2023,46994
+54043,West Virginia,Lincoln,2023,38761
+54045,West Virginia,Logan,2023,46862
+54047,West Virginia,McDowell,2023,35813
+54049,West Virginia,Marion,2023,51911
+54051,West Virginia,Marshall,2023,51767
+54053,West Virginia,Mason,2023,44435
+54055,West Virginia,Mercer,2023,48086
+54057,West Virginia,Mineral,2023,49484
+54059,West Virginia,Mingo,2023,39157
+54061,West Virginia,Monongalia,2023,58418
+54063,West Virginia,Monroe,2023,42813
+54065,West Virginia,Morgan,2023,45801
+54067,West Virginia,Nicholas,2023,44299
+39001,Ohio,Adams,2023,46249
+39015,Ohio,Brown,2023,65199
+39079,Ohio,Jackson,2023,52237
+39081,Ohio,Jefferson,2023,58374
+39111,Ohio,Monroe,2023,52978
+39167,Ohio,Washington,2023,73187

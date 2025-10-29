@@ -1,0 +1,476 @@
+state,county,gdp_per_capita_2021,gdp_per_capita_2022,gdp_per_capita_2023,rank_2023,pct_change_2022,pct_change_2023,county_clean,fips
+Alabama,Bibb,37362,38196,39835,64,2.2,4.3,Bibb,01007
+Alabama,Blount,42975,44063,45021,38,2.5,2.2,Blount,01009
+Alabama,Calhoun,43215,42668,44737,40,-1.3,4.8,Calhoun,01015
+Alabama,Chambers,39269,39447,40735,62,0.5,3.3,Chambers,01017
+Alabama,Cherokee,44590,44563,45099,36,-0.1,1.2,Cherokee,01019
+Alabama,Chilton,42839,43454,46120,31,1.4,6.1,Chilton,01021
+Alabama,Clay,39465,39456,39082,66,0.0,-0.9,Clay,01027
+Alabama,Cleburne,42929,44251,44266,43,3.1,0.0,Cleburne,01029
+Alabama,Colbert,44126,44800,47137,28,1.5,5.2,Colbert,01033
+Alabama,Coosa,39176,38739,40420,63,-1.1,4.3,Coosa,01037
+Alabama,Cullman,46886,49758,50812,15,6.1,2.1,Cullman,01043
+Alabama,Elmore,48569,48671,51950,12,0.2,6.7,Elmore,01051
+Alabama,Etowah,42777,43196,45062,37,1.0,4.3,Etowah,01055
+Alabama,Fayette,42191,42765,42346,50,1.4,-1.0,Fayette,01057
+Alabama,Franklin,40296,42616,42272,52,5.8,-0.8,Franklin,01059
+Alabama,Hale,44809,44433,46181,30,-0.8,3.9,Hale,01065
+Alabama,Jackson,43162,44123,45322,34,2.2,2.7,Jackson,01071
+Alabama,Jefferson,64992,67431,71275,2,3.8,5.7,Jefferson,01073
+Alabama,Lamar,39831,39774,41514,57,-0.1,4.4,Lamar,01075
+Alabama,Lauderdale,44823,44959,47168,27,0.3,4.9,Lauderdale,01077
+Alabama,Lawrence,42235,43891,44413,42,3.9,1.2,Lawrence,01079
+Alabama,Limestone,53156,53965,57194,5,1.5,6.0,Limestone,01083
+Alabama,Macon,38030,38926,41172,60,2.4,5.8,Macon,01087
+Alabama,Madison,60517,62533,66005,3,3.3,5.6,Madison,01089
+Alabama,Marion,41506,43428,45211,35,4.6,4.1,Marion,01093
+Alabama,Marshall,45985,47142,48602,23,2.5,3.1,Marshall,01095
+Alabama,Morgan,46508,47549,49630,19,2.2,4.4,Morgan,01103
+Alabama,Pickens,43902,41570,42292,51,-5.3,1.7,Pickens,01107
+Alabama,Randolph,42014,42457,42104,53,1.1,-0.8,Randolph,01111
+Alabama,St. Clair,47303,48215,50493,17,1.9,4.7,St. Clair,01115
+Alabama,Shelby,65158,67354,71565,1,3.4,6.3,Shelby,01117
+Alabama,Talladega,41267,41455,43284,46,0.5,4.4,Talladega,01121
+Alabama,Tallapoosa,48690,49046,51662,13,0.7,5.3,Tallapoosa,01123
+Alabama,Tuscaloosa,41246,42186,44456,41,2.3,5.4,Tuscaloosa,01125
+Alabama,Walker,46956,49274,51485,14,4.9,4.5,Walker,01127
+Alabama,Winston,42783,43713,44873,39,2.2,2.7,Winston,01133
+Alabama,Calhoun,46680,46697,49037,23,0.0,5.0,Calhoun,01015
+Alabama,Clay,44081,44983,46032,37,2.0,2.3,Clay,01027
+Alabama,Cleburne,47988,48829,51355,11,1.8,5.2,Cleburne,01029
+Alabama,Franklin,41147,43540,42944,51,5.8,-1.4,Franklin,01059
+Alabama,Jackson,44489,46970,49638,19,5.6,5.7,Jackson,01071
+Alabama,Jefferson,41329,41959,43046,49,1.5,2.6,Jefferson,01073
+Alabama,Lawrence,40541,43390,43536,47,7.0,0.3,Lawrence,01079
+Alabama,Madison,43456,46040,42673,53,5.9,-7.3,Madison,01089
+Alabama,Marion,37642,37718,39163,66,0.2,3.8,Marion,01093
+Mississippi,Monroe,42738,42766,45511,39,0.1,6.4,Monroe,28095
+Mississippi,Montgomery,38258,39259,40367,61,2.6,2.8,Montgomery,28097
+Mississippi,Union,51839,53759,56838,5,3.7,5.7,Union,28145
+Mississippi,Calhoun,36349,36065,38342,59,-0.8,6.3,Calhoun,28013
+Mississippi,Clay,52615,53891,56382,26,2.4,4.6,Clay,28025
+Mississippi,Lee,61275,61510,65878,14,0.4,7.1,Lee,28081
+Mississippi,Monroe,105768,118434,130525,2,12.0,10.2,Monroe,28095
+Mississippi,Union,26134,27029,28946,67,3.4,7.1,Union,28145
+Georgia,Banks,43100,44808,43896,95,4.0,-2.0,Banks,13011
+Georgia,Barrow,45802,48229,50221,38,5.3,4.1,Barrow,13013
+Georgia,Bartow,47529,49193,51396,34,3.5,4.5,Bartow,13015
+Georgia,Carroll,49186,49914,51798,31,1.5,3.8,Carroll,13045
+Georgia,Catoosa,42143,43876,45791,69,4.1,4.4,Catoosa,13047
+Georgia,Chattooga,37014,37111,38269,142,0.3,3.1,Chattooga,13055
+Georgia,Cherokee,62910,67315,71255,7,7.0,5.9,Cherokee,13057
+Georgia,Dade,41069,42382,43769,96,3.2,3.3,Dade,13083
+Georgia,Dawson,57601,60181,63599,9,4.5,5.7,Dawson,13085
+Georgia,Douglas,43879,43755,45636,73,-0.3,4.3,Douglas,13097
+Georgia,Elbert,41802,43130,44067,90,3.2,2.2,Elbert,13105
+Georgia,Fannin,47735,51143,54467,23,7.1,6.5,Fannin,13111
+Georgia,Floyd,44177,44332,46727,62,0.4,5.4,Floyd,13115
+Georgia,Forsyth,74584,79986,84447,3,7.2,5.6,Forsyth,13117
+Georgia,Franklin,40801,44534,41656,120,9.1,-6.5,Franklin,13119
+Georgia,Gilmer,42781,45922,47155,57,7.3,2.7,Gilmer,13123
+Georgia,Gordon,43088,45387,45960,67,5.3,1.3,Gordon,13129
+Georgia,Gwinnett,50066,51729,54331,24,3.3,5.0,Gwinnett,13135
+Georgia,Habersham,39366,40550,40806,127,3.0,0.6,Habersham,13137
+Georgia,Hall,55114,57126,60036,17,3.7,5.1,Hall,13139
+Georgia,Haralson,44224,45239,46887,61,2.3,3.6,Haralson,13143
+Georgia,Hart,43869,46161,46368,64,5.2,0.4,Hart,13147
+Georgia,Heard,41117,41139,41968,113,0.1,2.0,Heard,13149
+Georgia,Jackson,52143,56230,58834,19,7.8,4.6,Jackson,13157
+Georgia,Lumpkin,47607,47008,49173,43,-1.3,4.6,Lumpkin,13187
+Georgia,Madison,43669,47184,46890,60,8.0,-0.6,Madison,13195
+Georgia,Murray,37345,38242,38846,139,2.4,1.6,Murray,13213
+Georgia,Paulding,46912,47668,50181,39,1.6,5.3,Paulding,13223
+Georgia,Pickens,58192,60575,63367,11,4.1,4.6,Pickens,13227
+Georgia,Polk,39380,40471,41831,116,2.8,3.4,Polk,13233
+Georgia,Rabun,51221,51594,54148,25,0.7,5.0,Rabun,13241
+Georgia,Stephens,43644,45412,46093,65,4.1,1.5,Stephens,13257
+Georgia,Towns,47344,48175,51955,30,1.8,7.8,Towns,13281
+Georgia,Union,44841,45528,47853,53,1.5,5.1,Union,13291
+Georgia,Walker,41454,42812,44195,88,3.3,3.2,Walker,13295
+Georgia,White,48170,48617,50043,40,0.9,2.9,White,13311
+Georgia,Whitfield,46950,46258,47955,51,-1.5,3.7,Whitfield,13313
+Georgia,Franklin,44944,45424,45872,36,1.1,1.0,Franklin,13119
+Georgia,Madison,27693,28113,29168,44,1.5,3.8,Madison,13195
+Georgia,Carroll,50760,52107,52391,75,2.7,0.5,Carroll,13045
+Georgia,Douglas,61083,69116,71677,7,13.2,3.7,Douglas,13097
+Georgia,Franklin,45826,45930,48167,94,0.2,4.9,Franklin,13119
+Georgia,Jackson,46923,47152,49775,88,0.5,5.6,Jackson,13157
+Georgia,Madison,55268,56766,60115,27,2.7,5.9,Madison,13195
+Georgia,Union,48837,48948,51681,82,0.2,5.6,Union,13291
+Georgia,White,56269,59999,61640,22,6.6,2.7,White,13311
+Georgia,Carroll,51573,51375,53144,53,-0.4,3.4,Carroll,13045
+Georgia,Floyd,63200,63496,66690,7,0.5,5.0,Floyd,13115
+Georgia,Franklin,56052,55604,57550,25,-0.8,3.5,Franklin,13119
+Georgia,Jackson,48535,50212,51461,67,3.5,2.5,Jackson,13157
+Georgia,Madison,46623,46947,48479,80,0.7,3.3,Madison,13195
+Ohio,Perry,44466,45081,46830,87,1.4,3.9,Perry,39127
+Ohio,Pike,47688,48871,50515,70,2.5,3.4,Pike,39131
+Ohio,Washington,47929,50302,51198,68,5.0,1.8,Washington,39167
+Ohio,Adams,65237,66764,64379,28,2.3,-3.6,Adams,39001
+Ohio,Carroll,60922,68120,65159,23,11.8,-4.3,Carroll,39019
+Ohio,Harrison,55951,60019,59741,54,7.3,-0.5,Harrison,39067
+Ohio,Jackson,53959,56366,56935,63,4.5,1.0,Jackson,39079
+Ohio,Jefferson,53205,56925,57961,60,7.0,1.8,Jefferson,39081
+Ohio,Monroe,54539,55747,58282,59,2.2,4.5,Monroe,39111
+Ohio,Washington,72335,82598,80062,5,14.2,-3.1,Washington,39167
+Ohio,Brown,53575,51909,54718,68,-3.1,5.4,Brown,39015
+Ohio,Jackson,50474,49905,53147,77,-1.1,6.5,Jackson,39079
+Ohio,Jefferson,53775,54538,58042,53,1.4,6.4,Jefferson,39081
+Ohio,Washington,56307,50260,55727,61,-10.7,10.9,Washington,39167
+Kentucky,Adair,41156,41624,43430,82,1.1,4.3,Adair,21001
+Kentucky,Bath,38121,38581,40141,110,1.2,4.0,Bath,21011
+Kentucky,Bell,40573,39680,42353,88,-2.2,6.7,Bell,21013
+Kentucky,Boyd,46154,45860,49074,43,-0.6,7.0,Boyd,21019
+Kentucky,Breathitt,39020,39280,42633,85,0.7,8.5,Breathitt,21025
+Kentucky,Carter,39255,38950,40853,107,-0.8,4.9,Carter,21043
+Kentucky,Casey,40521,40325,42262,92,-0.5,4.8,Casey,21045
+Kentucky,Clark,48032,48727,51148,32,1.4,5.0,Clark,21049
+Kentucky,Clay,38970,38265,40899,106,-1.8,6.9,Clay,21051
+Kentucky,Clinton,43976,44344,44343,74,0.8,0.0,Clinton,21053
+Kentucky,Cumberland,50564,51076,54202,22,1.0,6.1,Cumberland,21057
+Kentucky,Edmonson,40459,40491,41551,98,0.1,2.6,Edmonson,21061
+Kentucky,Elliott,28751,27678,29689,120,-3.7,7.3,Elliott,21063
+Kentucky,Estill,40190,40269,42324,91,0.2,5.1,Estill,21065
+Kentucky,Fleming,41373,41425,42128,93,0.1,1.7,Fleming,21069
+Kentucky,Floyd,43342,42986,45540,66,-0.8,5.9,Floyd,21071
+Kentucky,Garrard,44195,44079,46035,61,-0.3,4.4,Garrard,21079
+Kentucky,Green,42974,42241,43751,80,-1.7,3.6,Green,21087
+Kentucky,Greenup,47502,47838,50917,33,0.7,6.4,Greenup,21089
+Kentucky,Harlan,38206,37910,40111,111,-0.8,5.8,Harlan,21095
+Kentucky,Hart,41222,42335,44753,70,2.7,5.7,Hart,21099
+Kentucky,Jackson,38299,37510,39236,112,-2.1,4.6,Jackson,21109
+Kentucky,Johnson,39580,39143,41188,103,-1.1,5.2,Johnson,21115
+Kentucky,Knott,41216,41732,44273,76,1.3,6.1,Knott,21119
+Kentucky,Knox,38688,37330,39065,113,-3.5,4.6,Knox,21121
+Kentucky,Laurel,41320,40659,42337,90,-1.6,4.1,Laurel,21125
+Kentucky,Lawrence,38148,38464,41198,102,0.8,7.1,Lawrence,21127
+Kentucky,Lee,34946,34304,36462,116,-1.8,6.3,Lee,21129
+Kentucky,Leslie,39574,39352,41877,96,-0.6,6.4,Leslie,21131
+Kentucky,Letcher,39667,39824,42346,89,0.4,6.3,Letcher,21133
+Kentucky,Lewis,40142,39658,41161,104,-1.2,3.8,Lewis,21135
+Kentucky,Lincoln,40422,40770,41970,95,0.9,2.9,Lincoln,21137
+Kentucky,McCreary,35655,33934,35036,117,-4.8,3.2,McCreary,21147
+Kentucky,Madison,44175,45296,48025,50,2.5,6.0,Madison,21151
+Kentucky,Magoffin,42399,41842,44371,73,-1.3,6.0,Magoffin,21153
+Kentucky,Martin,32922,31935,33523,119,-3.0,5.0,Martin,21159
+Kentucky,Menifee,41400,40862,42933,83,-1.3,5.1,Menifee,21165
+Kentucky,Metcalfe,38240,37519,38441,114,-1.9,2.5,Metcalfe,21169
+Kentucky,Monroe,44252,44675,44980,67,1.0,0.7,Monroe,21171
+Kentucky,Montgomery,42840,43623,45753,64,1.8,4.9,Montgomery,21173
+Kentucky,Morgan,33898,32223,34380,118,-4.9,6.7,Morgan,21175
+Kentucky,Nicholas,40735,39213,41289,100,-3.7,5.3,Nicholas,21181
+Ohio,Perry,43293,43542,46219,60,0.6,6.1,Perry,39127
+Ohio,Pike,42989,44003,46272,59,2.4,5.2,Pike,39131
+Ohio,Washington,46533,45614,47570,52,-2.0,4.3,Washington,39167
+Ohio,Jackson,42344,42687,44759,52,0.8,4.9,Jackson,39079
+Ohio,Jefferson,60836,59743,63448,10,-1.8,6.2,Jefferson,39081
+Ohio,Washington,41826,42127,44615,56,0.7,5.9,Washington,39167
+Ohio,Washington,49899,49799,52366,13,-0.2,5.2,Washington,39167
+Maryland,Allegany,47462,46913,49182,22,-1.2,4.8,Allegany,24001
+Maryland,Garrett,53377,53861,57525,17,0.9,6.8,Garrett,24023
+Maryland,Washington,53079,53502,56174,21,0.8,5.0,Washington,24043
+Maryland,Washington,76885,79494,84018,3,3.4,5.7,Washington,24043
+Mississippi,Alcorn,44564,44838,47651,25,0.6,6.3,Alcorn,28003
+Mississippi,Benton,42696,41656,45081,41,-2.4,8.2,Benton,28009
+Mississippi,Calhoun,43094,40976,42728,55,-4.9,4.3,Calhoun,28013
+Mississippi,Chickasaw,42560,39303,39952,70,-7.7,1.7,Chickasaw,28017
+Mississippi,Choctaw,41521,40350,42655,57,-2.8,5.7,Choctaw,28019
+Mississippi,Clay,48828,48588,51599,9,-0.5,6.2,Clay,28025
+Mississippi,Itawamba,41930,41166,42737,54,-1.8,3.8,Itawamba,28057
+Mississippi,Kemper,38601,37428,39625,71,-3.0,5.9,Kemper,28069
+Mississippi,Lee,52704,52029,54255,5,-1.3,4.3,Lee,28081
+Mississippi,Lowndes,47971,48298,51172,12,0.7,6.0,Lowndes,28087
+Mississippi,Marshall,44871,44357,46470,31,-1.1,4.8,Marshall,28093
+Mississippi,Monroe,44562,43271,44517,44,-2.9,2.9,Monroe,28095
+Mississippi,Montgomery,42537,41480,42976,52,-2.5,3.6,Montgomery,28097
+Mississippi,Noxubee,44879,42953,44881,43,-4.3,4.5,Noxubee,28103
+Mississippi,Oktibbeha,39966,39730,42241,61,-0.6,6.3,Oktibbeha,28105
+Mississippi,Panola,42503,41496,43391,50,-2.4,4.6,Panola,28107
+Mississippi,Pontotoc,42985,42069,43359,51,-2.1,3.1,Pontotoc,28115
+Mississippi,Prentiss,38526,38145,39413,75,-1.0,3.3,Prentiss,28117
+Mississippi,Tippah,44606,42729,45880,37,-4.2,7.4,Tippah,28139
+Mississippi,Tishomingo,41999,42481,45018,42,1.1,6.0,Tishomingo,28141
+Mississippi,Union,41673,41120,42339,60,-1.3,3.0,Union,28145
+Mississippi,Webster,45217,44320,47027,29,-2.0,6.1,Webster,28155
+Mississippi,Winston,43700,43721,46075,34,0.0,5.4,Winston,28159
+Mississippi,Yalobusha,42995,42201,44057,48,-1.8,4.4,Yalobusha,28161
+Mississippi,Benton,43416,44334,46819,75,2.1,5.6,Benton,28009
+Mississippi,Clay,55740,57103,60043,9,2.4,5.1,Clay,28025
+Mississippi,Monroe,48362,50311,56061,16,4.0,11.4,Monroe,28095
+Mississippi,Montgomery,49816,51075,54811,22,2.5,7.3,Montgomery,28097
+Mississippi,Webster,41464,42105,43890,100,1.5,4.2,Webster,28155
+Mississippi,Clay,69130,64258,69182,43,-7.0,7.7,Clay,28025
+Mississippi,Webster,59798,58850,65987,60,-1.6,12.1,Webster,28155
+Mississippi,Union,75432,78440,82502,7,4.0,5.2,Union,28145
+Mississippi,Union,41890,44513,40654,30,6.3,-8.7,Union,28145
+New York,Allegany,42299,40738,42832,62,-3.7,5.1,Allegany,36003
+New York,Broome,50085,49185,52147,46,-1.8,6.0,Broome,36007
+New York,Cattaraugus,46505,46131,48342,59,-0.8,4.8,Cattaraugus,36009
+New York,Chautauqua,47702,47471,49640,56,-0.5,4.6,Chautauqua,36013
+New York,Chemung,51914,52228,53850,38,0.6,3.1,Chemung,36015
+New York,Chenango,50591,51381,54527,36,1.6,6.1,Chenango,36017
+New York,Cortland,48524,49104,50994,51,1.2,3.8,Cortland,36023
+New York,Delaware,47197,47015,50348,54,-0.4,7.1,Delaware,36025
+New York,Otsego,50957,50404,53098,45,-1.1,5.3,Otsego,36077
+New York,Schuyler,49869,50240,52126,47,0.7,3.8,Schuyler,36097
+New York,Steuben,54372,54991,56349,29,1.1,2.5,Steuben,36101
+New York,Tioga,52074,52058,54765,35,0.0,5.2,Tioga,36107
+New York,Tompkins,50211,51589,54159,37,2.7,5.0,Tompkins,36109
+North Carolina,Alexander,46187,48883,49694,57,5.8,1.7,Alexander,37003
+North Carolina,Alleghany,45359,44408,46732,83,-2.1,5.2,Alleghany,37005
+North Carolina,Ashe,44235,45135,48453,69,2.0,7.4,Ashe,37009
+North Carolina,Avery,44731,47081,50256,54,5.3,6.7,Avery,37011
+North Carolina,Buncombe,59007,61970,66288,11,5.0,7.0,Buncombe,37021
+North Carolina,Burke,44608,45654,47560,74,2.3,4.2,Burke,37023
+North Carolina,Caldwell,44280,45684,47398,76,3.2,3.8,Caldwell,37027
+North Carolina,Catawba,53990,55157,57624,25,2.2,4.5,Catawba,37035
+North Carolina,Cherokee,39715,40143,41999,98,1.1,4.6,Cherokee,37039
+North Carolina,Clay,43734,44822,47138,79,2.5,5.2,Clay,37043
+North Carolina,Cleveland,44736,45858,47778,73,2.5,4.2,Cleveland,37045
+North Carolina,Davie,59130,60577,63324,15,2.4,4.5,Davie,37059
+North Carolina,Forsyth,56581,57884,60481,18,2.3,4.5,Forsyth,37067
+North Carolina,Graham,42914,41437,44387,91,-3.4,7.1,Graham,37075
+North Carolina,Haywood,49522,50797,53755,32,2.6,5.8,Haywood,37087
+North Carolina,Henderson,53644,55447,59258,21,3.4,6.9,Henderson,37089
+North Carolina,Jackson,44064,44768,46605,85,1.6,4.1,Jackson,37099
+North Carolina,McDowell,43835,45094,47124,80,2.9,4.5,McDowell,37111
+North Carolina,Macon,48104,49554,52844,41,3.0,6.6,Macon,37113
+North Carolina,Madison,43325,44969,47811,72,3.8,6.3,Madison,37115
+North Carolina,Mitchell,43772,44265,47047,81,1.1,6.3,Mitchell,37121
+North Carolina,Polk,58935,62448,67589,9,6.0,8.2,Polk,37149
+North Carolina,Rutherford,42177,42656,44091,93,1.1,3.4,Rutherford,37161
+North Carolina,Stokes,46605,47087,49687,59,1.0,5.5,Stokes,37169
+North Carolina,Surry,48222,49633,51241,48,2.9,3.2,Surry,37171
+North Carolina,Swain,50591,52757,55328,30,4.3,4.9,Swain,37173
+North Carolina,Transylvania,53367,56487,60160,20,5.8,6.5,Transylvania,37175
+North Carolina,Watauga,46588,49431,53013,39,6.1,7.2,Watauga,37189
+North Carolina,Wilkes,45937,49022,49350,63,6.7,0.7,Wilkes,37193
+North Carolina,Yadkin,46773,48584,49886,56,3.9,2.7,Yadkin,37197
+North Carolina,Yancey,42049,43097,45449,90,2.5,5.5,Yancey,37199
+North Carolina,Burke,72214,102766,89281,11,42.3,-13.1,Burke,37023
+Ohio,Adams,44417,43289,46026,78,-2.5,6.3,Adams,39001
+Ohio,Ashtabula,46451,47692,50508,61,2.7,5.9,Ashtabula,39007
+Ohio,Athens,42586,41207,42018,87,-3.2,2.0,Athens,39009
+Ohio,Belmont,46432,48305,51534,51,4.0,6.7,Belmont,39013
+Ohio,Brown,46376,46963,49102,68,1.3,4.6,Brown,39015
+Ohio,Carroll,47751,48377,50809,58,1.3,5.0,Carroll,39019
+Ohio,Clermont,62127,60505,63599,15,-2.6,5.1,Clermont,39025
+Ohio,Columbiana,45491,45358,47871,75,-0.3,5.5,Columbiana,39029
+Ohio,Coshocton,43032,42480,44741,83,-1.3,5.3,Coshocton,39031
+Ohio,Gallia,46340,47433,50025,64,2.4,5.5,Gallia,39053
+Ohio,Guernsey,49038,48997,51043,56,-0.1,4.2,Guernsey,39059
+Ohio,Harrison,46119,46777,50642,59,1.4,8.3,Harrison,39067
+Ohio,Highland,44693,44727,46608,77,0.1,4.2,Highland,39071
+Ohio,Hocking,45847,46133,48115,74,0.6,4.3,Hocking,39073
+Ohio,Holmes,54643,57229,60632,18,4.7,5.9,Holmes,39075
+Ohio,Jackson,42194,41551,43799,84,-1.5,5.4,Jackson,39079
+Ohio,Jefferson,46277,46523,48346,72,0.5,3.9,Jefferson,39081
+Ohio,Lawrence,47217,48423,51367,53,2.6,6.1,Lawrence,39087
+Ohio,Mahoning,51548,51805,54630,39,0.5,5.5,Mahoning,39099
+Ohio,Meigs,43109,42418,44864,82,-1.6,5.8,Meigs,39105
+Ohio,Monroe,43528,42773,44894,81,-1.7,5.0,Monroe,39111
+Ohio,Morgan,43791,43282,45751,79,-1.2,5.7,Morgan,39115
+Ohio,Muskingum,49464,50018,52225,47,1.1,4.4,Muskingum,39119
+Ohio,Noble,32537,31558,33492,88,-3.0,6.1,Noble,39121
+Ohio,Perry,46471,46862,48777,69,0.8,4.1,Perry,39127
+Ohio,Pike,46171,46256,48745,70,0.2,5.4,Pike,39131
+Ohio,Ross,45483,45237,46934,76,-0.5,3.8,Ross,39141
+Ohio,Scioto,46139,46568,49423,66,0.9,6.1,Scioto,39145
+Ohio,Trumbull,46077,46766,49159,67,1.5,5.1,Trumbull,39155
+Ohio,Tuscarawas,50875,54411,57335,29,7.0,5.4,Tuscarawas,39157
+Ohio,Vinton,41447,41177,43796,85,-0.7,6.4,Vinton,39163
+Ohio,Washington,51416,51493,55168,38,0.1,7.1,Washington,39167
+Ohio,Jackson,49858,51752,54031,21,3.8,4.4,Jackson,39079
+Ohio,Jefferson,40248,43106,44947,61,7.1,4.3,Jefferson,39081
+Ohio,Noble,50811,50683,53893,22,-0.3,6.3,Noble,39121
+Ohio,Washington,82944,110159,111286,1,32.8,1.0,Washington,39167
+Ohio,Jackson,57180,58570,62541,8,2.4,6.8,Jackson,39079
+Ohio,Jefferson,44404,43902,46111,35,-1.1,5.0,Jefferson,39081
+Ohio,Washington,74715,75130,79139,3,0.6,5.3,Washington,39167
+Pennsylvania,Allegheny,69414,71362,75468,5,2.8,5.8,Allegheny,42003
+Pennsylvania,Armstrong,53392,56791,58854,24,6.4,3.6,Armstrong,42005
+Pennsylvania,Beaver,55016,55174,58206,27,0.3,5.5,Beaver,42007
+Pennsylvania,Bedford,49771,50263,52510,46,1.0,4.5,Bedford,42009
+Pennsylvania,Blair,54826,55071,57782,30,0.4,4.9,Blair,42013
+Pennsylvania,Bradford,47753,49053,50930,56,2.7,3.8,Bradford,42015
+Pennsylvania,Butler,67680,68762,73039,7,1.6,6.2,Butler,42019
+Pennsylvania,Cambria,48712,48018,50932,55,-1.4,6.1,Cambria,42021
+Pennsylvania,Cameron,52268,51491,54148,38,-1.5,5.2,Cameron,42023
+Pennsylvania,Carbon,60328,58535,62353,15,-3.0,6.5,Carbon,42025
+Pennsylvania,Centre,54767,54756,57800,29,0.0,5.6,Centre,42027
+Pennsylvania,Clarion,47303,47685,50175,58,0.8,5.2,Clarion,42031
+Pennsylvania,Clearfield,53641,54951,57841,28,2.4,5.3,Clearfield,42033
+Pennsylvania,Clinton,46633,46366,48383,62,-0.6,4.4,Clinton,42035
+Pennsylvania,Columbia,50147,50004,52692,45,-0.3,5.4,Columbia,42037
+Pennsylvania,Crawford,48226,48734,51236,52,1.1,5.1,Crawford,42039
+Pennsylvania,Elk,50577,50945,53862,39,0.7,5.7,Elk,42047
+Pennsylvania,Erie,52723,51554,54694,36,-2.2,6.1,Erie,42049
+Pennsylvania,Fayette,49374,49302,51467,50,-0.1,4.4,Fayette,42051
+Pennsylvania,Forest,28625,28437,30606,67,-0.7,7.6,Forest,42053
+Pennsylvania,Fulton,49488,47915,49640,60,-3.2,3.6,Fulton,42057
+Pennsylvania,Greene,48849,50640,52757,44,3.7,4.2,Greene,42059
+Pennsylvania,Huntingdon,45635,45444,46957,66,-0.4,3.3,Huntingdon,42061
+Pennsylvania,Indiana,46462,45910,48336,63,-1.2,5.3,Indiana,42063
+Pennsylvania,Jefferson,48226,48530,50976,54,0.6,5.0,Jefferson,42065
+Pennsylvania,Juniata,56579,60088,62851,14,6.2,4.6,Juniata,42067
+Pennsylvania,Lackawanna,54437,54479,56985,33,0.1,4.6,Lackawanna,42069
+Pennsylvania,Lawrence,51416,51072,53835,40,-0.7,5.4,Lawrence,42073
+Pennsylvania,Luzerne,51307,50955,53214,43,-0.7,4.4,Luzerne,42079
+Pennsylvania,Lycoming,50449,50940,53630,41,1.0,5.3,Lycoming,42081
+Pennsylvania,McKean,49946,48986,51318,51,-1.9,4.8,McKean,42083
+Pennsylvania,Mercer,48513,48630,51133,53,0.2,5.1,Mercer,42085
+Pennsylvania,Mifflin,46271,47383,49197,61,2.4,3.8,Mifflin,42087
+Pennsylvania,Monroe,51663,51977,54716,35,0.6,5.3,Monroe,42089
+Pennsylvania,Montour,64432,67096,70610,8,4.1,5.2,Montour,42093
+Pennsylvania,Northumberland,48288,48499,50445,57,0.4,4.0,Northumberland,42097
+Pennsylvania,Perry,54388,54842,56411,34,0.8,2.9,Perry,42099
+Pennsylvania,Pike,55280,56041,59543,21,1.4,6.2,Pike,42103
+Pennsylvania,Potter,52092,46407,48180,64,-10.9,3.8,Potter,42105
+Pennsylvania,Schuylkill,49219,49853,52049,48,1.3,4.4,Schuylkill,42107
+Pennsylvania,Snyder,51173,53285,54472,37,4.1,2.2,Snyder,42109
+Pennsylvania,Somerset,48575,47188,49685,59,-2.9,5.3,Somerset,42111
+Pennsylvania,Sullivan,55400,56482,59379,22,2.0,5.1,Sullivan,42113
+Pennsylvania,Susquehanna,56165,59387,61452,18,5.7,3.5,Susquehanna,42115
+Pennsylvania,Tioga,46281,46793,47580,65,1.1,1.7,Tioga,42117
+Pennsylvania,Union,50161,51099,53495,42,1.9,4.7,Union,42119
+Pennsylvania,Venango,49403,49218,51568,49,-0.4,4.8,Venango,42121
+Pennsylvania,Warren,48900,49366,52057,47,1.0,5.5,Warren,42123
+Pennsylvania,Washington,65480,71259,75091,6,8.8,5.4,Washington,42125
+Pennsylvania,Wayne,52956,54371,57575,31,2.7,5.9,Wayne,42127
+Pennsylvania,Westmoreland,59471,60282,64021,13,1.4,6.2,Westmoreland,42129
+Pennsylvania,Wyoming,53914,54770,57180,32,1.6,4.4,Wyoming,42131
+Pennsylvania,Washington,78229,78884,83586,3,0.8,6.0,Washington,42125
+South Carolina,Anderson,47395,48196,50288,20,1.7,4.3,Anderson,45007
+South Carolina,Cherokee,39216,40508,41896,40,3.3,3.4,Cherokee,45021
+South Carolina,Greenville,56128,57838,60866,5,3.0,5.2,Greenville,45045
+South Carolina,Oconee,53686,54951,57361,8,2.4,4.4,Oconee,45073
+South Carolina,Pickens,45494,47139,49294,24,3.6,4.6,Pickens,45077
+South Carolina,Spartanburg,53005,51359,53700,14,-3.1,4.6,Spartanburg,45083
+South Carolina,Union,38691,39168,40314,45,1.2,2.9,Union,45087
+South Carolina,Union,120277,131131,139931,1,9.0,6.7,Union,45087
+Tennessee,Anderson,51271,53607,56260,15,4.6,4.9,Anderson,47001
+Tennessee,Bledsoe,34388,35182,36038,93,2.3,2.4,Bledsoe,47007
+Tennessee,Blount,52907,55312,58447,11,4.5,5.7,Blount,47009
+Tennessee,Bradley,46628,48065,50014,39,3.1,4.1,Bradley,47011
+Tennessee,Campbell,42634,43205,44694,58,1.3,3.4,Campbell,47013
+Tennessee,Cannon,44247,46695,48732,42,5.5,4.4,Cannon,47015
+Tennessee,Carter,40683,40863,42833,71,0.4,4.8,Carter,47019
+Tennessee,Claiborne,42113,42772,44367,61,1.6,3.7,Claiborne,47025
+Tennessee,Clay,39750,41327,39424,87,4.0,-4.6,Clay,47027
+Tennessee,Cocke,40996,40651,42387,74,-0.8,4.3,Cocke,47029
+Tennessee,Coffee,46742,47687,50163,36,2.0,5.2,Coffee,47031
+Tennessee,Cumberland,44792,45530,48091,46,1.6,5.6,Cumberland,47035
+Tennessee,Fentress,42447,41810,43102,69,-1.5,3.1,Fentress,47049
+Tennessee,Franklin,46433,47746,49891,40,2.8,4.5,Franklin,47051
+Tennessee,Grainger,42856,43630,45678,53,1.8,4.7,Grainger,47057
+Tennessee,Greene,42456,43721,44945,57,3.0,2.8,Greene,47059
+Tennessee,Grundy,39193,38989,40453,80,-0.5,3.8,Grundy,47061
+Tennessee,Hamblen,47382,47899,50094,38,1.1,4.6,Hamblen,47063
+Tennessee,Hamilton,59664,62241,65525,8,4.3,5.3,Hamilton,47065
+Tennessee,Hancock,33327,32401,33223,94,-2.8,2.5,Hancock,47067
+Tennessee,Hawkins,41472,41853,44192,63,0.9,5.6,Hawkins,47073
+Tennessee,Jackson,38228,38286,40132,84,0.2,4.8,Jackson,47087
+Tennessee,Jefferson,45398,45718,48184,45,0.7,5.4,Jefferson,47089
+Tennessee,Johnson,38709,39284,40345,82,1.5,2.7,Johnson,47091
+Tennessee,Knox,62742,63634,67323,7,1.4,5.8,Knox,47093
+Tennessee,Lawrence,41852,41698,43273,68,-0.4,3.8,Lawrence,47099
+Tennessee,Lewis,41742,41937,44554,59,0.5,6.2,Lewis,47101
+Tennessee,Loudon,64528,66918,70063,4,3.7,4.7,Loudon,47105
+Tennessee,McMinn,43540,43962,45629,54,1.0,3.8,McMinn,47107
+Tennessee,Macon,39384,41149,41530,76,4.5,0.9,Macon,47111
+Tennessee,Marion,47540,49519,51590,28,4.2,4.2,Marion,47115
+Tennessee,Meigs,39913,40681,41017,79,1.9,0.8,Meigs,47121
+Tennessee,Monroe,42225,42530,44350,62,0.7,4.3,Monroe,47123
+Tennessee,Morgan,37244,38505,40237,83,3.4,4.5,Morgan,47129
+Tennessee,Overton,40761,40604,42000,75,-0.4,3.4,Overton,47133
+Tennessee,Pickett,43214,41636,42545,72,-3.7,2.2,Pickett,47137
+Tennessee,Polk,40313,41748,42519,73,3.6,1.8,Polk,47139
+Tennessee,Putnam,48229,48938,51132,30,1.5,4.5,Putnam,47141
+Tennessee,Rhea,43579,43791,45745,52,0.5,4.5,Rhea,47143
+Tennessee,Roane,49851,50869,53353,23,2.0,4.9,Roane,47145
+Tennessee,Scott,37731,37530,39326,88,-0.5,4.8,Scott,47151
+Tennessee,Sequatchie,45532,45529,48254,44,0.0,6.0,Sequatchie,47153
+Tennessee,Sevier,51742,54656,57533,12,5.6,5.3,Sevier,47155
+Tennessee,Smith,48103,47955,50388,35,-0.3,5.1,Smith,47159
+Tennessee,Sullivan,51006,51628,54453,21,1.2,5.5,Sullivan,47163
+Tennessee,Unicoi,42822,43539,45593,55,1.7,4.7,Unicoi,47171
+Tennessee,Union,40980,41344,43407,67,0.9,5.0,Union,47173
+Tennessee,Van Buren,36688,35142,36828,92,-4.2,4.8,Van Buren,47175
+Tennessee,Warren,42804,42702,44375,60,-0.2,3.9,Warren,47177
+Tennessee,Washington,52818,52955,55967,16,0.3,5.7,Washington,47179
+Tennessee,White,42325,41610,42866,70,-1.7,3.0,White,47185
+Tennessee,Anderson,43311,44505,46478,225,2.8,4.4,Anderson,47001
+Tennessee,Clay,52242,53256,57095,126,1.9,7.2,Clay,47027
+Tennessee,Franklin,51380,56477,56987,127,9.9,0.9,Franklin,47051
+Tennessee,Hamilton,70499,69445,70580,54,-1.5,1.6,Hamilton,47065
+Tennessee,Jackson,50852,51180,54702,150,0.6,6.9,Jackson,47087
+Tennessee,Jefferson,47408,47661,50131,197,0.5,5.2,Jefferson,47089
+Tennessee,Johnson,51464,52389,55487,139,1.8,5.9,Johnson,47091
+Tennessee,Knox,51783,54750,52798,169,5.7,-3.6,Knox,47093
+Tennessee,Marion,48483,49627,52570,174,2.4,5.9,Marion,47115
+Tennessee,Polk,47501,47138,49945,199,-0.8,6.0,Polk,47139
+Tennessee,Smith,62358,65495,66887,64,5.0,2.1,Smith,47159
+Tennessee,Washington,68834,69605,73880,42,1.1,6.1,Washington,47179
+Tennessee,Morgan,68537,67498,71630,5,-1.5,6.1,Morgan,47129
+Tennessee,Sevier,43088,44511,46183,23,3.3,3.8,Sevier,47155
+Tennessee,Washington,50741,51650,54405,11,1.8,5.3,Washington,47179
+Tennessee,Franklin,54571,55937,57298,11,2.5,2.4,Franklin,47051
+Tennessee,Washington,66673,69964,73602,3,4.9,5.2,Washington,47179
+Virginia,Bath,72876,73371,77195,14,0.7,5.2,Bath,51017
+Virginia,Bland,42421,43800,46796,89,3.3,6.8,Bland,51021
+Virginia,Botetourt,58134,59932,64012,33,3.1,6.8,Botetourt,51023
+Virginia,Buchanan,43325,45462,49335,74,4.9,8.5,Buchanan,51027
+Virginia,Craig,46875,47820,50734,68,2.0,6.1,Craig,51045
+Virginia,Dickenson,40555,41979,44423,92,3.5,5.8,Dickenson,51051
+Virginia,Floyd,48107,49376,53008,58,2.6,7.4,Floyd,51063
+Virginia,Giles,48133,49867,53100,56,3.6,6.5,Giles,51071
+Virginia,Grayson,38203,39423,40784,103,3.2,3.5,Grayson,51077
+Virginia,Highland,50887,52174,50924,66,2.5,-2.4,Highland,51091
+Virginia,Lee,37995,39709,41822,101,4.5,5.3,Lee,51105
+Virginia,Patrick,39124,40749,42956,97,4.2,5.4,Patrick,51141
+Virginia,Pulaski,46445,48601,51836,62,4.6,6.7,Pulaski,51155
+Virginia,Russell,39796,41628,43189,96,4.6,3.7,Russell,51167
+Virginia,Scott,39382,41613,43448,95,5.7,4.4,Scott,51169
+Virginia,Smyth,44170,45321,48244,80,2.6,6.4,Smyth,51173
+Virginia,Tazewell,43136,45456,48157,81,5.4,5.9,Tazewell,51185
+Virginia,Wythe,43349,45129,47343,88,4.1,4.9,Wythe,51197
+West Virginia,Barbour,41056,41289,42530,45,0.6,3.0,Barbour,54001
+West Virginia,Berkeley,51155,51772,54940,11,1.2,6.1,Berkeley,54003
+West Virginia,Boone,41428,41814,43398,43,0.9,3.8,Boone,54005
+West Virginia,Braxton,40682,40416,42520,46,-0.7,5.2,Braxton,54007
+West Virginia,Brooke,49449,51046,53325,16,3.2,4.5,Brooke,54009
+West Virginia,Cabell,49384,50998,54209,12,3.3,6.3,Cabell,54011
+West Virginia,Calhoun,41800,41532,44580,37,-0.6,7.3,Calhoun,54013
+West Virginia,Clay,39158,39151,41070,48,0.0,4.9,Clay,54015
+West Virginia,Doddridge,37308,39383,40875,49,5.6,3.8,Doddridge,54017
+West Virginia,Fayette,44231,44859,47212,29,1.4,5.2,Fayette,54019
+West Virginia,Gilmer,36225,36538,38947,51,0.9,6.6,Gilmer,54021
+West Virginia,Grant,46167,47897,47890,28,3.7,0.0,Grant,54023
+West Virginia,Greenbrier,46603,47453,50142,22,1.8,5.7,Greenbrier,54025
+West Virginia,Hampshire,45139,45182,46417,32,0.1,2.7,Hampshire,54027
+West Virginia,Hancock,50091,51423,53854,14,2.7,4.7,Hancock,54029
+West Virginia,Hardy,40407,45583,43439,42,12.8,-4.7,Hardy,54031
+West Virginia,Harrison,57138,59939,63351,3,4.9,5.7,Harrison,54033
+West Virginia,Jackson,44893,46178,48978,24,2.9,6.1,Jackson,54035
+West Virginia,Jefferson,61072,63053,66514,2,3.2,5.5,Jefferson,54037
+West Virginia,Kanawha,55337,57868,61400,5,4.6,6.1,Kanawha,54039
+West Virginia,Lewis,43402,44293,46994,30,2.1,6.1,Lewis,54041
+West Virginia,Lincoln,36873,36931,38761,52,0.2,5.0,Lincoln,54043
+West Virginia,Logan,42379,44821,46862,31,5.8,4.6,Logan,54045
+West Virginia,McDowell,34021,34264,35813,54,0.7,4.5,McDowell,54047
+West Virginia,Marion,48615,49990,51911,19,2.8,3.8,Marion,54049
+West Virginia,Marshall,46916,50166,51767,21,6.9,3.2,Marshall,54051
+West Virginia,Mason,42057,41921,44435,38,-0.3,6.0,Mason,54053
+West Virginia,Mercer,44804,45286,48086,26,1.1,6.2,Mercer,54055
+West Virginia,Mineral,50327,47743,49484,23,-5.1,3.6,Mineral,54057
+West Virginia,Mingo,36736,36887,39157,50,0.4,6.2,Mingo,54059
+West Virginia,Monongalia,53257,55502,58418,7,4.2,5.3,Monongalia,54061
+West Virginia,Monroe,40642,40435,42813,44,-0.5,5.9,Monroe,54063
+West Virginia,Morgan,45227,43695,45801,34,-3.4,4.8,Morgan,54065
+West Virginia,Nicholas,40533,40643,44299,39,0.3,9.0,Nicholas,54067
+Ohio,Adams,45813,44489,46249,71,-2.9,4.0,Adams,39001
+Ohio,Brown,60759,62163,65199,13,2.3,4.9,Brown,39015
+Ohio,Jackson,51893,50837,52237,58,-2.0,2.8,Jackson,39079
+Ohio,Jefferson,53915,55703,58374,31,3.3,4.8,Jefferson,39081
+Ohio,Monroe,50107,50984,52978,55,1.8,3.9,Monroe,39111
+Ohio,Washington,66611,69370,73187,5,4.1,5.5,Washington,39167
